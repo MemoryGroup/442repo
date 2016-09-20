@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_9b6bb5153b7470a2bea2c725551d081a71dd7197/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.0_86d4d8377d88ae2c268fea92627d30f15d740d18/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.0_66779ea16f06830c4047cb976fb159ce867911b3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="c755536e5a100d9c76c8ea0b72f76c018f7a9de2">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.0_fccccf23012492149bc158293b278bbfd3b2c0a9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="fcdb04c0a6ee4a65c870a5e67519672ffd979a9d">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_e1222a7149bdddf4af46191545189e225c4f687e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.0_d3fddd6a5cc749ac0c23dd8310daaf11f2f0fb31/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.0_2179e5811e1ac6a46ea8fc434d4c6810954d859e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.0_2e27188339f51a300acfad674e2032b03b464437/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.0_ee664c609f5266386de3050d4aaca08b0ede9b0a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_3e11dcfa8c37835235c681ad43a143f977f57b23/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.0_1c34593d44be4ef85d536c64c9bd429f670da5ca/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.0_017364d8e36ca6f681fc4981803b2771eaaf2d14/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_fa829903516ce6061f2956c3cf937ebe6cccecbb/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.0_98bf51d6936c7a0ab754df0548af8339d72434a7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.0_af9a1a20da1e730e266358ee04576a11fa7ee45d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.0_f8adab014b0759b853e49a51da79f7a89fdcb26e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_e893b7f8e6cabc1e532f6ae9372a28a543c1fabe/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="8e9744d697cdc1ff33d394e4173164950a88370e">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a50325fa1c60d65565dfc8acf196c1162ccd321e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/Memory_Project/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_d18e7293d1e3afff39033680aabe2af3d074ce2f/classes.dex" />
+    </item>
+
+</items>
