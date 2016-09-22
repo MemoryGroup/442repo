@@ -1,0 +1,13 @@
+date: September 15, 2016
+meeting_type: ta # meeting_type can "group", "ta", or "instructor"
+attendance: [kreidler, youngkih, amypritc, majuran]
+absent: []
+excused_absences: [ # Any legitamite excuses for absent team members
+  ]
+task_progress: [ # All group members must be included here even if they haven't made any progress since the last meeting
+  ]
+issues: [ # Post any issues here. Issues that cannot be addressed by the group should especially be included
+  ]
+Notes:  | # Anything covered in the meeting that doesn't fit elsewhere.
+  Meeting covered overview of git, github desktop, and community point submission.
+  Also covered app layout and basic menu design for sprint submission.
