@@ -16,7 +16,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".showRandomNumber" />
-        <activity android:name=".showHelp"></activity>
+        <activity android:name=".showHelp" />
+        <activity
+            android:name=".createMap"
+            android:label="@string/title_activity_create_map"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

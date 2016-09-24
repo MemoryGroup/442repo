@@ -2,4 +2,17 @@
     <string name="app_name">Memory_Project</string>
     <string name="title_activity_display_random_number">displayRandomNumber</string>
     <string name="title_activity_display_random_number2">displayRandomNumber2</string>
+    <string name="title_activity_create_map">createMap</string>
+    <string name="mapInfoDefault"> How many pairs can you memorize?\n Select a difficulty or make
+        your own map.\n
+    </string>
+    <string name="mapInfoEasy"> How many pairs can you memorize?\n Easy has up to 4 different
+        digits.\n Increase letters to maximize your possible score!\n
+    </string>
+    <string name="mapInfoMedium"> How many pairs can you memorize?\n Medium has up to 7 different
+        digits.\n Increase letters to maximize your possible score!\n
+    </string>
+    <string name="mapInfoHard"> How many pairs can you memorize?\n Hard has up to 10 different
+        digits.\n Increase letters to maximize your possible score!\n
+    </string>
 </resources>
