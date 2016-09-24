@@ -7,12 +7,15 @@
         your own map.\n
     </string>
     <string name="mapInfoEasy"> How many pairs can you memorize?\n Easy has up to 4 different
-        digits.\n Increase letters to maximize your possible score!\n
+        digits.\n Increase letters to maximize your possible score!\n Press Generate to Make a new
+        Map
     </string>
     <string name="mapInfoMedium"> How many pairs can you memorize?\n Medium has up to 7 different
-        digits.\n Increase letters to maximize your possible score!\n
+        digits.\n Increase letters to maximize your possible score!\n Press Generate to Make a new
+        Map
     </string>
     <string name="mapInfoHard"> How many pairs can you memorize?\n Hard has up to 10 different
-        digits.\n Increase letters to maximize your possible score!\n
+        digits.\n Increase letters to maximize your possible score!\n Press Generate to Make a new
+        Map
     </string>
 </resources>
