@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onStartButtonClicked(View v){
         Button startButton = (Button) v;
-        Intent startWindowOpener = new Intent(this,showRandomNumber.class);
+        Intent startWindowOpener = new Intent(this,createMap.class);
         startActivity(startWindowOpener);
     }
     public void onHelpButtonClicked(View v){
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Intent helpWindowOpener = new Intent(this,showHelp.class);
         startActivity(helpWindowOpener);
 
-
     }
+
+
 }
