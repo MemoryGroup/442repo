@@ -12,45 +12,60 @@
 
 
     <Button
+        android:text="@string/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Train"
-        android:id="@+id/button"
-        android:layout_marginBottom="80dp"
-        android:layout_marginLeft="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="onStartButtonClicked" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Progress"
-        android:id="@+id/button2"
-        android:layout_alignTop="@+id/button"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="30dp"
-        android:nestedScrollingEnabled="false"
-        android:onClick="onHelpButtonClicked" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Score"
-        android:id="@+id/button3"
-        android:layout_below="@+id/button2"
+        android:id="@+id/button6"
+        android:onClick="onTestButtonClicked"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="setting"
+        android:text="Score"
+        android:id="@+id/button3"
+        android:layout_alignBaseline="@+id/button4"
+        android:layout_alignBottom="@+id/button4"
+        android:layout_alignLeft="@+id/button6"
+        android:layout_alignStart="@+id/button6" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Train"
+        android:id="@+id/button"
+        android:onClick="onStartButtonClicked"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setting"
+        android:id="@+id/button2"
+        android:layout_marginRight="27dp"
+        android:nestedScrollingEnabled="false"
+        android:onClick="onHelpButtonClicked"
+        android:layout_marginEnd="27dp"
+        android:layout_marginTop="46dp"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progress"
         android:id="@+id/button4"
-        android:layout_alignTop="@+id/button3"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:layout_below="@+id/button2"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
 
 </RelativeLayout>
