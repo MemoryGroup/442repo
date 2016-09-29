@@ -48,7 +48,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Setting"
+        android:text="Settings"
         android:id="@+id/button2"
         android:layout_marginRight="27dp"
         android:nestedScrollingEnabled="false"

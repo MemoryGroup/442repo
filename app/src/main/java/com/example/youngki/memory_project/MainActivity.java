@@ -27,8 +27,11 @@ public class MainActivity extends AppCompatActivity {
         Button helpButton = (Button) v;
         Intent helpWindowOpener = new Intent(this,showHelp.class);
         startActivity(helpWindowOpener);
-
     }
 
+    public void onTestButtonClicked(View v){
+        Intent testWindowOpener = new Intent(this,showTest.class);
+        startActivity(testWindowOpener);
+    }
 
 }

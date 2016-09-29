@@ -9,99 +9,82 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.youngki.memory_project.showHelp">
 
-
-    <Button
-        android:text="@string/zero"
+    <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:id="@+id/button17"
+        android:columnCount="4"
+        android:rowCount="3"
+        android:layout_marginBottom="39dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gridLayout2">
 
-    <Button
-        android:text="@string/two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button18"
-        android:layout_toRightOf="@+id/button18"
-        android:layout_toEndOf="@+id/button18"
-        android:id="@+id/button19" />
 
-    <Button
-        android:text="@string/three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button19"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/button20"
-        tools:ignore="RelativeOverlap" />
+        <Button
+            android:text="@string/_1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button23" />
 
-    <Button
-        android:text="@string/four"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button18"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/button21" />
+        <Button
+            android:text="@string/_2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button25" />
 
-    <Button
-        android:text="@string/five"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button18"
-        android:layout_toRightOf="@+id/button21"
-        android:layout_toEndOf="@+id/button21"
-        android:id="@+id/button22" />
+        <Button
+            android:text="@string/_3"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button26" />
 
-    <Button
-        android:text="@string/six"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button19"
-        android:layout_toRightOf="@+id/button22"
-        android:layout_toEndOf="@+id/button22"
-        android:id="@+id/button23" />
+        <Button
+            android:text="@string/_4"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button20" />
 
-    <Button
-        android:text="@string/seven"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button19"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/button24" />
+        <Button
+            android:text="@string/_5"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button24" />
 
-    <Button
-        android:text="@string/eight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/button21"
-        android:layout_toEndOf="@+id/button21"
-        android:id="@+id/button25" />
+        <Button
+            android:text="@string/_6"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button19" />
 
-    <Button
-        android:text="@string/nine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button25"
-        android:layout_toRightOf="@+id/button25"
-        android:layout_toEndOf="@+id/button25"
-        android:id="@+id/button26" />
+        <Button
+            android:text="@string/_7"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button18" />
 
-    <Button
-        android:text="@string/one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button18"
-        android:layout_alignBaseline="@+id/button17"
-        android:layout_alignBottom="@+id/button17"
-        android:layout_toRightOf="@+id/button17"
-        android:layout_toEndOf="@+id/button17" />
+        <Button
+            android:text="@string/_8"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button21" />
+
+        <Button
+            android:text="@string/_0"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button17"
+            android:layout_row="2"
+            android:layout_column="2" />
+
+        <Button
+            android:text="@string/_9"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button22"
+            android:layout_row="2"
+            android:layout_column="1" />
+
+    </GridLayout>
 
     <TextView
         android:text="@string/_A"
@@ -109,9 +92,8 @@
         android:layout_width="115dp"
         android:layout_height="160dp"
         android:id="@+id/textView3"
-        android:layout_marginTop="95dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
+        android:layout_above="@+id/gridLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp" />
 
 </RelativeLayout>
