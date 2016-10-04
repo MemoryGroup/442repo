@@ -21,7 +21,8 @@
         <activity
             android:name=".createMap"
             android:label="@string/title_activity_create_map"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".showResults"></activity>
     </application>
 
 </manifest>

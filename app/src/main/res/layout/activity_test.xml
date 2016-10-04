@@ -24,6 +24,7 @@
             android:text="@string/_1"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="onOneClicked"
             android:id="@+id/button23" />
 
         <Button
@@ -88,12 +89,26 @@
 
     <TextView
         android:text="@string/_A"
+        android:textAlignment="center"
         android:textSize="160sp"
-        android:layout_width="115dp"
-        android:layout_height="160dp"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
         android:id="@+id/textView3"
         android:layout_above="@+id/gridLayout2"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginBottom="40dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="5"
+        android:progress="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/progressBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

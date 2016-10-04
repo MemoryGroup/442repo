@@ -55,4 +55,6 @@
     <string name="_X">X</string>
     <string name="_Y">Y</string>
     <string name="_Z">Z</string>
+    <string name="correct">Correct:</string>
+    <string name="incorrect">Incorrect:</string>
 </resources>
