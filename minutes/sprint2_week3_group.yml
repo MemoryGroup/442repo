@@ -1,0 +1,15 @@
+date: October 4, 2016
+meeting_type: group
+attendance: [kreidler, youngkih, amypritc, majuran]
+excused_absences: [ 
+  ]
+task_progress: [ 
+  {ubit: majuran, progress: specific Train goals for sprint 2 including menu redesign and button functionality},
+  {ubit: kreidler, progress: progress on saving hashmap and using created map in testing section},
+  {ubit: youngkih, progress: customized font, merged develop and test branch},
+  {ubit: amypritc, progress: demoed further progress on test phase functionality, merged changes together in test branch}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  merged code from a few different branches and resolved issues, fixed functionality of a few buttons
