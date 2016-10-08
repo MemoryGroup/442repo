@@ -1,0 +1,15 @@
+date: October 4, 2016
+meeting_type: group
+attendance: [kreidler, youngkih, amypritc, majuran]
+excused_absences: [ 
+  ]
+task_progress: [ 
+  {ubit: majuran, progress: redesign of train UI and further train feature completion},
+  {ubit: kreidler, progress: started data storage implementation of maps },
+  {ubit: youngkih, progress: contunued work on integration and UI animations},
+  {ubit: amypritc, redesign of test portion}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  
