@@ -12,24 +12,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
-        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.0_d1ef61fa047fb03f8327bd862957ef61c10f80bf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
-        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_f97fa992740dcb5b4125a10e98a831c867ca92de/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -54,6 +36,60 @@
         revision="24.0.2"
         sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
         <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.0_66f17310f19fa861db3c4dfa2bb01499a0b31deb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4caba255479baa8a4bf7c251d8415deda54d03a5">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_46833077e660db42d4a866ec270a2114b9769d1e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.0_86357f44ab6e6e5c73a08aec53b01001bba4e181/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b89768f74269e58d0298c520953f9dfc028e82b9">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_85fa009adce4b5e4fcc06e511071d2433f7900e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_f5ab4f372bf5d75606dedd5d2f4e5977b6e146b0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.0_d1ef61fa047fb03f8327bd862957ef61c10f80bf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_f97fa992740dcb5b4125a10e98a831c867ca92de/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -93,15 +129,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b17e4691e292382e5de8443f2ad41764be1e1020">
-        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_46833077e660db42d4a866ec270a2114b9769d1e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -129,24 +156,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
-        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.0_86357f44ab6e6e5c73a08aec53b01001bba4e181/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="53221dfd1d743052fa94772587c956eaadb8a5c3">
-        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_85fa009adce4b5e4fcc06e511071d2433f7900e3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -162,15 +171,6 @@
         revision="24.0.2"
         sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
         <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.0_98bf51d6936c7a0ab754df0548af8339d72434a7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
-        <dex dex="/Users/YoungKi/AndroidStudioProjects/442repo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_f5ab4f372bf5d75606dedd5d2f4e5977b6e146b0/classes.dex" />
     </item>
 
 </items>
