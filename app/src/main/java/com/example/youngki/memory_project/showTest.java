@@ -159,69 +159,6 @@ public class showTest extends AppCompatActivity {
         getNextLetter();
     }
 
-    public void onTwoClicked(View view){
-        if (values[count] == 2){
-            correct.put(keys[count], values[count]);
-        }
-        getNextLetter();
-    }
-
-    public void onThreeClicked(View view){
-        if (values[count] == 3){
-            correct.put(keys[count], values[count]);
-        }
-        getNextLetter();
-    }
-
-    public void onFourClicked(View view){
-        if (values[count] == 4){
-            correct.put(keys[count], values[count]);
-        }
-        getNextLetter();
-    }
-
-    public void onFiveClicked(View view){
-        if (values[count] == 5){
-            correct.put(keys[count], values[count]);
-        }
-        getNextLetter();
-    }
-
-    public void onSixClicked(View view){
-        if (values[count] == 6){
-            correct.put(keys[count], values[count]);
-        }
-        getNextLetter();
-    }
-
-    public void onSevenClicked(View view){
-        if (values[count] == 7){
-            correct.put(keys[count], values[count]);
-        }
-        getNextLetter();
-    }
-
-    public void onEightClicked(View view){
-        if (values[count] == 8){
-            correct.put(keys[count], values[count]);
-        }
-        getNextLetter();
-    }
-
-    public void onNineClicked(View view){
-        if (values[count] == 9){
-            correct.put(keys[count], values[count]);
-        }
-        getNextLetter();
-    }
-
-    public void onZeroClicked(View view){
-        if (values[count] == 0){
-            correct.put(keys[count], values[count]);
-        }
-        getNextLetter();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
