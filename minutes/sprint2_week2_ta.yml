@@ -1,0 +1,16 @@
+date: September 29, 2016
+meeting_type: ta 
+attendance: [kreidler, youngkih, amypritc, majuran]
+excused_absences: [ 
+  ]
+task_progress: [ 
+  {ubit: majuran, progress: specific Train goals for sprint 2 including menu redesign and button functionality},
+  {ubit: kreidler, progress: have basic train phase implementation },
+  {ubit: youngkih, progress: Assigned specific goals for sprint 2 },
+  {ubit: amypritc, progress: began progress on train phase for sprint 2, need to integration, add style to buttons, background image/font, make map persistant}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  covered sprint 2 progress and remaining work
+  recap of community points

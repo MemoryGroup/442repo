@@ -1,0 +1,17 @@
+date: September 22, 2016
+meeting_type: ta 
+attendance: [kreidler, youngkih, amypritc, majuran]
+excused_absences: [ 
+  ]
+task_progress: [ 
+  {ubit: majuran, progress: Assigned Train},
+  {ubit: kreidler, progress: Assigned Train},
+  {ubit: youngkih, progress: Assigned menu design and integration},
+  {ubit: amypritc, progress: Completed AJAX functions for user to upload files to the server.}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  sprint 2 overview and points
+  Posted tasks as issues in github
+  Assigned tasks and expectations for sprint 2 app

@@ -1,0 +1,16 @@
+date: September 29, 2016
+meeting_type: group
+attendance: [kreidler, youngkih, amypritc, majuran]
+excused_absences: [ 
+  ]
+task_progress: [ 
+  {ubit: majuran, progress: discussed additional Train goals and functionality},
+  {ubit: kreidler, progress: demoed basic train phase implementation },
+  {ubit: youngkih, progress: completed animations, Assigned specific goals for sprint 2 },
+  {ubit: amypritc, progress: demoed progress on test phase}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  test_basic_cards branch set up for generating maps to train
+  test branch set up for test phase
