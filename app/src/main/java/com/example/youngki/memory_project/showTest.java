@@ -1,13 +1,12 @@
 package com.example.youngki.memory_project;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import java.util.HashMap;
 
 
@@ -158,6 +157,7 @@ public class showTest extends AppCompatActivity {
         }
         getNextLetter();
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
