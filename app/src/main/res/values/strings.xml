@@ -2,4 +2,8 @@
     <string name="app_name">Memory_Project</string>
     <string name="title_activity_display_random_number">displayRandomNumber</string>
     <string name="title_activity_display_random_number2">displayRandomNumber2</string>
+
+    <string name="title_activity_number_buttons">NumberButtons</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
