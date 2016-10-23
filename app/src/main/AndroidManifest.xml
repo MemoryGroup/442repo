@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/memory_project_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoTitleBar">
@@ -22,7 +22,9 @@
             android:name=".createMap"
             android:label="@string/title_activity_create_map"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".showResults"></activity>
+        <activity android:name=".showResults" />
+        <activity android:name=".showTestOptions" />
+        <activity android:name=".matchingTest"></activity>
     </application>
 
 </manifest>

@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onTestButtonClicked(View v){
         v.startAnimation(buttonClicked);
-        Intent testWindowOpener = new Intent(this,showTest.class);
+        Intent testWindowOpener = new Intent(this,showTestOptions.class);
         startActivity(testWindowOpener);
     }
 

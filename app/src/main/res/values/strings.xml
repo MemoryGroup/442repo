@@ -59,4 +59,6 @@
     <string name="incorrect">Incorrect:</string>
     <string name="_correct">correct</string>
     <string name="_incorrect">incorrect</string>
+    <string name="letter_to_number">Letter to Number</string>
+    <string name="matching">Matching</string>
 </resources>
