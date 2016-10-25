@@ -110,6 +110,7 @@ public class showTest extends AppCompatActivity {
         }
         getNextLetter();
     }
+
     public void onSevenClicked(View view){
         TextView tv = (TextView) findViewById(R.id.textView10);
         if (values[count] == 7){
@@ -169,5 +170,6 @@ public class showTest extends AppCompatActivity {
         tv.setText(this.showThis);
         ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
         pb.setMax(keys.length);
+
     }
 }

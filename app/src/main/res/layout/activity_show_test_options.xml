@@ -4,6 +4,7 @@
     android:id="@+id/activity_show_test_options"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightBlue"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -21,17 +22,38 @@
 
         <Button
             android:text="@string/letter_to_number"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
             android:onClick="onLetterToNumberButtonClicked"
             android:id="@+id/buttonLetterToNumber" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12sp" />
+
         <Button
             android:text="@string/matching"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
             android:onClick="onMatchingButtonClicked"
             android:id="@+id/buttonMatching" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12sp" />
+
+        <Button
+            android:text="matching 2.0"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:onClick="on2Clicked"
+            android:id="@+id/buttonMatching2" />
 
     </LinearLayout>
 </RelativeLayout>

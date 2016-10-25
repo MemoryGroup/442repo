@@ -61,4 +61,10 @@
     <string name="_incorrect">incorrect</string>
     <string name="letter_to_number">Letter to Number</string>
     <string name="matching">Matching</string>
+    <string name="matching_test_instructions">Please match each letter to its number.</string>
+    <string name="results">results</string>
+    <string name="submit">Submit</string>
+    <string name="blue">blue</string>
+    <string name="green">green</string>
+    <string name="gray">gray</string>
 </resources>

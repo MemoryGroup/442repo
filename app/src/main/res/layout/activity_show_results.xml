@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_show_results"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightBlue"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -14,14 +16,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/gridLayout3"
-        android:columnCount="5"
+        android:columnCount="6"
         android:rowCount="26"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
 
         <TextView
-            android:text="A:"
+            android:text="A :"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -29,23 +31,26 @@
             android:id="@+id/textView1.0" />
 
         <TextView
-            android:text="0 "
+            android:text="@string/_0"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="2"
             android:id="@+id/textView1.1" />
 
-        <TextView
-            android:text="correct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
+        <ImageView
+            android:layout_width="17sp"
+            android:layout_height="19sp"
             android:layout_column="4"
-            android:id="@+id/textView1.2" />
+            android:layout_row="0"
+            android:contentDescription="@string/results"
+            app:srcCompat="@mipmap/checkmark"
+            android:id="@+id/imageView1" />
 
         <TextView
-            android:text="B: "
+            android:text="B :"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -53,23 +58,26 @@
             android:id="@+id/textView2.0" />
 
         <TextView
-            android:text="1 "
+            android:text="@string/_1"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_column="2"
             android:id="@+id/textView2.1" />
 
-        <TextView
-            android:text="correct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
+        <ImageView
+            android:layout_width="17sp"
+            android:layout_height="19sp"
             android:layout_column="4"
-            android:id="@+id/textView2.2" />
+            android:layout_row="1"
+            android:contentDescription="@string/results"
+            app:srcCompat="@mipmap/checkmark"
+            android:id="@+id/imageView2" />
 
         <TextView
-            android:text="C: "
+            android:text="C :"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="2"
@@ -77,23 +85,26 @@
             android:id="@+id/textView3.0" />
 
         <TextView
-            android:text="2 "
+            android:text="@string/_2"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="2"
             android:layout_column="2"
             android:id="@+id/textView3.1" />
 
-        <TextView
-            android:text="correct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
+        <ImageView
+            android:layout_width="17sp"
+            android:layout_height="19sp"
             android:layout_column="4"
-            android:id="@+id/textView3.2" />
+            android:layout_row="2"
+            android:contentDescription="@string/results"
+            app:srcCompat="@mipmap/checkmark"
+            android:id="@+id/imageView3" />
 
         <TextView
-            android:text="D: 3"
+            android:text="D :"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="3"
@@ -101,7 +112,26 @@
             android:id="@+id/textView4" />
 
         <TextView
-            android:text="E: 4"
+            android:text="@string/_3"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:id="@+id/textView4.1" />
+
+        <ImageView
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_column="4"
+            android:layout_row="3"
+            android:contentDescription="@string/results"
+            app:srcCompat="@mipmap/checkmark"
+            android:id="@+id/imageView4" />
+
+        <TextView
+            android:text="E :"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="4"
@@ -109,7 +139,26 @@
             android:id="@+id/textView5" />
 
         <TextView
-            android:text="F: 5"
+            android:text="@string/_4"
+            android:textSize="17sp"
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:id="@+id/textView5.1" />
+
+        <ImageView
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_column="4"
+            android:layout_row="4"
+            android:contentDescription="@string/results"
+            app:srcCompat="@mipmap/checkmark"
+            android:id="@+id/imageView5" />
+
+        <TextView
+            android:text="F :"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="5"
@@ -117,7 +166,36 @@
             android:id="@+id/textView6" />
 
         <TextView
-            android:text=""
+            android:text="@string/_5"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_column="2"
+            android:id="@+id/textView6.1" />
+
+        <Space
+            android:layout_width="3sp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"/>
+
+        <Space
+            android:layout_width="10sp"
+            android:layout_height="wrap_content"
+            android:layout_column="3"/>
+
+        <ImageView
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_column="4"
+            android:layout_row="5"
+            android:contentDescription="@string/results"
+            app:srcCompat="@android:drawable/ic_delete"
+            android:id="@+id/imageView6" />
+
+        <TextView
+            android:text="G :"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="6"
@@ -125,7 +203,26 @@
             android:id="@+id/textView7" />
 
         <TextView
-            android:text=""
+            android:text="@string/_6"
+            android:textSize="17sp"
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_row="6"
+            android:layout_column="2"
+            android:id="@+id/textView7.1" />
+
+        <ImageView
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_column="4"
+            android:layout_row="6"
+            android:contentDescription="@string/results"
+            app:srcCompat="@mipmap/checkmark"
+            android:id="@+id/imageView7" />
+
+        <TextView
+            android:text="H :"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="7"
@@ -133,12 +230,103 @@
             android:id="@+id/textView8" />
 
         <TextView
-            android:text=""
+            android:text="@string/_7"
+            android:textSize="17sp"
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_row="7"
+            android:layout_column="2"
+            android:id="@+id/textView8.1" />
+
+        <ImageView
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_column="4"
+            android:layout_row="7"
+            android:contentDescription="@string/results"
+            app:srcCompat="@mipmap/checkmark"
+            android:id="@+id/imageView8" />
+
+        <TextView
+            android:text="I :"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="8"
             android:layout_column="0"
             android:id="@+id/textView9" />
+
+        <TextView
+            android:text="@string/_8"
+            android:textSize="17sp"
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_row="8"
+            android:layout_column="2"
+            android:id="@+id/textView9.1" />
+
+        <ImageView
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_column="4"
+            android:layout_row="8"
+            android:contentDescription="@string/results"
+            app:srcCompat="@mipmap/checkmark"
+            android:id="@+id/imageView9" />
+
+        <TextView
+            android:text="J :"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="9"
+            android:layout_column="0"
+            android:id="@+id/textView10" />
+
+        <TextView
+            android:text="@string/_9"
+            android:textSize="17sp"
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_row="9"
+            android:layout_column="2"
+            android:id="@+id/textView10.1" />
+
+        <ImageView
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_column="4"
+            android:layout_row="9"
+            android:contentDescription="@string/results"
+            app:srcCompat="@mipmap/checkmark"
+            android:id="@+id/imageView10" />
+
+        <TextView
+            android:text="K :"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="10"
+            android:layout_column="0"
+            android:id="@+id/textView11" />
+
+        <TextView
+            android:text="@string/_0"
+            android:textSize="17sp"
+            android:layout_width="17sp"
+            android:layout_height="19sp"
+            android:layout_row="10"
+            android:layout_column="2"
+            android:id="@+id/textView11.1" />
+
+        <ImageView
+            android:layout_width="17sp"
+            android:contentDescription="@string/results"
+            android:layout_height="19sp"
+            android:layout_column="4"
+            android:layout_row="10"
+            app:srcCompat="@mipmap/checkmark"
+            android:id="@+id/imageView11" />
 
     </GridLayout>
 

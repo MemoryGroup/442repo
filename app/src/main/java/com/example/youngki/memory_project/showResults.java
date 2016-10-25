@@ -6,8 +6,6 @@ import android.widget.TextView;
 
 public class showResults extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

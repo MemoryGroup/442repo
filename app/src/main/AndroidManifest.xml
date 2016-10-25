@@ -24,7 +24,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".showResults" />
         <activity android:name=".showTestOptions" />
-        <activity android:name=".matchingTest"></activity>
+        <activity android:name=".matchingTest" />
+        <activity android:name=".matchingTest2"></activity>
     </application>
 
 </manifest>
