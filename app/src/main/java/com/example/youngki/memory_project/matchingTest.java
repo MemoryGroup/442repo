@@ -18,14 +18,16 @@ public class matchingTest extends AppCompatActivity {
     Boolean B0 = Boolean.FALSE;
     Boolean C0 = Boolean.FALSE;
     Boolean D0 = Boolean.FALSE;
+    Boolean submitted = Boolean.FALSE;
     Boolean done = Boolean.FALSE;
     Button a1, b1, c1, d1;
+    String sA, sB, sC, sD;
+    int iA, iB, iC, iD;
+    int answerA, answerB, answerC, answerD;
     int length = keys.length;
     Boolean submit = Boolean.FALSE;
     HashMap<String, Integer> result = new HashMap<>();
     int currentColor = Color.rgb(202,201,201);
-    Integer[] numbers = {R.id.buttonA1, R.id.buttonB1, R.id.buttonC1, R.id.buttonD1};
-    Integer[] letters = {R.id.buttonA0, R.id.buttonB0, R.id.buttonC0, R.id.buttonD0};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,10 @@ public class matchingTest extends AppCompatActivity {
         button.setTypeface(type);
         button = (Button)findViewById(R.id.buttonNext);
         button.setTypeface(type);
+        iA = 0;
+        iB = 1;
+        iC = 2;
+        iD = 3;
     }
 
     public void onSubmitClicked(View v){
@@ -44,29 +50,32 @@ public class matchingTest extends AppCompatActivity {
             submit.setAlpha(0);
             Button next = (Button) findViewById(R.id.buttonNext);
             next.setAlpha(1);
-            showResult();
+            submitted = Boolean.TRUE;
+         //   showResult();
         }
     }
 
     public void onNextClicked(View view){
-        Button next = (Button) findViewById(R.id.buttonNext);
-        next.setAlpha(0);
-        if (done){
-            Intent resultsWindowOpener = new Intent(this,showResults.class);
-            startActivity(resultsWindowOpener);
-        }
-        else{
-            Button submit = (Button) findViewById(R.id.buttonSubmit);
-            A0 = Boolean.FALSE;
-            B0 = Boolean.FALSE;
-            C0 = Boolean.FALSE;
-            D0 = Boolean.FALSE;
-            submit.setAlpha(1);
-            clearA0Lines();
-            clearB0Lines();
-            clearC0Lines();
-            clearD0Lines();
-            clearColors();
+        if (submitted) {
+            Button next = (Button) findViewById(R.id.buttonNext);
+            next.setAlpha(0);
+            submitted = Boolean.FALSE;
+            if (done) {
+                Intent resultsWindowOpener = new Intent(this, showResults.class);
+                startActivity(resultsWindowOpener);
+            } else {
+                Button submit = (Button) findViewById(R.id.buttonSubmit);
+                A0 = Boolean.FALSE;
+                B0 = Boolean.FALSE;
+                C0 = Boolean.FALSE;
+                D0 = Boolean.FALSE;
+                submit.setAlpha(1);
+                clearA0Lines();
+                clearB0Lines();
+                clearC0Lines();
+                clearD0Lines();
+                clearColors();
+            }
         }
     }
 
@@ -172,7 +181,6 @@ public class matchingTest extends AppCompatActivity {
 
     public void showResult(){
 
-
     }
 
     public void setNumbers(){
@@ -214,179 +222,191 @@ public class matchingTest extends AppCompatActivity {
         }
     }
 
-    public void onA0Click(View view){
-        clearA0Lines();
-        A0 = Boolean.TRUE;
-        Button b = (Button) findViewById(R.id.buttonA0);
-        clearButtonRefs(b);
-        if (currentColor == Color.rgb(142,197,235)){
-            View v = findViewById(R.id.lineA1A0);
-            if(a1 != null){
-                a1.setBackgroundColor(Color.rgb(202,201,201));
+    public void onA0Click(View view) {
+        if (submitted == Boolean.FALSE) {
+            clearA0Lines();
+            A0 = Boolean.TRUE;
+            Button b = (Button) findViewById(R.id.buttonA0);
+            clearButtonRefs(b);
+            if (currentColor == Color.rgb(142, 197, 235)) {
+                View v = findViewById(R.id.lineA1A0);
+                if (a1 != null) {
+                    a1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                clearA1Lines();
+                v.setAlpha(1);
+                a1 = b;
+                answerA = iA;
+            } else if (currentColor == Color.rgb(111, 197, 128)) {
+                View v = findViewById(R.id.lineB1A0);
+                if (b1 != null) {
+                    b1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                clearB1Lines();
+                v.setAlpha(1);
+                b1 = b;
+                answerA = iB;
+            } else if (currentColor == Color.rgb(220, 94, 90)) {
+                View v = findViewById(R.id.lineC1A0);
+                clearC1Lines();
+                v.setAlpha(1);
+                if (c1 != null) {
+                    c1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                c1 = b;
+                answerA = iC;
+            } else if (currentColor == Color.rgb(175, 134, 204)) {
+                View v = findViewById(R.id.lineD1A0);
+                clearD1Lines();
+                v.setAlpha(1);
+                if (d1 != null) {
+                    d1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                d1 = b;
+                answerA = iD;
             }
-            clearA1Lines();
-            v.setAlpha(1);
-            a1 = b;
+            b.setBackgroundColor(currentColor);
         }
-        else if (currentColor == Color.rgb(111,197,128)){
-            View v = findViewById(R.id.lineB1A0);
-            if(b1 != null){
-                b1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            clearB1Lines();
-            v.setAlpha(1);
-            b1 = b;
-        }
-        else if (currentColor == Color.rgb(220,94,90)){
-            View v = findViewById(R.id.lineC1A0);
-            clearC1Lines();
-            v.setAlpha(1);
-            if(c1 != null){
-                c1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            c1 = b;
-        }
-        else if (currentColor == Color.rgb(175,134,204)){
-            View v = findViewById(R.id.lineD1A0);
-            clearD1Lines();
-            v.setAlpha(1);
-            if(d1 != null){
-                d1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            d1 = b;
-        }
-        b.setBackgroundColor(currentColor);
     }
 
-    public void onB0Click(View view){
-        clearB0Lines();
-        B0 = Boolean.TRUE;
-        Button b = (Button) findViewById(R.id.buttonB0);
-        clearButtonRefs(b);
-        if (currentColor == Color.rgb(142,197,235)){
-            View v = findViewById(R.id.lineA1B0);
-            clearA1Lines();
-            v.setAlpha(1);
-            if(a1 != null){
-                a1.setBackgroundColor(Color.rgb(202,201,201));
+    public void onB0Click(View view) {
+        if (submitted == Boolean.FALSE) {
+            clearB0Lines();
+            B0 = Boolean.TRUE;
+            Button b = (Button) findViewById(R.id.buttonB0);
+            clearButtonRefs(b);
+            if (currentColor == Color.rgb(142, 197, 235)) {
+                View v = findViewById(R.id.lineA1B0);
+                clearA1Lines();
+                v.setAlpha(1);
+                if (a1 != null) {
+                    a1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                a1 = b;
+                answerB = iA;
+            } else if (currentColor == Color.rgb(111, 197, 128)) {
+                View v = findViewById(R.id.lineB1B0);
+                clearB1Lines();
+                v.setAlpha(1);
+                if (b1 != null) {
+                    b1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                b1 = b;
+                answerB = iB;
+            } else if (currentColor == Color.rgb(220, 94, 90)) {
+                View v = findViewById(R.id.lineC1B0);
+                clearC1Lines();
+                v.setAlpha(1);
+                if (c1 != null) {
+                    c1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                c1 = b;
+                answerB = iC;
+            } else if (currentColor == Color.rgb(175, 134, 204)) {
+                View v = findViewById(R.id.lineD1B0);
+                clearD1Lines();
+                v.setAlpha(1);
+                if (d1 != null) {
+                    d1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                d1 = b;
+                answerB = iD;
             }
-            a1 = b;
+            b.setBackgroundColor(currentColor);
         }
-        else if (currentColor == Color.rgb(111,197,128)){
-            View v = findViewById(R.id.lineB1B0);
-            clearB1Lines();
-            v.setAlpha(1);
-            if(b1 != null){
-                b1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            b1 = b;
-        }
-        else if (currentColor == Color.rgb(220,94,90)){
-            View v = findViewById(R.id.lineC1B0);
-            clearC1Lines();
-            v.setAlpha(1);
-            if(c1 != null){
-                c1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            c1 = b;
-        }
-        else if (currentColor == Color.rgb(175,134,204)){
-            View v = findViewById(R.id.lineD1B0);
-            clearD1Lines();
-            v.setAlpha(1);
-            if(d1 != null){
-                d1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            d1 = b;
-        }
-        b.setBackgroundColor(currentColor);
     }
 
-    public void onC0Click(View view){
-        clearC0Lines();
-        C0 = Boolean.TRUE;
-        Button b = (Button) findViewById(R.id.buttonC0);
-        clearButtonRefs(b);
-        if (currentColor == Color.rgb(142,197,235)){
-            View v = findViewById(R.id.lineA1C0);
-            clearA1Lines();
-            v.setAlpha(1);
-            if(a1 != null){
-                a1.setBackgroundColor(Color.rgb(202,201,201));
+    public void onC0Click(View view) {
+        if (submitted == Boolean.FALSE) {
+            clearC0Lines();
+            C0 = Boolean.TRUE;
+            Button b = (Button) findViewById(R.id.buttonC0);
+            clearButtonRefs(b);
+            if (currentColor == Color.rgb(142, 197, 235)) {
+                View v = findViewById(R.id.lineA1C0);
+                clearA1Lines();
+                v.setAlpha(1);
+                if (a1 != null) {
+                    a1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                a1 = b;
+                answerC = iA;
+            } else if (currentColor == Color.rgb(111, 197, 128)) {
+                View v = findViewById(R.id.lineB1C0);
+                clearB1Lines();
+                v.setAlpha(1);
+                if (b1 != null) {
+                    b1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                b1 = b;
+                answerC = iB;
+            } else if (currentColor == Color.rgb(220, 94, 90)) {
+                View v = findViewById(R.id.lineC1C0);
+                clearC1Lines();
+                v.setAlpha(1);
+                if (c1 != null) {
+                    c1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                c1 = b;
+                answerC = iC;
+            } else if (currentColor == Color.rgb(175, 134, 204)) {
+                View v = findViewById(R.id.lineD1C0);
+                clearD1Lines();
+                v.setAlpha(1);
+                if (d1 != null) {
+                    d1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                d1 = b;
+                answerC = iD;
             }
-            a1 = b;
+            b.setBackgroundColor(currentColor);
         }
-        else if (currentColor == Color.rgb(111,197,128)){
-            View v = findViewById(R.id.lineB1C0);
-            clearB1Lines();
-            v.setAlpha(1);
-            if(b1 != null){
-                b1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            b1 = b;
-        }
-        else if (currentColor == Color.rgb(220,94,90)){
-            View v = findViewById(R.id.lineC1C0);
-            clearC1Lines();
-            v.setAlpha(1);
-            if(c1 != null){
-                c1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            c1 = b;
-        }
-        else if (currentColor == Color.rgb(175,134,204)){
-            View v = findViewById(R.id.lineD1C0);
-            clearD1Lines();
-            v.setAlpha(1);
-            if(d1 != null){
-                d1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            d1 = b;
-        }
-        b.setBackgroundColor(currentColor);
     }
 
-    public void onD0Click(View view){
-        clearD0Lines();
-        D0 = Boolean.TRUE;
-        Button b = (Button) findViewById(R.id.buttonD0);
-        clearButtonRefs(b);
-        if (currentColor == Color.rgb(142,197,235)){
-            View v = findViewById(R.id.lineA1D0);
-            clearA1Lines();
-            v.setAlpha(1);
-            if(a1 != null){
-                a1.setBackgroundColor(Color.rgb(202,201,201));
+    public void onD0Click(View view) {
+        if (submitted == Boolean.FALSE) {
+            clearD0Lines();
+            D0 = Boolean.TRUE;
+            Button b = (Button) findViewById(R.id.buttonD0);
+            clearButtonRefs(b);
+            if (currentColor == Color.rgb(142, 197, 235)) {
+                View v = findViewById(R.id.lineA1D0);
+                clearA1Lines();
+                v.setAlpha(1);
+                if (a1 != null) {
+                    a1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                a1 = b;
+                answerD = iA;
+            } else if (currentColor == Color.rgb(111, 197, 128)) {
+                View v = findViewById(R.id.lineB1D0);
+                clearB1Lines();
+                v.setAlpha(1);
+                if (b1 != null) {
+                    b1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                b1 = b;
+                answerD = iB;
+            } else if (currentColor == Color.rgb(220, 94, 90)) {
+                View v = findViewById(R.id.lineC1D0);
+                clearC1Lines();
+                v.setAlpha(1);
+                if (c1 != null) {
+                    c1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                c1 = b;
+                answerD = iC;
+            } else if (currentColor == Color.rgb(175, 134, 204)) {
+                View v = findViewById(R.id.lineD1D0);
+                clearD1Lines();
+                v.setAlpha(1);
+                if (d1 != null) {
+                    d1.setBackgroundColor(Color.rgb(202, 201, 201));
+                }
+                d1 = b;
+                answerD = iD;
             }
-            a1 = b;
+            b.setBackgroundColor(currentColor);
         }
-        else if (currentColor == Color.rgb(111,197,128)){
-            View v = findViewById(R.id.lineB1D0);
-            clearB1Lines();
-            v.setAlpha(1);
-            if(b1 != null){
-                b1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            b1 = b;
-        }
-        else if (currentColor == Color.rgb(220,94,90)){
-            View v = findViewById(R.id.lineC1D0);
-            clearC1Lines();
-            v.setAlpha(1);
-            if(c1 != null){
-                c1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            c1 = b;
-        }
-        else if (currentColor == Color.rgb(175,134,204)){
-            View v = findViewById(R.id.lineD1D0);
-            clearD1Lines();
-            v.setAlpha(1);
-            if(d1 != null){
-                d1.setBackgroundColor(Color.rgb(202,201,201));
-            }
-            d1 = b;
-        }
-        b.setBackgroundColor(currentColor);
     }
 }
