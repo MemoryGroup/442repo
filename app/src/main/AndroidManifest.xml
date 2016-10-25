@@ -22,7 +22,13 @@
             android:name=".createMap"
             android:label="@string/title_activity_create_map"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".showResults" />
+        <activity
+            android:name=".showResults"
+            android:parentActivityName=".showTestOptions">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.youngki.memory_project.showTestOptions" />
+        </activity>
         <activity android:name=".showTestOptions" />
         <activity android:name=".matchingTest" />
         <activity android:name=".matchingTest2"></activity>

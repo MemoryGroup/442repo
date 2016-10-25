@@ -36,4 +36,10 @@ public class showTestOptions extends AppCompatActivity {
         Intent test2Opener = new Intent(this, matchingTest2.class);
         startActivity(test2Opener);
     }
+
+    @Override
+    public void onBackPressed(){
+        Intent mainWindowOpener = new Intent(this,MainActivity.class);
+        startActivity(mainWindowOpener);
+    }
 }
