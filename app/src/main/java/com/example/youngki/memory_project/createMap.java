@@ -14,7 +14,8 @@ package com.example.youngki.memory_project;
         import java.util.Random;
         import android.graphics.Typeface;
 
-
+        import android.content.SharedPreferences;
+        import com.google.gson.Gson;
 
 public class createMap extends AppCompatActivity {
 
@@ -23,6 +24,9 @@ public class createMap extends AppCompatActivity {
     Difficulty curDifficulty = Difficulty.UNSET;
     int mapLetters =  2;
     int mapDigits = 2;
+
+    Boolean hasGenerated = false;
+
 
     // given amount of letters and digits, make a new Memory Map stored in memMap
     public void makeNewMap(int letters, int digits) {
@@ -89,6 +93,13 @@ public class createMap extends AppCompatActivity {
 
     public void onGenerateClicked(View v) {
         //now get the maps with default: 7 letters and 3 numbers for easy
+
+        if(curDifficulty == Difficulty.UNSET){
+            return;
+        }
+
+        hasGenerated = true;
+
         makeNewMap(mapLetters, mapDigits);
 
         String letterMap = "abcdefghijklmnopqrstuvwxyz";
@@ -115,6 +126,22 @@ public class createMap extends AppCompatActivity {
         //setContentView(mapView);
     }
 
+    public void onNewTrainClicked(View v){
+
+        if(hasGenerated == false){
+            return;
+        }
+
+        Gson gson = new Gson();
+        MapWrapper wrapper = new MapWrapper();
+        wrapper.setMap(memMap);
+        String serializedMap = gson.toJson(wrapper);
+        SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
+        editor.putString("memMap", serializedMap);
+
+        editor.commit();
+    }
+
 
     public void onNewEasyClicked(View v) {
         TextView titleView = (TextView) findViewById(R.id.longText);
@@ -133,7 +160,7 @@ public class createMap extends AppCompatActivity {
         mapLetters = 7;
         mapDigits = 3;
 
-
+        curDifficulty = Difficulty.EASY;
 
     }
 
@@ -153,6 +180,8 @@ public class createMap extends AppCompatActivity {
 
         mapLetters = 14;
         mapDigits = 6;
+
+        curDifficulty = Difficulty.MEDIUM;
     }
 
     public void onNewHardClicked(View v) {
@@ -171,6 +200,8 @@ public class createMap extends AppCompatActivity {
 
         mapLetters = 21;
         mapDigits = 10;
+
+        curDifficulty = Difficulty.HARD;
     }
 
 }
