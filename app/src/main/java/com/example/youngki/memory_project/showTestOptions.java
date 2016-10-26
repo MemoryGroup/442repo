@@ -1,7 +1,6 @@
 package com.example.youngki.memory_project;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +15,7 @@ public class showTestOptions extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_test_options);
         Typeface type = Typeface.createFromAsset(getAssets(),"fonts/orange juice 2.0.ttf");
@@ -26,16 +26,7 @@ public class showTestOptions extends AppCompatActivity {
         button = (Button)findViewById(R.id.buttonMatching2);
         button.setTypeface(type);
 
-        // here is the stored hashmap
-        //if gson error add to gradlefile like here:
-        //http://stackoverflow.com/questions/18555135/the-best-way-to-integrate-third-party-library-in-android-studio
 
-        Gson gson = new Gson();
-        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
-        String wrapperStr = prefs.getString("memMap", null);
-        if (wrapperStr == null){
-            //TODO: here a map was not created
-        }
 
     }
 
