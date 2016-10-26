@@ -12,8 +12,8 @@ import java.util.HashMap;
 
 public class matchingTest extends AppCompatActivity {
 
-    String[] keys = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"};
-    Integer[] values = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+    String[] keys = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"};
+    Integer[] values = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1};
     Boolean A0 = Boolean.FALSE;
     Boolean B0 = Boolean.FALSE;
     Boolean C0 = Boolean.FALSE;
@@ -23,6 +23,8 @@ public class matchingTest extends AppCompatActivity {
     Button a1, b1, c1, d1;
     String sA, sB, sC, sD;
     int iA, iB, iC, iD;
+    int iCount = 0;
+    int visible = 4; //can be 1-4
     int answerA, answerB, answerC, answerD;
     int length = keys.length;
     Boolean submit = Boolean.FALSE;
@@ -38,10 +40,7 @@ public class matchingTest extends AppCompatActivity {
         button.setTypeface(type);
         button = (Button)findViewById(R.id.buttonNext);
         button.setTypeface(type);
-        iA = 0;
-        iB = 1;
-        iC = 2;
-        iD = 3;
+        setNumbersLetters();
     }
 
     public void onSubmitClicked(View v){
@@ -51,7 +50,25 @@ public class matchingTest extends AppCompatActivity {
             Button next = (Button) findViewById(R.id.buttonNext);
             next.setAlpha(1);
             submitted = Boolean.TRUE;
-         //   showResult();
+            getResult();
+        }
+    }
+
+    public void getResult(){
+        int i = visible;
+        switch (i){
+            case 4:
+                result.put(sD, answerD);
+                i = 3;
+            case 3:
+                result.put(sC, answerC);
+                i = 2;
+            case 2:
+                result.put(sB, answerB);
+                i = 1;
+            case 1:
+                result.put(sA, answerA);
+                break;
         }
     }
 
@@ -75,7 +92,220 @@ public class matchingTest extends AppCompatActivity {
                 clearC0Lines();
                 clearD0Lines();
                 clearColors();
+                setNumbersLetters();
             }
+        }
+    }
+
+    public void setNumbersLetters(){
+        if (iCount+4<=length){
+            iA = values[iCount+2];
+            setButton(R.id.buttonA1, iA);
+            iB = values[iCount];
+            setButton(R.id.buttonB1, iB);
+            iC = values[iCount+3];
+            setButton(R.id.buttonC1, iC);
+            iD = values[iCount+1];
+            setButton(R.id.buttonD1, iD);
+            sA = keys[iCount+3];
+            setLetterButton(R.id.buttonA0, sA);
+            sB = keys[iCount+1];
+            setLetterButton(R.id.buttonB0, sB);
+            sC = keys[iCount];
+            setLetterButton(R.id.buttonC0, sC);
+            sD = keys[iCount+2];
+            setLetterButton(R.id.buttonD0, sD);
+            iCount = iCount + 4;
+            if (iCount == length){
+                done = Boolean.TRUE;
+            }
+        }
+        else if ((iCount+3)<=length){
+            iA = values[iCount+2];
+            setButton(R.id.buttonA1, iA);
+            iB = values[iCount];
+            setButton(R.id.buttonB1, iB);
+            iC = values[iCount+1];
+            setButton(R.id.buttonC1, iC);
+            sA = keys[iCount];
+            setLetterButton(R.id.buttonA0, sA);
+            sB = keys[iCount+1];
+            setLetterButton(R.id.buttonB0, sB);
+            sC = keys[iCount+2];
+            setLetterButton(R.id.buttonC0, sC);
+            Button b = (Button) findViewById(R.id.buttonD1);
+            b.setAlpha(0);
+            b = (Button) findViewById(R.id.buttonD0);
+            b.setAlpha(0);
+            visible = 3;
+            D0 = Boolean.TRUE;
+            done = Boolean.TRUE;
+        }
+        else if ((iCount+2)<=length){
+            iA = values[iCount+1];
+            setButton(R.id.buttonA1, iA);
+            iB = values[iCount];
+            setButton(R.id.buttonB1, iB);
+            sA = keys[iCount];
+            setLetterButton(R.id.buttonA0, sA);
+            sB = keys[iCount+1];
+            setLetterButton(R.id.buttonB0, sB);
+            Button b = (Button) findViewById(R.id.buttonC1);
+            b.setAlpha(0);
+            b = (Button) findViewById(R.id.buttonC0);
+            b.setAlpha(0);
+            b = (Button) findViewById(R.id.buttonD1);
+            b.setAlpha(0);
+            b = (Button) findViewById(R.id.buttonD0);
+            b.setAlpha(0);
+            visible = 2;
+            D0 = Boolean.TRUE;
+            C0 = Boolean.TRUE;
+            done = Boolean.TRUE;
+        }
+        else if ((iCount+1)<=length){
+            iA = values[iCount];
+            setButton(R.id.buttonA1, iA);
+            sA = keys[iCount];
+            setLetterButton(R.id.buttonA0, sA);
+            Button b = (Button) findViewById(R.id.buttonB1);
+            b.setAlpha(0);
+            b = (Button) findViewById(R.id.buttonC1);
+            b.setAlpha(0);
+            b = (Button) findViewById(R.id.buttonD1);
+            b.setAlpha(0);
+            b = (Button) findViewById(R.id.buttonB0);
+            b.setAlpha(0);
+            b = (Button) findViewById(R.id.buttonC0);
+            b.setAlpha(0);
+            b = (Button) findViewById(R.id.buttonD0);
+            b.setAlpha(0);
+            visible = 1;
+            D0 = Boolean.TRUE;
+            C0 = Boolean.TRUE;
+            B0 = Boolean.TRUE;
+            done = Boolean.TRUE;
+        }
+    }
+
+    public void setButton(int id, int i){
+        Button b = (Button) findViewById(id);
+
+        switch (i){
+            case 0:
+                b.setText(R.string._0);
+                break;
+            case 1:
+                b.setText(R.string._1);
+                break;
+            case 2:
+                b.setText(R.string._2);
+                break;
+            case 3:
+                b.setText(R.string._3);
+                break;
+            case 4:
+                b.setText(R.string._4);
+                break;
+            case 5:
+                b.setText(R.string._5);
+                break;
+            case 6:
+                b.setText(R.string._6);
+                break;
+            case 7:
+                b.setText(R.string._7);
+                break;
+            case 8:
+                b.setText(R.string._8);
+                break;
+            case 9:
+                b.setText(R.string._9);
+                break;
+        }
+    }
+
+    public void setLetterButton(int id, String s){
+        Button b = (Button) findViewById(id);
+        switch (s) {
+            case "A":
+                b.setText(R.string._A);
+                break;
+            case "B":
+                b.setText(R.string._B);
+                break;
+            case "C":
+                b.setText(R.string._C);
+                break;
+            case "D":
+                b.setText(R.string._D);
+                break;
+            case "E":
+                b.setText(R.string._E);
+                break;
+            case "F":
+                b.setText(R.string._F);
+                break;
+            case "G":
+                b.setText(R.string._G);
+                break;
+            case "H":
+                b.setText(R.string._H);
+                break;
+            case "I":
+                b.setText(R.string._I);
+                break;
+            case "J":
+                b.setText(R.string._J);
+                break;
+            case "K":
+                b.setText(R.string._K);
+                break;
+            case "L":
+                b.setText(R.string._L);
+                break;
+            case "M":
+                b.setText(R.string._M);
+                break;
+            case "N":
+                b.setText(R.string._N);
+                break;
+            case "O":
+                b.setText(R.string._O);
+                break;
+            case "P":
+                b.setText(R.string._P);
+                break;
+            case "Q":
+                b.setText(R.string._Q);
+                break;
+            case "R":
+                b.setText(R.string._R);
+                break;
+            case "S":
+                b.setText(R.string._S);
+                break;
+            case "T":
+                b.setText(R.string._T);
+                break;
+            case "U":
+                b.setText(R.string._U);
+                break;
+            case "V":
+                b.setText(R.string._V);
+                break;
+            case "W":
+                b.setText(R.string._W);
+                break;
+            case "X":
+                b.setText(R.string._X);
+                break;
+            case "Y":
+                b.setText(R.string._Y);
+                break;
+            case "Z":
+                b.setText(R.string._Z);
+                break;
         }
     }
 
@@ -179,18 +409,6 @@ public class matchingTest extends AppCompatActivity {
         b.setBackgroundColor(currentColor);
     }
 
-    public void showResult(){
-
-    }
-
-    public void setNumbers(){
-        
-    }
-
-    public void setLetters(){
-
-    }
-
     public void clearButtonRefs(Button b){
         if (a1 == b){
             a1 = null;
@@ -211,14 +429,21 @@ public class matchingTest extends AppCompatActivity {
         if (id == R.id.buttonA1){
             currentColor = Color.rgb(142,197,235);
         }
-        else if (id == R.id.buttonB1){
-            currentColor = Color.rgb(111,197,128);
+        else if (id == R.id.buttonB1) {
+            if (visible > 1){
+                currentColor = Color.rgb(111, 197, 128);
+            }
         }
         else if (id == R.id.buttonC1){
-            currentColor = Color.rgb(220,94,90);
+            if (visible > 2){
+                currentColor = Color.rgb(220,94,90);
+
+            }
         }
         else if (id == R.id.buttonD1){
-            currentColor = Color.rgb(175,134,204);
+            if (visible == 4) {
+                currentColor = Color.rgb(175, 134, 204);
+            }
         }
     }
 
@@ -270,7 +495,7 @@ public class matchingTest extends AppCompatActivity {
     }
 
     public void onB0Click(View view) {
-        if (submitted == Boolean.FALSE) {
+        if ((submitted == Boolean.FALSE) & (visible > 1)) {
             clearB0Lines();
             B0 = Boolean.TRUE;
             Button b = (Button) findViewById(R.id.buttonB0);
@@ -317,7 +542,7 @@ public class matchingTest extends AppCompatActivity {
     }
 
     public void onC0Click(View view) {
-        if (submitted == Boolean.FALSE) {
+        if ((submitted == Boolean.FALSE) & (visible > 2)) {
             clearC0Lines();
             C0 = Boolean.TRUE;
             Button b = (Button) findViewById(R.id.buttonC0);
@@ -364,7 +589,7 @@ public class matchingTest extends AppCompatActivity {
     }
 
     public void onD0Click(View view) {
-        if (submitted == Boolean.FALSE) {
+        if ((submitted == Boolean.FALSE) & (visible == 4)) {
             clearD0Lines();
             D0 = Boolean.TRUE;
             Button b = (Button) findViewById(R.id.buttonD0);
