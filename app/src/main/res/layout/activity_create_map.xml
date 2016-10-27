@@ -35,9 +35,7 @@
         android:columnCount="4"
         android:rowCount="4"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentStart="false">
+        android:layout_centerHorizontal="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -120,7 +118,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Train"
-            android:id="@+id/generateMap"
+            android:id="@+id/train"
             android:layout_alignBaseline="@+id/customMap"
             android:layout_alignBottom="@+id/customMap"
             android:layout_row="2"
