@@ -92,7 +92,8 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:layout_column="2"
-            android:text="Train"/>
+            android:text="Train"
+			android:onClick="onNewTrainClicked" />
 
     </TableRow>
     <TableRow>

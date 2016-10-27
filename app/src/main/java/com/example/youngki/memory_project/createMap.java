@@ -1,19 +1,29 @@
 package com.example.youngki.memory_project;
 
-import android.graphics.Typeface;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
+        import android.content.Intent;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.TextView;
+
+        import java.util.ArrayList;
+        import java.util.Arrays;
+        import java.util.Collections;
+        import java.util.HashMap;
+        import java.util.Random;
+        import android.graphics.Typeface;
+
+import android.content.SharedPreferences;
+import com.google.gson.Gson;
 
 public class createMap extends AppCompatActivity {
 
   private static final String ALPHABETS = "abcdefghijklmnopqrstuvwxyz";
   HashMap<String, Integer> memMap = new HashMap<>();
+  int mapLetters =  2;
+  int mapDigits = 2;
+  Boolean hasGenerated = false;
 
   Level level = Level.EASY;
 
@@ -38,10 +48,13 @@ public class createMap extends AppCompatActivity {
     }
   }
 
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_create_map);
-  }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_create_map);
+
+    }
 
   public void onAddLettersClicked(View v) {
     level.incrementLetter();
@@ -65,6 +78,7 @@ public class createMap extends AppCompatActivity {
     makeNewMap(level.letters(), level.digits());
     String letterMap = ALPHABETS;
     String displayLetters = "";
+	String displayNumbers = "";
     int mapLetters = level.letters();
     for (int i = 0; i < mapLetters; i++) {
       String curLetter = letterMap.substring(i, i + 1);
@@ -80,6 +94,7 @@ public class createMap extends AppCompatActivity {
     mapView.setHeight(500);
     mapView.setWidth(500);
     //setContentView(mapView);
+	hasGenerated = true;
   }
 
   public void onNewEasyClicked(View v) {
@@ -120,4 +135,19 @@ public class createMap extends AppCompatActivity {
     hard.setTypeface(null, Typeface.BOLD);
     level = Level.HARD;
   }
+  
+public void onNewTrainClicked(View v){
+	
+    if(hasGenerated == false){
+        return;
+    }
+
+    Gson gson = new Gson();
+    MapWrapper wrapper = new MapWrapper();
+    wrapper.setMap(memMap);
+    String serializedMap = gson.toJson(wrapper);
+    SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
+    editor.putString("memMap", serializedMap);
+	editor.commit();
+    }
 }
