@@ -15,9 +15,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
-
-
-
 public class MainActivity extends AppCompatActivity {
 
     //added to check before test phase
@@ -29,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button;
     private Button buttonTmp;
     private AlphaAnimation buttonClicked = new AlphaAnimation(1F, 0.8F);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,14 +51,15 @@ public class MainActivity extends AppCompatActivity {
 
         button = (Button)findViewById(R.id.button4);
         button.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
-
-
-
-            // a map was detected
-            hasMap = true;
+        findViewById(R.id.numberButton).setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,NumberButtons.class));
+            }
+        });
+        // a map was detected
+        hasMap = true;
 
     }
-
     public void onStartButtonClicked(View v){
         v.startAnimation(buttonClicked);
         Intent startWindowOpener = new Intent(this,createMap.class);

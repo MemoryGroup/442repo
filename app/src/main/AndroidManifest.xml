@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".showRandomNumber" />
         <activity android:name=".showHelp" />
+        <activity android:name=".NumberButtons" />
         <activity android:name=".showTest" />
         <activity
             android:name=".createMap"
