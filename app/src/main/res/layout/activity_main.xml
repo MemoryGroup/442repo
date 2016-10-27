@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,37 +22,35 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_shape"
         android:onClick="onStartButtonClicked" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="progress"
+        android:text="test"
         android:id="@+id/button2"
         android:layout_alignTop="@+id/button"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="30dp"
         android:nestedScrollingEnabled="false"
-        android:onClick="onHelpButtonClicked" />
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_shape"
+        android:onClick="onTestButtonClicked" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score"
-        android:id="@+id/button3"
-        android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="setting"
+        android:text="help"
         android:id="@+id/button4"
         android:layout_alignTop="@+id/button3"
         android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_shape"
+        android:layout_alignEnd="@+id/button2"
+        android:onClick="onHelpButtonClicked" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -59,7 +58,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/textView2"
         android:text="Memory Project"
-        android:textSize="70dp"
+        android:textSize="@dimen/MemoryProjectFontSize"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button"
@@ -68,4 +67,25 @@
         android:layout_alignEnd="@+id/button2"
         android:gravity="center_horizontal"
         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score"
+        android:id="@+id/button3"
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_shape"
+        android:layout_below="@+id/button2"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_marginTop="13dp" />
+
+    <Button
+        android:text="handwrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:id="@+id/buttonTmp" />
 </RelativeLayout>

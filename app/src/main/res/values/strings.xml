@@ -1,5 +1,71 @@
 <resources>
-    <string name="app_name">Memory_Project</string>
+    <string name="app_name">Memory Project</string>
     <string name="title_activity_display_random_number">displayRandomNumber</string>
     <string name="title_activity_display_random_number2">displayRandomNumber2</string>
+    <string name="title_activity_create_map">createMap</string>
+    <string name="mapInfoDefault"> How many pairs can you memorize?\n Select a difficulty or make
+        your own map.\n
+    </string>
+    <string name="mapInfoEasy"> How many pairs can you memorize?\n Easy has up to 4 different
+        digits.\n Increase letters to maximize your possible score!\n Press Generate to Make a new
+        Map
+    </string>
+    <string name="mapInfoMedium"> How many pairs can you memorize?\n Medium has up to 7 different
+        digits.\n Increase letters to maximize your possible score!\n Press Generate to Make a new
+        Map
+    </string>
+    <string name="mapInfoHard"> How many pairs can you memorize?\n Hard has up to 10 different
+        digits.\n Increase letters to maximize your possible score!\n Press Generate to Make a new
+        Map
+    </string>
+    <string name="test">test</string>
+    <string name="_0">0</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_1">1</string>
+    <string name="_A">A</string>
+    <string name="_B">B</string>
+    <string name="_C">C</string>
+    <string name="_D">D</string>
+    <string name="_E">E</string>
+    <string name="_F">F</string>
+    <string name="_G">G</string>
+    <string name="_H">H</string>
+    <string name="_I">I</string>
+    <string name="_J">J</string>
+    <string name="_K">K</string>
+    <string name="_L">L</string>
+    <string name="_M">M</string>
+    <string name="_N">N</string>
+    <string name="_O">O</string>
+    <string name="_P">P</string>
+    <string name="_Q">Q</string>
+    <string name="_R">R</string>
+    <string name="_S">S</string>
+    <string name="_T">T</string>
+    <string name="_U">U</string>
+    <string name="_V">V</string>
+    <string name="_W">W</string>
+    <string name="_X">X</string>
+    <string name="_Y">Y</string>
+    <string name="_Z">Z</string>
+    <string name="correct">Correct:</string>
+    <string name="incorrect">Incorrect:</string>
+    <string name="_correct">correct</string>
+    <string name="_incorrect">incorrect</string>
+    <string name="letter_to_number">Letter to Number</string>
+    <string name="matching">Matching</string>
+    <string name="matching_test_instructions">Please match each letter to its number.</string>
+    <string name="results">results</string>
+    <string name="submit">Submit</string>
+    <string name="blue">blue</string>
+    <string name="green">green</string>
+    <string name="gray">gray</string>
+    <string name="next">next</string>
 </resources>
