@@ -33,42 +33,49 @@
             android:text="@string/_2"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="onTwoClicked"
             android:id="@+id/button25" />
 
         <Button
             android:text="@string/_3"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="onThreeClicked"
             android:id="@+id/button26" />
 
         <Button
             android:text="@string/_4"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="onFourClicked"
             android:id="@+id/button20" />
 
         <Button
             android:text="@string/_5"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="onFiveClicked"
             android:id="@+id/button24" />
 
         <Button
             android:text="@string/_6"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="onSixClicked"
             android:id="@+id/button19" />
 
         <Button
             android:text="@string/_7"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="onSevenClicked"
             android:id="@+id/button18" />
 
         <Button
             android:text="@string/_8"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:onClick="onEightClicked"
             android:id="@+id/button21" />
 
         <Button

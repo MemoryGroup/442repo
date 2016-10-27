@@ -15,6 +15,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
+
+import com.google.gson.Gson;
+import static android.R.attr.onClick;
+
+
 public class MainActivity extends AppCompatActivity {
 
     //added to check before test phase
@@ -56,8 +61,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,NumberButtons.class));
             }
         });
-        // a map was detected
-        hasMap = true;
+
+        onClickButtonListener();
+
+		// here is the stored hashmap
+        //if gson error add to gradlefile like here:
+        //http://stackoverflow.com/questions/18555135/the-best-way-to-integrate-third-party-library-in-android-studio
+
+        Gson gson = new Gson();
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        String wrapperStr = prefs.getString("memMap", null);
+        if (wrapperStr != null){
+            //TODO: Also check that the user trained today via userHasTrainedToday boolean
+
+            // a map was detected
+            hasMap = true;
+        }
 
     }
     public void onStartButtonClicked(View v){
@@ -90,6 +109,22 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        if(hasMap == false){
+            AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+            builder1.setMessage("Train today before testing.");
+            builder1.setCancelable(false);
+            builder1.setNeutralButton(
+                    "Ok",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+
+                        }
+                    });
+            AlertDialog alert11 = builder1.create();
+            alert11.show();
+            return;
+        }
         v.startAnimation(buttonClicked);
         Intent testWindowOpener = new Intent(this,showTestOptions.class);
         startActivity(testWindowOpener);

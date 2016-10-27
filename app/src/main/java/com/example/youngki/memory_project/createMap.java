@@ -76,6 +76,7 @@ public class createMap extends AppCompatActivity {
     makeNewMap(level.letters(), level.digits());
     String letterMap = ALPHABETS;
     String displayLetters = "";
+	String displayNumbers = "";
     int mapLetters = level.letters();
     for (int i = 0; i < mapLetters; i++) {
       String curLetter = letterMap.substring(i, i + 1);
@@ -91,6 +92,7 @@ public class createMap extends AppCompatActivity {
     mapView.setHeight(500);
     mapView.setWidth(500);
     //setContentView(mapView);
+	hasGenerated = true;
   }
 
     public void onNewTrainClicked(View v){
