@@ -65,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(testWindowOpener);
     }
 
+    public void onScoreButtonClicked(View v){
+        v.startAnimation(buttonClicked);
+        Intent scoreWindowOpener = new Intent(this, progress.class);
+        startActivity(scoreWindowOpener);
+    }
 
 
     public void onClickButtonListener(){
