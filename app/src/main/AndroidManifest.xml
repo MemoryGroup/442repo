@@ -31,7 +31,14 @@
         </activity>
         <activity android:name=".showTestOptions" />
         <activity android:name=".matchingTest" />
-        <activity android:name=".matchingTest2"></activity>
+        <activity android:name=".matchingTest2" />
+        <activity android:name=".handWritingTrain">
+            <intent-filter>
+                <action android:name="com.example.youngki.memory_project.handWritingTrain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
