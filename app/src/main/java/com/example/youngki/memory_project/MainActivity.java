@@ -58,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
             // a map was detected
             hasMap = true;
-        }
+
     }
+
     public void onStartButtonClicked(View v){
         v.startAnimation(buttonClicked);
         Intent startWindowOpener = new Intent(this,createMap.class);
