@@ -53,7 +53,6 @@ public class handWritingTrain extends Activity {
         gestureOverlayView.addOnGesturePerformedListener(gesturePerformedListener);
 
 
-
     }
 
     private void generateHashMap(HashMap<String, Integer> memMap) {
