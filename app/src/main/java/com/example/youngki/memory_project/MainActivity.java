@@ -45,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
         button = (Button)findViewById(R.id.button4);
         button.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
 
+        findViewById(R.id.numberButton).setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,NumberButtons.class));
+            }
+        });
+
         onClickButtonListener();
 
     }
