@@ -1,0 +1,16 @@
+date: October 13, 2016
+meeting_type: ta
+attendance: [kreidler, youngkih, amypritc, majuran]
+excused_absences: [
+  ]
+task_progress: [ 
+  {ubit: kreidler, progress: created youtube video for sprint 2 progress},
+  {ubit: youngkih, progress: created youtube video for sprint 2 progress},
+  {ubit: amypritc, progress: merged code to develop for sprint 2},
+  {ubit: majuran, progress: worked on merging changes for train section }
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  discussed options for sprint three
+  assigned roles and basic goals for sprint 3
