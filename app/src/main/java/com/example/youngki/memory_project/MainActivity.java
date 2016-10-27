@@ -16,8 +16,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-import com.google.gson.Gson;
-import static android.R.attr.onClick;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -56,29 +54,13 @@ public class MainActivity extends AppCompatActivity {
         button = (Button)findViewById(R.id.button4);
         button.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
 
-        findViewById(R.id.numberButton).setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,NumberButtons.class));
-            }
-        });
 
-        onClickButtonListener();
-
-		// here is the stored hashmap
-        //if gson error add to gradlefile like here:
-        //http://stackoverflow.com/questions/18555135/the-best-way-to-integrate-third-party-library-in-android-studio
-		
-        Gson gson = new Gson();
-        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
-        String wrapperStr = prefs.getString("memMap", null);
-        if (wrapperStr != null){
-            //TODO: Also check that the user trained today via userHasTrainedToday boolean
 
             // a map was detected
             hasMap = true;
-        }
 
     }
+
     public void onStartButtonClicked(View v){
         v.startAnimation(buttonClicked);
         Intent startWindowOpener = new Intent(this,createMap.class);
@@ -91,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onTestButtonClicked(View v){
+
         if(hasMap == false){
             AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
             builder1.setMessage("Train today before testing.");
@@ -107,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
             alert11.show();
             return;
         }
+
         v.startAnimation(buttonClicked);
         Intent testWindowOpener = new Intent(this,showTestOptions.class);
         startActivity(testWindowOpener);

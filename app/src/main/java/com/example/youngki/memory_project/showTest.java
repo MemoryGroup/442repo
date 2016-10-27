@@ -12,7 +12,9 @@ import com.google.gson.Gson;
 import java.util.HashMap;
 
 
+
 public class showTest extends AppCompatActivity {
+
 
     private MapWrapper memMapWrap;
 
@@ -23,7 +25,7 @@ public class showTest extends AppCompatActivity {
     HashMap<String, Integer> correct = new HashMap<>();
     //String [] correct;
 
-	 @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         //have to access sharedpreferences in onCreate
         Gson gson = new Gson();
@@ -44,7 +46,8 @@ public class showTest extends AppCompatActivity {
         pb.setMax(keys.length);
 
     }
-	
+
+
     public void showResultsNow(){
         Intent resultsWindowOpener = new Intent(this,showResults.class);
         //resultsWindowOpener.putExtra("correct", correct);
@@ -184,6 +187,5 @@ public class showTest extends AppCompatActivity {
         }
         getNextLetter();
     }
-
 
 }
