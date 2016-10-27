@@ -14,16 +14,18 @@ package com.example.youngki.memory_project;
         import java.util.Random;
         import android.graphics.Typeface;
 
-        import android.content.SharedPreferences;
-        import com.google.gson.Gson;
+import android.content.SharedPreferences;
+import com.google.gson.Gson;
 
 public class createMap extends AppCompatActivity {
 
   private static final String ALPHABETS = "abcdefghijklmnopqrstuvwxyz";
   HashMap<String, Integer> memMap = new HashMap<>();
+  int mapLetters =  2;
+  int mapDigits = 2;
+  Boolean hasGenerated = false;
 
-    Boolean hasGenerated = false;
-    Level level = Level.EASY;
+  Level level = Level.EASY;
 
   // given amount of letters
   // and digits, make a new Memory Map stored in memMap
@@ -95,22 +97,6 @@ public class createMap extends AppCompatActivity {
 	hasGenerated = true;
   }
 
-    public void onNewTrainClicked(View v){
-
-        if(hasGenerated == false){
-            return;
-        }
-
-        Gson gson = new Gson();
-        MapWrapper wrapper = new MapWrapper();
-        wrapper.setMap(memMap);
-        String serializedMap = gson.toJson(wrapper);
-        SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
-        editor.putString("memMap", serializedMap);
-
-        editor.commit();
-    }
-
   public void onNewEasyClicked(View v) {
     TextView titleView = (TextView) findViewById(R.id.longText);
     titleView.setText(getResources().getString(R.string.mapInfoEasy));
@@ -149,4 +135,19 @@ public class createMap extends AppCompatActivity {
     hard.setTypeface(null, Typeface.BOLD);
     level = Level.HARD;
   }
+  
+public void onNewTrainClicked(View v){
+	
+    if(hasGenerated == false){
+        return;
+    }
+
+    Gson gson = new Gson();
+    MapWrapper wrapper = new MapWrapper();
+    wrapper.setMap(memMap);
+    String serializedMap = gson.toJson(wrapper);
+    SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
+    editor.putString("memMap", serializedMap);
+	editor.commit();
+    }
 }
