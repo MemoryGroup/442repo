@@ -15,8 +15,8 @@ import java.util.HashMap;
 public class matchingTest extends AppCompatActivity {
 
     private MapWrapper memMapWrap;
-    String[] keys = {"A", "B", "C", "D", "E"};
-    Integer[] values = {0, 1, 2, 3, 4};
+    String[] keys;
+    Integer[] values;
     Boolean A0 = Boolean.FALSE;
     Boolean B0 = Boolean.FALSE;
     Boolean C0 = Boolean.FALSE;
@@ -29,7 +29,7 @@ public class matchingTest extends AppCompatActivity {
     int iCount = 0;
     int visible = 4; //can be 1-4
     int answerA, answerB, answerC, answerD;
-    int length = keys.length;
+    int length;
     Boolean submit = Boolean.FALSE;
     HashMap<String, Integer> result = new HashMap<>();
     int currentColor = Color.rgb(202,201,201);
@@ -42,7 +42,7 @@ public class matchingTest extends AppCompatActivity {
         MapWrapper wrapper = gson.fromJson(wrapperStr, MapWrapper.class);
         this.keys = wrapper.getKeys();
         this.values = wrapper.getValues(keys);
-
+        length = keys.length;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matching_test);
         Typeface type = Typeface.createFromAsset(getAssets(),"fonts/orange juice 2.0.ttf");
