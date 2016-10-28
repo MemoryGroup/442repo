@@ -1,6 +1,7 @@
 package com.example.youngki.memory_project;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,12 +9,14 @@ import android.view.View;
 import android.graphics.Color;
 import android.widget.Button;
 
+import com.google.gson.Gson;
 import java.util.HashMap;
 
 public class matchingTest extends AppCompatActivity {
 
-    String[] keys = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"};
-    Integer[] values = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1};
+    private MapWrapper memMapWrap;
+    String[] keys = {"A", "B", "C", "D", "E"};
+    Integer[] values = {0, 1, 2, 3, 4};
     Boolean A0 = Boolean.FALSE;
     Boolean B0 = Boolean.FALSE;
     Boolean C0 = Boolean.FALSE;
@@ -33,6 +36,13 @@ public class matchingTest extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Gson gson = new Gson();
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        String wrapperStr = prefs.getString("memMap", null);
+        MapWrapper wrapper = gson.fromJson(wrapperStr, MapWrapper.class);
+        this.keys = wrapper.getKeys();
+        this.values = wrapper.getValues(keys);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matching_test);
         Typeface type = Typeface.createFromAsset(getAssets(),"fonts/orange juice 2.0.ttf");

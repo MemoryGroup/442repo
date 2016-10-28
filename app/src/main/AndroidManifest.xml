@@ -31,6 +31,7 @@
                 android:value="com.example.youngki.memory_project.showTestOptions" />
         </activity>
         <activity android:name=".showTestOptions" />
+        <activity android:name=".progress" />
         <activity android:name=".matchingTest" />
         <activity android:name=".matchingTest2" />
         <activity android:name=".handWritingTrain">
