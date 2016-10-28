@@ -24,17 +24,7 @@
         android:layout_alignParentStart="true"
         android:textSize="@dimen/activity_horizontal_margin"
         android:background="@drawable/button_shape"
-        android:onClick="onStartButtonClicked" />
-  <Button
-      android:id="@+id/numberButton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_marginBottom="150dp"
-      android:layout_marginLeft="30dp"
-      android:background="@drawable/button_shape"
-      android:text="Number"
-      android:textSize="@dimen/activity_horizontal_margin"/>
+        android:onClick="onTrainButtonClicked" />
 
   <Button
       android:id="@+id/button2"
@@ -90,12 +80,4 @@
         android:layout_alignStart="@+id/button"
         android:layout_marginTop="13dp" />
 
-    <Button
-    android:text="handwrite"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_above="@+id/button2"
-    android:layout_alignRight="@+id/button2"
-    android:layout_alignEnd="@+id/button2"
-    android:id="@+id/buttonTmp" />
 </RelativeLayout>

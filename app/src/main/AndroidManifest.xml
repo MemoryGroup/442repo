@@ -40,6 +40,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".showTrainOptions"></activity>
     </application>
 
 </manifest>

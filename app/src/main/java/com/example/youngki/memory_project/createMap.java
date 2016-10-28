@@ -19,7 +19,7 @@ import com.google.gson.Gson;
 
 public class createMap extends AppCompatActivity {
 
-  private static final String ALPHABETS = "abcdefghijklmnopqrstuvwxyz";
+  private static final String ALPHABETS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   HashMap<String, Integer> memMap = new HashMap<>();
   int mapLetters =  2;
   int mapDigits = 2;

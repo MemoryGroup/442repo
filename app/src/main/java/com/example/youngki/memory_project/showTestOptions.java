@@ -15,7 +15,6 @@ public class showTestOptions extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_test_options);
         Typeface type = Typeface.createFromAsset(getAssets(),"fonts/orange juice 2.0.ttf");
@@ -25,11 +24,7 @@ public class showTestOptions extends AppCompatActivity {
         button.setTypeface(type);
         button = (Button)findViewById(R.id.buttonMatching2);
         button.setTypeface(type);
-
-
-
     }
-
 
     public void onLetterToNumberButtonClicked(View v){
         Intent testOpener = new Intent(this,showTest.class);

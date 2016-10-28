@@ -56,13 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
         button = (Button)findViewById(R.id.button4);
         button.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
-        findViewById(R.id.numberButton).setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,NumberButtons.class));
-            }
-        });
-
-        onClickButtonListener();
 
 		// here is the stored hashmap
         //if gson error add to gradlefile like here:
@@ -79,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    public void onStartButtonClicked(View v){
+    public void onTrainButtonClicked(View v){
         v.startAnimation(buttonClicked);
-        Intent startWindowOpener = new Intent(this,createMap.class);
+        Intent startWindowOpener = new Intent(this,showTrainOptions.class);
         startActivity(startWindowOpener);
     }
     public void onHelpButtonClicked(View v){
@@ -91,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onTestButtonClicked(View v){
-
         if(hasMap == false){
             AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
             builder1.setMessage("Train today before testing.");
@@ -128,23 +120,6 @@ public class MainActivity extends AppCompatActivity {
         v.startAnimation(buttonClicked);
         Intent testWindowOpener = new Intent(this,showTestOptions.class);
         startActivity(testWindowOpener);
-    }
-
-
-
-    public void onClickButtonListener(){
-
-        buttonTmp = (Button)findViewById(R.id.buttonTmp);
-        buttonTmp.setOnClickListener(
-                new View.OnClickListener(){
-
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent("com.example.youngki.memory_project.handWritingTrain");
-                        startActivity(intent);
-                    }
-                }
-        );
     }
 
 

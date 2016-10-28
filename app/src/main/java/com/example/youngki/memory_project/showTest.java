@@ -45,29 +45,6 @@ public class showTest extends AppCompatActivity {
 
     }
 
-
-	 @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        //have to access sharedpreferences in onCreate
-        Gson gson = new Gson();
-        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
-        String wrapperStr = prefs.getString("memMap", null);
-        MapWrapper wrapper = gson.fromJson(wrapperStr, MapWrapper.class);
-        this.keys = wrapper.getKeys();
-        this.values = wrapper.getValues(keys);
-        this.showThis = this.keys[0];
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
-        //    setMemoryMap(memoryMap);
-        TextView tv = (TextView) findViewById(R.id.textView3);
-        //    this.showThis = this.keys[3];
-        tv.setText(this.showThis);
-        ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
-        pb.setMax(keys.length);
-
-    }
-
     public void showResultsNow(){
         Intent resultsWindowOpener = new Intent(this,showResults.class);
         //resultsWindowOpener.putExtra("correct", correct);
