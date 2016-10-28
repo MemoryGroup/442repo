@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightBlue"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -31,50 +32,50 @@
         <Button
             android:text="@string/_2"
             android:layout_width="70dp"
-            android:onClick="onTwoClicked"
             android:layout_height="wrap_content"
+            android:onClick="onTwoClicked"
             android:id="@+id/button25" />
 
         <Button
             android:text="@string/_3"
             android:layout_width="70dp"
-            android:onClick="onThreeClicked"
             android:layout_height="wrap_content"
+            android:onClick="onThreeClicked"
             android:id="@+id/button26" />
 
         <Button
             android:text="@string/_4"
             android:layout_width="70dp"
-            android:onClick="onFourClicked"
             android:layout_height="wrap_content"
+            android:onClick="onFourClicked"
             android:id="@+id/button20" />
 
         <Button
             android:text="@string/_5"
             android:layout_width="70dp"
-            android:onClick="onFiveClicked"
             android:layout_height="wrap_content"
+            android:onClick="onFiveClicked"
             android:id="@+id/button24" />
 
         <Button
             android:text="@string/_6"
             android:layout_width="70dp"
-            android:onClick="onSixClicked"
             android:layout_height="wrap_content"
+            android:onClick="onSixClicked"
             android:id="@+id/button19" />
 
         <Button
             android:text="@string/_7"
             android:layout_width="70dp"
-            android:onClick="onSevenClicked"
             android:layout_height="wrap_content"
+            android:onClick="onSevenClicked"
             android:id="@+id/button18" />
 
         <Button
             android:text="@string/_8"
             android:layout_width="70dp"
-            android:onClick="onEightClicked"
             android:layout_height="wrap_content"
+            android:onClick="onEightClicked"
             android:id="@+id/button21" />
 
         <Button

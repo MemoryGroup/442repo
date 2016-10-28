@@ -1,0 +1,16 @@
+date: October 27, 2016
+meeting_type: ta
+attendance: [kreidler, youngkih, amypritc, majuran]
+excused_absences: [
+  ]
+task_progress: [ 
+  {ubit: kreidler, progress: integrated persistent maps},
+  {ubit: youngkih, progress: progress on gesture code},
+  {ubit: amypritc, progress: integrated new tests}
+  {ubit: majuran, progress: worked on voice recognition}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  discussed progress and final goals for sprint 3
+  

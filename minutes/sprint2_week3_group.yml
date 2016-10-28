@@ -4,12 +4,12 @@ attendance: [kreidler, youngkih, amypritc, majuran]
 excused_absences: [ 
   ]
 task_progress: [ 
-  {ubit: majuran, progress: specific Train goals for sprint 2 including menu redesign and button functionality},
-  {ubit: kreidler, progress: progress on saving hashmap and using created map in testing section},
-  {ubit: youngkih, progress: customized font, merged develop and test branch},
-  {ubit: amypritc, progress: demoed further progress on test phase functionality, merged changes together in test branch}
+  {ubit: majuran, progress: redesign of train UI and further train feature completion},
+  {ubit: kreidler, progress: started data storage implementation of maps },
+  {ubit: youngkih, progress: contunued work on integration and UI animations},
+  {ubit: amypritc, redesign of test portion}
   ]
 issues: [ 
   ]
 Notes:  | 
-  merged code from a few different branches and resolved issues, fixed functionality of a few buttons
+  

@@ -1,23 +1,49 @@
 package com.example.youngki.memory_project;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import java.util.HashMap;
 
 
 public class showTest extends AppCompatActivity {
 
-    String[] keys = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"};
-    Integer[] values = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-    String showThis = this.keys[0];
+    private MapWrapper memMapWrap;
+
+    String[] keys;
+    Integer[] values;
+    String showThis;
     int count = 0;
     HashMap<String, Integer> correct = new HashMap<>();
     //String [] correct;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        //have to access sharedpreferences in onCreate
+        Gson gson = new Gson();
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        String wrapperStr = prefs.getString("memMap", null);
+        MapWrapper wrapper = gson.fromJson(wrapperStr, MapWrapper.class);
+        this.keys = wrapper.getKeys();
+        this.values = wrapper.getValues(keys);
+        this.showThis = this.keys[0];
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_test);
+        //    setMemoryMap(memoryMap);
+        TextView tv = (TextView) findViewById(R.id.textView3);
+        //    this.showThis = this.keys[3];
+        tv.setText(this.showThis);
+        ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
+        pb.setMax(keys.length);
+
+    }
 
     public void showResultsNow(){
         Intent resultsWindowOpener = new Intent(this,showResults.class);
@@ -110,6 +136,7 @@ public class showTest extends AppCompatActivity {
         }
         getNextLetter();
     }
+
     public void onSevenClicked(View view){
         TextView tv = (TextView) findViewById(R.id.textView10);
         if (values[count] == 7){
@@ -159,15 +186,4 @@ public class showTest extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
-    //    setMemoryMap(memoryMap);
-        TextView tv = (TextView) findViewById(R.id.textView3);
-    //    this.showThis = this.keys[3];
-        tv.setText(this.showThis);
-        ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
-        pb.setMax(keys.length);
-    }
 }

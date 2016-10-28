@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/memory_project_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoTitleBar">
@@ -17,12 +17,30 @@
         </activity>
         <activity android:name=".showRandomNumber" />
         <activity android:name=".showHelp" />
+        <activity android:name=".NumberButtons" />
         <activity android:name=".showTest" />
         <activity
             android:name=".createMap"
             android:label="@string/title_activity_create_map"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".showResults"></activity>
+        <activity
+            android:name=".showResults"
+            android:parentActivityName=".showTestOptions">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.youngki.memory_project.showTestOptions" />
+        </activity>
+        <activity android:name=".showTestOptions" />
+        <activity android:name=".matchingTest" />
+        <activity android:name=".matchingTest2" />
+        <activity android:name=".handWritingTrain">
+            <intent-filter>
+                <action android:name="com.example.youngki.memory_project.handWritingTrain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".showTrainOptions"></activity>
     </application>
 
 </manifest>

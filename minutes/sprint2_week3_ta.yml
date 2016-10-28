@@ -1,0 +1,15 @@
+date: October 6, 2016
+meeting_type: ta
+attendance: [kreidler, youngkih, amypritc]
+excused_absences: [majuran 
+  ]
+task_progress: [ 
+  {ubit: kreidler, progress: started data storage implementation of maps },
+  {ubit: youngkih, progress: contunued work on integration and UI animations},
+  {ubit: amypritc, progress: displayed test portion routine with accuracy}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  discussed options for sprint two
+  broke down goals into a defined train session, additional test option, and score integration
