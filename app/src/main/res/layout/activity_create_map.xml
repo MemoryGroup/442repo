@@ -38,17 +38,17 @@
       android:layout_alignParentLeft="true"
       android:layout_alignParentStart="true">
     <TableRow>
+        <TextView
+            android:id="@+id/letterCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Letters:"/>
       <TextView
           android:id="@+id/numberCount"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Numbers:"/>
-      <TextView
-          android:id="@+id/letterCount"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
           android:layout_column="2"
-          android:text="Letters:"/>
+          android:text="Numbers:"/>
 
     </TableRow>
     <TableRow>

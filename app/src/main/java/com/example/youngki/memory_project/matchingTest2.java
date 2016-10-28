@@ -31,7 +31,8 @@ public class matchingTest2 extends AppCompatActivity {
         startActivity(resultsWindowOpener);
     }
 
-    public void onNumberClick(int id){
+    public void onNumberClick(View v){
+        int id = v.getId();
         if (id == R.id.button00){
             currentColor = Color.rgb(220,94,90);
         }
@@ -64,21 +65,9 @@ public class matchingTest2 extends AppCompatActivity {
         }
     }
 
-    public void onLetterClick(Button button){
-        button.setBackgroundColor(currentColor);
-    }
-
     public void onClick(View v){
-        Boolean t = Boolean.FALSE;
         int id = v.getId();
         Button b = (Button) findViewById(id);
-        if (i % 2 == 0){
-            onNumberClick(id);
-            i++;
-        }
-        else{
-            onLetterClick(b);
-            i++;
-        }
+        b.setBackgroundColor(currentColor);
     }
 }
