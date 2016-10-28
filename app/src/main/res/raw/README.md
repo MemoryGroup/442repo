@@ -28,6 +28,6 @@
   letters2
   ```
 
-Please notify us once you've added your content so we can integrate it into our project.
+As stated by the guidelines for content creation community points, content must be submitted via a pull request.
 
 **Thank You!**
