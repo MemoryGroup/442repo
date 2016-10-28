@@ -28,4 +28,6 @@
   letters2
   ```
 
+Please notify us once you've added your content so we can integrate it into our project.
+
 **Thank You!**
