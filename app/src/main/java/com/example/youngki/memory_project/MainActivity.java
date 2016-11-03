@@ -84,21 +84,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onTestButtonClicked(View v){
-        if(hasMap == false){
-            AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
-            builder1.setMessage("Train today before testing.");
-            builder1.setCancelable(false);
-            builder1.setNeutralButton(
-                    "Ok",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.cancel();
+        //check here that the user has created a map
+        Gson gson = new Gson();
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        String wrapperStr = prefs.getString("memMap", null);
+        if (wrapperStr != null){
+            //TODO: Also check that the user trained today via userHasTrainedToday boolean
 
-                        }
-                    });
-            AlertDialog alert11 = builder1.create();
-            alert11.show();
-            return;
+            // a map was detected
+            hasMap = true;
         }
 
         if(hasMap == false){
