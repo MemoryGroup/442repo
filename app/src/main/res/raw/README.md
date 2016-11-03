@@ -28,6 +28,12 @@
   letters2
   ```
 
+Please note, the following directory names have been taken:
+```
+numbers0
+letters0
+```
+
 As stated by the guidelines for content creation community points, content must be submitted via a pull request.
 
 **Thank You!**
