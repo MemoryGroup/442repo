@@ -29,6 +29,7 @@ public class handWritingTrain extends Activity {
     HashMap<String, Integer> memMap = new HashMap<>();
     Map<Integer, String> myNewHashMap = new HashMap<>();
 
+    int[] testingArray = new int[5];
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
