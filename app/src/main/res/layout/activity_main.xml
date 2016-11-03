@@ -24,49 +24,49 @@
         android:layout_alignParentStart="true"
         android:textSize="@dimen/activity_horizontal_margin"
         android:background="@drawable/button_shape"
-        android:onClick="onStartButtonClicked" />
+        android:onClick="onTrainButtonClicked" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test"
-        android:id="@+id/button2"
-        android:layout_alignTop="@+id/button"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="30dp"
-        android:nestedScrollingEnabled="false"
-        android:textSize="@dimen/activity_horizontal_margin"
-        android:background="@drawable/button_shape"
-        android:onClick="onTestButtonClicked" />
+  <Button
+      android:id="@+id/button2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignTop="@+id/button"
+      android:layout_marginRight="30dp"
+      android:background="@drawable/button_shape"
+      android:nestedScrollingEnabled="false"
+      android:onClick="onTestButtonClicked"
+      android:text="@string/test"
+      android:textSize="@dimen/activity_horizontal_margin"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="help"
-        android:id="@+id/button4"
-        android:layout_alignTop="@+id/button3"
-        android:layout_alignRight="@+id/button2"
-        android:textSize="@dimen/activity_horizontal_margin"
-        android:background="@drawable/button_shape"
-        android:layout_alignEnd="@+id/button2"
-        android:onClick="onHelpButtonClicked" />
+  <Button
+      android:id="@+id/button4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignEnd="@+id/button2"
+      android:layout_alignRight="@+id/button2"
+      android:layout_alignTop="@+id/button3"
+      android:background="@drawable/button_shape"
+      android:onClick="onHelpButtonClicked"
+      android:text="help"
+      android:textSize="@dimen/activity_horizontal_margin"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/textView2"
-        android:text="Memory Project"
-        android:textSize="@dimen/MemoryProjectFontSize"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_marginTop="110dp"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
-        android:gravity="center_horizontal"
-        />
+  <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignEnd="@+id/button2"
+      android:layout_alignLeft="@+id/button"
+      android:layout_alignParentTop="true"
+      android:layout_alignRight="@+id/button2"
+      android:layout_alignStart="@+id/button"
+      android:layout_marginTop="110dp"
+      android:gravity="center_horizontal"
+      android:text="Memory Project"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textSize="@dimen/MemoryProjectFontSize"
+      />
 
     <Button
         android:layout_width="wrap_content"
@@ -78,14 +78,7 @@
         android:layout_below="@+id/button2"
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button"
-        android:layout_marginTop="13dp" />
+        android:layout_marginTop="13dp"
+        android:onClick="onScoreButtonClicked" />
 
-    <Button
-        android:text="handwrite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
-        android:id="@+id/buttonTmp" />
 </RelativeLayout>

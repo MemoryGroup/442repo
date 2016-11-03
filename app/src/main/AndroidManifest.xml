@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".showRandomNumber" />
         <activity android:name=".showHelp" />
+        <activity android:name=".NumberButtons" />
         <activity android:name=".showTest" />
         <activity
             android:name=".createMap"
@@ -30,6 +31,7 @@
                 android:value="com.example.youngki.memory_project.showTestOptions" />
         </activity>
         <activity android:name=".showTestOptions" />
+        <activity android:name=".progress" />
         <activity android:name=".matchingTest" />
         <activity android:name=".matchingTest2" />
         <activity android:name=".handWritingTrain">
@@ -39,6 +41,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".showTrainOptions"></activity>
     </application>
 
 </manifest>
