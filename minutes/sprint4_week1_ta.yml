@@ -1,0 +1,15 @@
+date: November 3, 2016
+meeting_type: ta
+attendance: [kreidler, youngkih, amypritc, majuran]
+excused_absences: [ 
+  ]
+task_progress: [ 
+  {ubit: majuran, progress: assigned alternate display of map, redesign of UI},
+  {ubit: kreidler, progress: integrate testing and score and how score impacts training instances and accurate test feedback},
+  {ubit: youngkih, progress: integrate handwriting and audio and integrate with map},
+  {ubit: amypritc, assigned fixing layouts, app flow, potential new training component}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  discussed sprint 4 goals and assignment of goals for the application
