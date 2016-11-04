@@ -10,6 +10,7 @@
   eight.mp3
   nine.mp3
   ```
+-Please place these files in a folder labeled numbers.
   
 -You must have all 26 letters recorded as separate mp3 files and named as shown below:
   ```
@@ -19,21 +20,14 @@
   Y.mp3
   Z.mp3
   ```
+-Please place these in a folder labeled letters.
 
--Your submission of mp3 files must be contained within two separate directories, one for numbers and one for letters, so as to keep all of the submissions separate, which will allow us to incorporate them into our project much easier. Please make sure your directory name has not been taken before adding it, we don't want anyones submissions overwritten.
-  ```
-  numbers1
-  letters1
-  numbers2
-  letters2
-  ```
-
-Please note, the following directory names have been taken:
-```
-numbers0
-letters0
-```
-
-As stated by the guidelines for content creation community points, content must be submitted via a pull request.
+To submit your files, send them in a zip file to amypritc@buffalo.edu, then post in #memory3_content that you have sent them.
+Your files will be uploaded to GitHub as "[slack id]'s voice submission", and the list below will be updated as well.
 
 **Thank You!**
+
+```
+letters0/number0 - mdtobio
+letters1/numbers1 - alschmid
+```
