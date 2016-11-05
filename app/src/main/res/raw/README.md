@@ -43,3 +43,8 @@ Please submit a png file, and upload any submissions for the launcher icon to th
 https://github.com/MemoryGroup/442repo/blob/voice-submissions/app/src/main/res/drawable/flashcardimage.png
 
 Please submit a png file, and upload any submissions for the launcher icon to the memory3_content slack channel.
+
+*Two vector files: a check mark and an X to mark answers right and wrong*
+
+These check mark should be green and the X should be red.
+Please upload these as two separate svg or psd files, uploaded to the memory3_content slack page.
