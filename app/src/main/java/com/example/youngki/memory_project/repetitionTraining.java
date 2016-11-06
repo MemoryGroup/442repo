@@ -57,8 +57,6 @@ public class repetitionTraining extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repetition_training);
         nextPair();
-        setLetters();
-        setNumbers();
     }
 
     public void nextPair(){
@@ -66,42 +64,72 @@ public class repetitionTraining extends AppCompatActivity {
             this.letter = this.keys[count];
             this.number = this.values[count];
             count = count + 1;
-            if (count > keys.length){
+            setLetters();
+            setNumbers();
+            if (count == keys.length){
                 done = Boolean.TRUE;
             }
         }
         else{
-            Intent windowOpener = new Intent(this,showTrainOptions.class);
-            startActivity(windowOpener);
+            finished();
         }
     }
 
+    public void finished(){
+        Intent windowOpener = new Intent(this,showTrainOptions.class);
+        startActivity(windowOpener);
+    }
+
     public void setLetters(){
-        String a = letter + " " + letter + " " + letter + " " + letter + " " + letter;
-        String b = letter + " " + letter;
         TextView tv = (TextView) findViewById(R.id.textView0);
-        tv.setText(a);
+        tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView01);
+        tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView02);
+        tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView03);
+        tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView04);
+        tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView2);
-        tv.setText(b);
+        tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView21);
+        tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView4);
-        tv.setText(b);
+        tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView41);
+        tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView6);
         tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView8);
         tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView10);
         tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView12);
         tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView14);
         tv.setText(letter);
+        tv.setTypeface(Typeface.DEFAULT);
         Button button = (Button) findViewById(R.id.button0);
         button.setText(letter);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MediaPlayer.create(repetitionTraining.this, getAudio(letter)).start();
-                makeBold();
+                makeBold(R.id.button0);
             }
         });
 
@@ -109,111 +137,201 @@ public class repetitionTraining extends AppCompatActivity {
 
     public void setNumbers(){
         String n = Integer.toString(number);
-        String a = n + " " + n + " " + n + " " + n + " " + n;
-        String b = n + " " + n;
-        TextView tv = (TextView) findViewById(R.id.textView1);
-        tv.setText(a);
+        TextView tv = (TextView) findViewById(R.id.textView05);
+        tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView06);
+        tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView07);
+        tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView08);
+        tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView09);
+        tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView3);
-        tv.setText(b);
+        tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView31);
+        tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView5);
-        tv.setText(b);
+        tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
+        tv = (TextView) findViewById(R.id.textView51);
+        tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView7);
         tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView9);
         tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView11);
         tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView13);
         tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
         tv = (TextView) findViewById(R.id.textView15);
         tv.setText(n);
+        tv.setTypeface(Typeface.DEFAULT);
         Button button = (Button) findViewById(R.id.button1);
         button.setText(n);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MediaPlayer.create(repetitionTraining.this, getAudio(Integer.toString(number))).start();
-                makeBold();
+                makeBold(R.id.button1);
             }
         });
     }
 
-    public void makeBold(){
+    public void makeBold(int id){
         TextView tv;
-        switch (text) {
-            case 0:
-                tv = (TextView) findViewById(R.id.textView0);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 1:
-                tv = (TextView) findViewById(R.id.textView1);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 2:
-                tv = (TextView) findViewById(R.id.textView2);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 3:
-                tv = (TextView) findViewById(R.id.textView3);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 4:
-                tv = (TextView) findViewById(R.id.textView4);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 5:
-                tv = (TextView) findViewById(R.id.textView5);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 6:
-                tv = (TextView) findViewById(R.id.textView6);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 7:
-                tv = (TextView) findViewById(R.id.textView7);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 8:
-                tv = (TextView) findViewById(R.id.textView8);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 9:
-                tv = (TextView) findViewById(R.id.textView9);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 10:
-                tv = (TextView) findViewById(R.id.textView10);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 11:
-                tv = (TextView) findViewById(R.id.textView11);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 12:
-                tv = (TextView) findViewById(R.id.textView12);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 13:
-                tv = (TextView) findViewById(R.id.textView13);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 14:
-                tv = (TextView) findViewById(R.id.textView14);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
-            case 15:
-                tv = (TextView) findViewById(R.id.textView15);
-                tv.setTypeface(Typeface.DEFAULT_BOLD);
-                break;
+        Boolean correct = Boolean.FALSE;
+        if (id == R.id.button0){
+            if (text == 0 | text == 1 | text == 2| text == 3 | text == 4 | text == 10 | text == 11 |
+                    text == 14 | text == 15 | text == 18 | text == 20 | text == 22 | text == 24 |
+                    text == 26){
+                correct = Boolean.TRUE;
+            }
         }
-        if (text == 15){
-            text = 0;
-            nextPair();
-            setNumbers();
-            setLetters();
+        else if (id == R.id.button1){
+            if (text == 5 | text == 6 | text == 7 | text == 8 | text == 9 | text == 12 | text == 13 |
+                    text == 16 | text == 17 | text == 19 | text == 21 | text == 23 | text == 25 |
+                    text == 27){
+                correct = Boolean.TRUE;
+            }
         }
-        else{
-            text++;
+        if(correct) {
+            switch (text) {
+                case 0:
+                    tv = (TextView) findViewById(R.id.textView0);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 1:
+                    tv = (TextView) findViewById(R.id.textView01);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 2:
+                    tv = (TextView) findViewById(R.id.textView02);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 3:
+                    tv = (TextView) findViewById(R.id.textView03);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 4:
+                    tv = (TextView) findViewById(R.id.textView04);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 5:
+                    tv = (TextView) findViewById(R.id.textView05);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 6:
+                    tv = (TextView) findViewById(R.id.textView06);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 7:
+                    tv = (TextView) findViewById(R.id.textView07);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 8:
+                    tv = (TextView) findViewById(R.id.textView08);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 9:
+                    tv = (TextView) findViewById(R.id.textView09);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 10:
+                    tv = (TextView) findViewById(R.id.textView2);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 11:
+                    tv = (TextView) findViewById(R.id.textView21);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 12:
+                    tv = (TextView) findViewById(R.id.textView3);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 13:
+                    tv = (TextView) findViewById(R.id.textView31);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 14:
+                    tv = (TextView) findViewById(R.id.textView4);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 15:
+                    tv = (TextView) findViewById(R.id.textView41);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 16:
+                    tv = (TextView) findViewById(R.id.textView5);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 17:
+                    tv = (TextView) findViewById(R.id.textView51);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 18:
+                    tv = (TextView) findViewById(R.id.textView6);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 19:
+                    tv = (TextView) findViewById(R.id.textView7);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 20:
+                    tv = (TextView) findViewById(R.id.textView8);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 21:
+                    tv = (TextView) findViewById(R.id.textView9);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 22:
+                    tv = (TextView) findViewById(R.id.textView10);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 23:
+                    tv = (TextView) findViewById(R.id.textView11);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 24:
+                    tv = (TextView) findViewById(R.id.textView12);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 25:
+                    tv = (TextView) findViewById(R.id.textView13);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 26:
+                    tv = (TextView) findViewById(R.id.textView14);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+                case 27:
+                    tv = (TextView) findViewById(R.id.textView15);
+                    tv.setTypeface(Typeface.DEFAULT_BOLD);
+                    break;
+            }
+            if (text == 27) {
+                if (done == Boolean.TRUE) {
+                    finished();
+                } else {
+                    text = 0;
+                    nextPair();
+                }
+            } else {
+                text++;
+            }
         }
     }
 
