@@ -12,9 +12,10 @@
     tools:context="com.example.youngki.memory_project.showTrainOptions">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -54,5 +55,16 @@
             android:id="@+id/numberButton" />
 
     </LinearLayout>
+
+    <Button
+        android:text="@string/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button7"
+        android:onClick="onTestClicked"
+        android:background="@drawable/button_shape"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
