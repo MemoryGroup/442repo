@@ -22,6 +22,8 @@ public class showTrainOptions extends AppCompatActivity {
         button.setTypeface(type);
         button = (Button) findViewById(R.id.numberButton);
         button.setTypeface(type);
+        button = (Button)findViewById(R.id.button7);
+        button.setTypeface(type);
         findViewById(R.id.numberButton).setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 startActivity(new Intent(showTrainOptions.this,NumberButtons.class));
@@ -47,7 +49,12 @@ public class showTrainOptions extends AppCompatActivity {
     }
 
     public void onStartButtonClicked(View v){
-        Intent startWindowOpener = new Intent(this,createMap.class);
-        startActivity(startWindowOpener);
+        Intent windowOpener = new Intent(this,createMap.class);
+        startActivity(windowOpener);
+    }
+
+    public void onTestClicked(View v){
+        Intent windowOpener = new Intent(this,showTestOptions.class);
+        startActivity(windowOpener);
     }
 }

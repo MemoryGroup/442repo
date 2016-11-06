@@ -24,6 +24,8 @@ public class showTestOptions extends AppCompatActivity {
         button.setTypeface(type);
         button = (Button)findViewById(R.id.buttonMatching2);
         button.setTypeface(type);
+        button = (Button)findViewById(R.id.button7);
+        button.setTypeface(type);
     }
 
     public void onLetterToNumberButtonClicked(View v){
@@ -45,5 +47,10 @@ public class showTestOptions extends AppCompatActivity {
     public void onBackPressed(){
         Intent mainWindowOpener = new Intent(this,MainActivity.class);
         startActivity(mainWindowOpener);
+    }
+
+    public void onTrainClicked(View v){
+        Intent windowOpener = new Intent(this,showTrainOptions.class);
+        startActivity(windowOpener);
     }
 }
