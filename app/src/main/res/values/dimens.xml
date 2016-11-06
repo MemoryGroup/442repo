@@ -10,6 +10,6 @@
     <dimen name="test_button_size2">35sp</dimen>
     <dimen name="test_padding">12sp</dimen>
     <dimen name="repetition_text_size">30sp</dimen>
-    <dimen name="repetition_text_space">29sp</dimen>
+    <dimen name="repetition_text_space">25sp</dimen>
     <dimen name="repetition_button_width">35sp</dimen>
 </resources>
