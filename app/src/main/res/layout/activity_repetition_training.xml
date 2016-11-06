@@ -70,15 +70,6 @@
 
         </TableRow>
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textCapCharacters"
-            android:text=""
-            android:textSize="25sp"
-            android:ems="10"
-            android:id="@+id/editText1" />
-
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -117,15 +108,6 @@
                 android:id="@+id/textView5" />
 
         </TableRow>
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textCapCharacters"
-            android:text=""
-            android:ems="10"
-            android:textSize="25sp"
-            android:id="@+id/editText2" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -203,15 +185,6 @@
 
         </TableRow>
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textCapCharacters"
-            android:text=""
-            android:ems="10"
-            android:textSize="25sp"
-            android:id="@+id/editText3" />
-
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -259,7 +232,58 @@
         </TableRow>
     </TableLayout>
 
+    <TableLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
 
+        <TableRow>
+
+            <Button
+                android:text="A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button0" />
+
+            <Button
+                android:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button1" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="audio0"
+                android:id="@+id/audio0"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="audio1"
+                android:id="@+id/audio1"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="audio2"
+                android:id="@+id/audio2"
+                android:onClick="onAudioSelectClick"/>
+
+        </TableRow>
+
+
+    </TableLayout>
 
 
 </RelativeLayout>
