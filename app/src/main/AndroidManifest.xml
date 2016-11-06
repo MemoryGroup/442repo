@@ -41,7 +41,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".showTrainOptions"></activity>
+        <activity android:name=".showTrainOptions" />
+        <activity android:name=".repetitionTraining"></activity>
     </application>
 
 </manifest>
