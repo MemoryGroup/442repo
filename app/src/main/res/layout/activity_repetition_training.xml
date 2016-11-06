@@ -53,20 +53,74 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:text="A A A A A"
+                android:text="A"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView0"
-                android:layout_span="5"/>
+                android:id="@+id/textView0" />
 
             <TextView
-                android:text="1 1 1 1 1"
-                android:layout_span="5"
+                android:text="A"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView1" />
+                android:id="@+id/textView01" />
+
+            <TextView
+                android:text="A"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView02" />
+
+            <TextView
+                android:text="A"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView03" />
+
+            <TextView
+                android:text="A"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView04" />
+
+            <TextView
+                android:text="1"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView05" />
+
+            <TextView
+                android:text="1"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView06" />
+
+            <TextView
+                android:text="1"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView07" />
+
+            <TextView
+                android:text="1"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView08" />
+
+            <TextView
+                android:text="1"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView09" />
 
         </TableRow>
 
@@ -75,37 +129,61 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="A A"
+                android:text="A"
                 android:layout_column="1"
-                android:layout_span="2"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2" />
 
             <TextView
-                android:text="1 1"
-                android:layout_span="2"
+                android:text="A"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView21" />
+
+            <TextView
+                android:text="1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView3" />
 
             <TextView
-                android:text="A A"
-                android:layout_span="2"
+                android:text="1"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView31" />
+
+            <TextView
+                android:text="A"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView4" />
 
             <TextView
-                android:text="1 1"
-                android:layout_span="2"
+                android:text="A"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView41" />
+
+            <TextView
+                android:text="1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView5" />
+
+            <TextView
+                android:text="1"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView51" />
 
         </TableRow>
 
@@ -244,39 +322,53 @@
         <TableRow>
 
             <Button
-                android:text="A"
+                android:text="@string/_A"
+                android:background="@drawable/button_shape"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button0" />
 
+            <Space />
+
             <Button
-                android:text="1"
+                android:text="@string/_1"
+                android:background="@drawable/button_shape"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button1" />
 
         </TableRow>
 
+        <Space
+            android:layout_height="10dp"/>
+
         <TableRow>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="audio0"
+                android:background="@drawable/button_shape"
+                android:text="audio 0"
                 android:id="@+id/audio0"
                 android:onClick="onAudioSelectClick"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="audio1"
-                android:id="@+id/audio1"
-                android:onClick="onAudioSelectClick"/>
+            <Space />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="audio2"
+                android:text="audio 1"
+                android:id="@+id/audio1"
+                android:background="@drawable/button_shape"
+                android:onClick="onAudioSelectClick"/>
+
+            <Space />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="audio 2"
+                android:background="@drawable/button_shape"
                 android:id="@+id/audio2"
                 android:onClick="onAudioSelectClick"/>
 
