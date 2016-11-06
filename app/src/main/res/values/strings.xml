@@ -69,13 +69,4 @@
     <string name="gray">gray</string>
     <string name="next">next</string>
     <string name="train">Train</string>
-    <string name="how_to_play">HOW TO PLAY</string>
-    <string name="matching_2_0_test">Matching 2.0 Test</string>
-    <string name="matching_test">Matching Test</string>
-    <string name="letter_to_number_test">Letter to number test</string>
-    <string name="repetition_training">Repetition Training</string>
-    <string name="handwriting_training">Handwriting Training</string>
-    <string name="generating_a_new_map">Generating a new map</string>
-    <string name="generate_new_map">Generate New Map</string>
-    <string name="view_map">View Map</string>
 </resources>

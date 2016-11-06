@@ -8,8 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/memory_2_2"
-    tools:context="com.youngki.memory_project.showTrainOptions">
+    android:background="@color/lightBlue"
+    tools:context="com.example.youngki.memory_project.showTrainOptions">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -22,12 +22,24 @@
         android:layout_marginTop="35dp">
 
         <Button
-            android:text="Handwriting"
+            android:text="Generate Map"
             android:textSize="20sp"
-            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_shape1"
+            android:background="@drawable/button_shape"
+            android:onClick="onStartButtonClicked"
+            android:id="@+id/generateMap" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12sp" />
+
+        <Button
+            android:text="Handwriting"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
             android:id="@+id/buttonTmp" />
 
         <Space
@@ -35,13 +47,12 @@
             android:layout_height="12sp" />
 
         <Button
-            android:text="Repetition Training"
+            android:text="Number"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_shape1"
-            android:onClick="onRepetitionButtonClicked"
-            android:id="@+id/repetitionButton" />
+            android:background="@drawable/button_shape"
+            android:id="@+id/numberButton" />
 
     </LinearLayout>
 
@@ -51,7 +62,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/button7"
         android:onClick="onTestClicked"
-        android:background="@drawable/button_shape1"
+        android:background="@drawable/button_shape"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />

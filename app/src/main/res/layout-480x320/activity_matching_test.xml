@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_matching_test"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/lightBlue"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.youngki.memory_project.matchingTest">
+    tools:context="com.example.youngki.memory_project.matchingTest">
 
     <RelativeLayout
         android:layout_gravity="bottom"
@@ -23,42 +22,42 @@
 
     <View
             android:alpha="0"
-            android:transformPivotX="107dp"
-            android:transformPivotY="11dp"
+            android:transformPivotX="125dp"
+            android:transformPivotY="13dp"
             android:rotation="180.0"
             android:layout_gravity="center_horizontal"
-            android:layout_width="190dp"
+            android:layout_width="220dp"
             android:layout_height="3dp"
             android:id="@+id/lineA1A0"
             android:background="@color/blue" />
 
         <View
             android:alpha="0"
-            android:transformPivotX="105dp"
-            android:transformPivotY="25dp"
-            android:rotation="160.5"
+            android:transformPivotX="120dp"
+            android:transformPivotY="30dp"
+            android:rotation="156.5"
             android:layout_gravity="center_horizontal"
-            android:layout_width="240dp"
+            android:layout_width="245dp"
             android:layout_height="3dp"
             android:id="@+id/lineA1B0"
             android:background="@color/blue" />
 
         <View
             android:alpha="0"
-            android:transformPivotX="115dp"
-            android:transformPivotY="34dp"
-            android:rotation="144.5"
+            android:transformPivotX="118dp"
+            android:transformPivotY="42dp"
+            android:rotation="139.5"
             android:layout_gravity="center_horizontal"
-            android:layout_width="285dp"
+            android:layout_width="295dp"
             android:layout_height="3dp"
             android:id="@+id/lineA1C0"
             android:background="@color/blue" />
 
         <View
             android:alpha="0"
-            android:transformPivotX="69dp"
-            android:transformPivotY="249dp"
-            android:rotation="43"
+            android:transformPivotX="60dp"
+            android:transformPivotY="295dp"
+            android:rotation="40"
             android:layout_gravity="center_horizontal"
             android:layout_width="3dp"
             android:layout_height="450dp"
@@ -78,8 +77,8 @@
 
     <View
             android:alpha="0"
-            android:transformPivotX="110dp"
-            android:transformPivotY="40dp"
+            android:transformPivotX="120dp"
+            android:transformPivotY="46dp"
             android:rotation="180.0"
             android:layout_gravity="center_horizontal"
             android:layout_width="200dp"
@@ -90,8 +89,8 @@
         <View
             android:alpha="0"
             android:transformPivotX="100dp"
-            android:transformPivotY="54dp"
-            android:rotation="159.5"
+            android:transformPivotY="65dp"
+            android:rotation="157.5"
             android:layout_gravity="center"
             android:layout_width="220dp"
             android:layout_height="3dp"
@@ -100,11 +99,11 @@
 
         <View
             android:alpha="0"
-            android:transformPivotX="120dp"
-            android:transformPivotY="25dp"
-            android:rotation="200.5"
+            android:transformPivotX="127dp"
+            android:transformPivotY="28dp"
+            android:rotation="203.5"
             android:layout_gravity="center_horizontal"
-            android:layout_width="240dp"
+            android:layout_width="245dp"
             android:layout_height="3dp"
             android:id="@+id/lineB1A0"
             android:background="@color/green" />
@@ -112,8 +111,8 @@
         <View
             android:alpha="0"
             android:transformPivotX="87dp"
-            android:transformPivotY="68dp"
-            android:rotation="145"
+            android:transformPivotY="82dp"
+            android:rotation="140"
             android:layout_gravity="center_horizontal"
             android:layout_width="220dp"
             android:layout_height="3dp"
@@ -135,7 +134,7 @@
     <View
             android:alpha="0"
             android:transformPivotX="110dp"
-            android:transformPivotY="66dp"
+            android:transformPivotY="79dp"
             android:rotation="180.0"
             android:layout_gravity="center_horizontal"
             android:layout_width="200dp"
@@ -146,8 +145,8 @@
         <View
             android:alpha="0"
             android:transformPivotX="90dp"
-            android:transformPivotY="82dp"
-            android:rotation="160.5"
+            android:transformPivotY="98dp"
+            android:rotation="158.5"
             android:layout_gravity="center_horizontal"
             android:layout_width="200dp"
             android:layout_height="3dp"
@@ -156,9 +155,9 @@
 
         <View
             android:alpha="0"
-            android:transformPivotX="123dp"
-            android:transformPivotY="52dp"
-            android:rotation="199.5"
+            android:transformPivotX="140dp"
+            android:transformPivotY="63dp"
+            android:rotation="202.5"
             android:layout_gravity="center_horizontal"
             android:layout_width="240dp"
             android:layout_height="3dp"
@@ -167,11 +166,11 @@
 
         <View
             android:alpha="0"
-            android:transformPivotX="127dp"
-            android:transformPivotY="39dp"
-            android:rotation="215.5"
+            android:transformPivotX="148dp"
+            android:transformPivotY="47dp"
+            android:rotation="220.5"
             android:layout_gravity="center_horizontal"
-            android:layout_width="270dp"
+            android:layout_width="310dp"
             android:layout_height="3dp"
             android:id="@+id/lineC1A0"
             android:background="@color/red" />
@@ -189,8 +188,8 @@
 
         <View
             android:alpha="0"
-            android:transformPivotX="108dp"
-            android:transformPivotY="94dp"
+            android:transformPivotX="115dp"
+            android:transformPivotY="110dp"
             android:rotation="180.0"
             android:layout_gravity="center_horizontal"
             android:layout_width="200dp"
@@ -200,9 +199,9 @@
 
         <View
             android:alpha="0"
-            android:transformPivotX="125dp"
-            android:transformPivotY="79dp"
-            android:rotation="199.5"
+            android:transformPivotX="145dp"
+            android:transformPivotY="93dp"
+            android:rotation="202.5"
             android:layout_gravity="center_horizontal"
             android:layout_width="235dp"
             android:layout_height="3dp"
@@ -211,11 +210,11 @@
 
         <View
             android:alpha="0"
-            android:transformPivotX="142dp"
-            android:transformPivotY="68dp"
-            android:rotation="214.5"
+            android:transformPivotX="160dp"
+            android:transformPivotY="80dp"
+            android:rotation="219.5"
             android:layout_gravity="center_horizontal"
-            android:layout_width="275dp"
+            android:layout_width="300dp"
             android:layout_height="3dp"
             android:id="@+id/lineD1B0"
             android:background="@color/purple" />
@@ -223,8 +222,8 @@
         <View
             android:alpha="0"
             android:transformPivotX="63dp"
-            android:transformPivotY="140dp"
-            android:rotation="137.5"
+            android:transformPivotY="143dp"
+            android:rotation="141"
             android:layout_width="3dp"
             android:layout_height="450dp"
             android:id="@+id/lineD1A0"
@@ -257,7 +256,7 @@
             android:layout_row="4" />
         <Space
             android:layout_gravity="center_horizontal"
-            android:layout_width="115sp"
+            android:layout_width="145sp"
             android:layout_height="15sp"
             android:layout_column="1"
             android:layout_columnSpan="3"
@@ -266,9 +265,9 @@
         <Button
             android:text="@string/_A"
             android:alpha="1"
-            android:layout_width="@dimen/test_button_size_small"
-            android:layout_height="@dimen/test_button_size_small"
-            android:textSize="@dimen/test_text_size2"
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:textSize="@dimen/test_text_size"
             android:layout_gravity="center"
             android:background="@color/gray"
             android:onClick="onA0Click"
@@ -279,9 +278,9 @@
         <Button
             android:text="@string/_B"
             android:alpha="1"
-            android:layout_width="@dimen/test_button_size_small"
-            android:layout_height="@dimen/test_button_size_small"
-            android:textSize="@dimen/test_text_size2"
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:textSize="@dimen/test_text_size"
             android:layout_gravity="center"
             android:onClick="onB0Click"
             android:background="@color/gray"
@@ -292,9 +291,9 @@
         <Button
             android:text="@string/_C"
             android:alpha="1"
-            android:layout_width="@dimen/test_button_size_small"
-            android:layout_height="@dimen/test_button_size_small"
-            android:textSize="@dimen/test_text_size2"
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:textSize="@dimen/test_text_size"
             android:layout_gravity="center"
             android:onClick="onC0Click"
             android:background="@color/gray"
@@ -305,9 +304,9 @@
         <Button
             android:text="@string/_D"
             android:alpha="1"
-            android:layout_width="@dimen/test_button_size_small"
-            android:layout_height="@dimen/test_button_size_small"
-            android:textSize="@dimen/test_text_size2"
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:textSize="@dimen/test_text_size"
             android:layout_gravity="center"
             android:onClick="onD0Click"
             android:background="@color/gray"
@@ -318,9 +317,9 @@
         <Button
             android:text="@string/_0"
             android:alpha="1"
-            android:layout_width="@dimen/test_button_size_small"
-            android:layout_height="@dimen/test_button_size_small"
-            android:textSize="@dimen/test_text_size2"
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:textSize="@dimen/test_text_size"
             android:layout_gravity="center"
             android:onClick="onNumberClick"
             android:background="@color/blue"
@@ -331,9 +330,9 @@
         <Button
             android:text="@string/_1"
             android:alpha="1"
-            android:layout_width="@dimen/test_button_size_small"
-            android:layout_height="@dimen/test_button_size_small"
-            android:textSize="@dimen/test_text_size2"
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:textSize="@dimen/test_text_size"
             android:layout_gravity="center"
             android:onClick="onNumberClick"
             android:background="@color/green"
@@ -344,9 +343,9 @@
         <Button
             android:text="@string/_2"
             android:alpha="1"
-            android:layout_width="@dimen/test_button_size_small"
-            android:layout_height="@dimen/test_button_size_small"
-            android:textSize="@dimen/test_text_size2"
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:textSize="@dimen/test_text_size"
             android:layout_gravity="center"
             android:onClick="onNumberClick"
             android:background="@color/red"
@@ -357,9 +356,9 @@
         <Button
             android:text="@string/_3"
             android:alpha="1"
-            android:layout_width="@dimen/test_button_size_small"
-            android:layout_height="@dimen/test_button_size_small"
-            android:textSize="@dimen/test_text_size2"
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:textSize="@dimen/test_text_size"
             android:layout_gravity="center"
             android:onClick="onNumberClick"
             android:background="@color/purple"
@@ -396,22 +395,16 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_below="@+id/line"
-            android:id="@+id/space5"/>
-
         <Button
             android:alpha="1"
             android:text="@string/submit"
             android:textSize="18sp"
             android:onClick="onSubmitClicked"
             android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:background="@drawable/button_shape2"
+            android:layout_height="35dp"
+            android:background="@drawable/button_shape"
             android:id="@+id/buttonSubmit"
-            android:layout_below="@+id/space5"
+            android:layout_below="@+id/line"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
@@ -421,80 +414,13 @@
             android:textSize="18sp"
             android:onClick="onNextClicked"
             android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:background="@drawable/button_shape2"
+            android:layout_height="35dp"
+            android:background="@drawable/button_shape"
             android:id="@+id/buttonNext"
-            android:layout_below="@+id/space5"
+            android:layout_below="@+id/line"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
-
-    <GridLayout
-        android:layout_gravity="bottom"
-        android:layout_width="260dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginBottom="10dp"
-        android:columnCount="3"
-        android:rowCount="7"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin">
-
-        <Space
-            android:layout_column="0"
-            android:layout_row="1"
-            android:layout_width="45dp"
-            android:layout_height="20dp"/>
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_column="1"
-            android:layout_row="0"
-            android:alpha="0"
-            android:contentDescription="@string/results"
-            app:srcCompat="@drawable/ic_red_x_vector"
-            android:id="@+id/imageViewA" />
-
-        <ImageView
-            android:layout_width="35sp"
-            android:layout_height="35sp"
-            android:layout_column="1"
-            android:layout_row="2"
-            android:alpha="0"
-            android:contentDescription="@string/results"
-            app:srcCompat="@drawable/ic_red_x_vector"
-            android:id="@+id/imageViewB" />
-
-        <Space
-            android:layout_height="20dp"
-            android:layout_row="3"/>
-
-        <ImageView
-            android:layout_width="35sp"
-            android:layout_height="35sp"
-            android:layout_column="1"
-            android:layout_row="4"
-            android:alpha="0"
-            android:contentDescription="@string/results"
-            app:srcCompat="@drawable/ic_red_x_vector"
-            android:id="@+id/imageViewC" />
-
-        <Space
-            android:layout_row="5"
-            android:layout_height="20dp"/>
-
-        <ImageView
-            android:alpha="0"
-            android:layout_width="35sp"
-            android:layout_height="35sp"
-            android:layout_column="1"
-            android:layout_row="6"
-            android:contentDescription="@string/results"
-            app:srcCompat="@drawable/ic_red_x_vector"
-            android:id="@+id/imageViewD" />
-
-    </GridLayout>
 
 </FrameLayout>
