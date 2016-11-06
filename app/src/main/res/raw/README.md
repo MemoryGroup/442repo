@@ -14,11 +14,11 @@
   
 -You must have all 26 letters recorded as separate mp3 files and named as shown below:
   ```
-  A.mp3
-  B.mp3
+  a.mp3
+  b.mp3
   ...
-  Y.mp3
-  Z.mp3
+  y.mp3
+  z.mp3
   ```
 -Please place these in a folder labeled letters.
 
