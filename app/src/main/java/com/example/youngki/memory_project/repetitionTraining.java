@@ -10,8 +10,6 @@ import android.content.SharedPreferences;
 import android.widget.Button;
 import android.widget.TextView;
 import android.media.MediaPlayer;
-import android.view.inputmethod.InputMethodManager;
-import android.content.Context;
 
 public class repetitionTraining extends AppCompatActivity {
 
@@ -24,6 +22,13 @@ public class repetitionTraining extends AppCompatActivity {
     int text = 0;
     int audioSelection = 1;
     Boolean done = Boolean.FALSE;
+    int audioThree[] = new int[]{
+        R.raw.a3, R.raw.b3, R.raw.c3, R.raw.d3, R.raw.e3, R.raw.f3, R.raw.g3, R.raw.h3, R.raw.i3,
+        R.raw.j3, R.raw.k3, R.raw.l3, R.raw.m3, R.raw.n3, R.raw.o3, R.raw.p3, R.raw.q3, R.raw.r3,
+        R.raw.s3, R.raw.t3, R.raw.u3, R.raw.v3, R.raw.w3, R.raw.x3, R.raw.y3, R.raw.z3, R.raw.zero3,
+        R.raw.one3, R.raw.two3,R.raw.three3, R.raw.four3, R.raw.five3, R.raw.six3, R.raw.seven3,
+        R.raw.eight3, R.raw.nine3
+    };
     int audioTwo[] = new int[]{
         R.raw.a2, R.raw.b2, R.raw.c2, R.raw.d2, R.raw.e2, R.raw.f2, R.raw.g2, R.raw.h2, R.raw.i2,
         R.raw.j2, R.raw.k2, R.raw.l2, R.raw.m2, R.raw.n2, R.raw.o2, R.raw.p2, R.raw.q2, R.raw.r2,
@@ -39,11 +44,11 @@ public class repetitionTraining extends AppCompatActivity {
         R.raw.eight1, R.raw.nine1
     };
     int audioZero[] = new int[]{
-            R.raw.a0, R.raw.b0, R.raw.c0, R.raw.d0, R.raw.e0, R.raw.f0, R.raw.g0, R.raw.h0, R.raw.i0,
-            R.raw.j0, R.raw.k0, R.raw.l0, R.raw.m0, R.raw.n0, R.raw.o0, R.raw.p0, R.raw.q0, R.raw.r0,
-            R.raw.s0, R.raw.t0, R.raw.u0, R.raw.v0, R.raw.w0, R.raw.x0, R.raw.y0, R.raw.z0, R.raw.zero0,
-            R.raw.one0, R.raw.two0,R.raw.three0, R.raw.four0, R.raw.five0, R.raw.six0, R.raw.seven0,
-            R.raw.eight0, R.raw.nine0
+        R.raw.a0, R.raw.b0, R.raw.c0, R.raw.d0, R.raw.e0, R.raw.f0, R.raw.g0, R.raw.h0, R.raw.i0,
+        R.raw.j0, R.raw.k0, R.raw.l0, R.raw.m0, R.raw.n0, R.raw.o0, R.raw.p0, R.raw.q0, R.raw.r0,
+        R.raw.s0, R.raw.t0, R.raw.u0, R.raw.v0, R.raw.w0, R.raw.x0, R.raw.y0, R.raw.z0, R.raw.zero0,
+        R.raw.one0, R.raw.two0,R.raw.three0, R.raw.four0, R.raw.five0, R.raw.six0, R.raw.seven0,
+        R.raw.eight0, R.raw.nine0
     };
 
     @Override
@@ -57,6 +62,8 @@ public class repetitionTraining extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repetition_training);
         nextPair();
+        Button b = (Button) findViewById(R.id.audio1);
+        b.setTypeface(Typeface.DEFAULT_BOLD);
     }
 
     public void nextPair(){
@@ -337,22 +344,42 @@ public class repetitionTraining extends AppCompatActivity {
 
     public void onAudioSelectClick(View v){
         int id = v.getId();
+        Button b;
+        b = (Button) findViewById(R.id.audio0);
+        b.setTypeface(Typeface.DEFAULT);
+        b = (Button) findViewById(R.id.audio1);
+        b.setTypeface(Typeface.DEFAULT);
+        b = (Button) findViewById(R.id.audio2);
+        b.setTypeface(Typeface.DEFAULT);
+        b = (Button) findViewById(R.id.audio3);
+        b.setTypeface(Typeface.DEFAULT);
         switch (id){
             case R.id.audio0:
                 audioSelection = 0;
+                b = (Button) findViewById(R.id.audio0);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
                 break;
             case R.id.audio1:
                 audioSelection = 1;
+                b = (Button) findViewById(R.id.audio1);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
                 break;
             case R.id.audio2:
                 audioSelection = 2;
+                b = (Button) findViewById(R.id.audio2);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
+                break;
+            case R.id.audio3:
+                audioSelection = 3;
+                b = (Button) findViewById(R.id.audio3);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
                 break;
         }
     }
 
-    protected int getAudio(String s){
+    public int getAudio(String s){
         int audio = 0;
-        int audio1[] = audioOne;
+        int audio1[];
         if (audioSelection == 1){
             audio1 = audioOne;
         }
@@ -361,6 +388,12 @@ public class repetitionTraining extends AppCompatActivity {
         }
         else if (audioSelection == 0){
             audio1 = audioZero;
+        }
+        else if (audioSelection == 3){
+            audio1 = audioThree;
+        }
+        else{
+            audio1 = audioOne;
         }
         switch (s){
             case "A":
