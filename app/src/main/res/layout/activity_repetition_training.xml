@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/lightBlue"
     tools:context="com.example.youngki.memory_project.repetitionTraining">
 
     <TextView
@@ -323,8 +324,10 @@
 
             <Button
                 android:text="@string/_A"
-                android:background="@drawable/button_shape"
-                android:layout_width="wrap_content"
+                android:textSize="@dimen/repetition_text_size"
+                android:layout_column="2"
+                android:background="@drawable/round_button"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/button0" />
 
@@ -332,44 +335,70 @@
 
             <Button
                 android:text="@string/_1"
-                android:background="@drawable/button_shape"
-                android:layout_width="wrap_content"
+                android:textSize="@dimen/repetition_text_size"
+                android:background="@drawable/round_button"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/button1" />
 
         </TableRow>
 
         <Space
-            android:layout_height="10dp"/>
+            android:layout_height="15dp"/>
+
+        <TableRow>
+            <TextView
+                android:text="Audio Selection:"
+                android:layout_gravity="center_horizontal"
+                android:layout_span="7"/>
+
+        </TableRow>
+
+        <Space
+            android:layout_height="5dp"/>
 
         <TableRow>
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_shape"
-                android:text="audio 0"
+                android:background="@drawable/round_button"
+                android:text="@string/_0"
+                android:textSize="18sp"
                 android:id="@+id/audio0"
                 android:onClick="onAudioSelectClick"/>
 
             <Space />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="audio 1"
+                android:text="@string/_1"
+                android:textSize="18sp"
                 android:id="@+id/audio1"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/round_button"
                 android:onClick="onAudioSelectClick"/>
 
             <Space />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="audio 2"
-                android:background="@drawable/button_shape"
+                android:text="@string/_2"
+                android:textSize="18sp"
+                android:background="@drawable/round_button"
                 android:id="@+id/audio2"
+                android:onClick="onAudioSelectClick"/>
+
+            <Space />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_3"
+                android:textSize="18sp"
+                android:id="@+id/audio3"
+                android:background="@drawable/round_button"
                 android:onClick="onAudioSelectClick"/>
 
         </TableRow>
