@@ -1,0 +1,15 @@
+date: November 10, 2016
+meeting_type: ta
+attendance: [kreidler, youngkih, amypritc ]
+excused_absences: [ majuran
+  ]
+task_progress: [ 
+  {ubit: majuran, progress: began developing alternate display of map and map creation},
+  {ubit: kreidler,integrated score parameters into both the test and score activities},
+  {ubit: youngkih, progress: integrate handwriting and audio and integrate with map},
+  {ubit: amypritc, created a repetition based activity and worked on layouts}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  discussed remaining sprint 4 goals and integration
