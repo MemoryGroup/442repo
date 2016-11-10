@@ -2,6 +2,7 @@ package com.example.youngki.memory_project;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.AudioManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,8 @@ public class repetitionTraining extends AppCompatActivity {
     int text = 0;
     int audioSelection = 1;
     Boolean done = Boolean.FALSE;
+    MediaPlayer mp = new MediaPlayer();
+
     int audioThree[] = new int[]{
         R.raw.a3, R.raw.b3, R.raw.c3, R.raw.d3, R.raw.e3, R.raw.f3, R.raw.g3, R.raw.h3, R.raw.i3,
         R.raw.j3, R.raw.k3, R.raw.l3, R.raw.m3, R.raw.n3, R.raw.o3, R.raw.p3, R.raw.q3, R.raw.r3,
@@ -135,7 +138,14 @@ public class repetitionTraining extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MediaPlayer.create(repetitionTraining.this, getAudio(letter)).start();
+                if (mp != null){
+                    mp.stop();
+                    mp.release();
+                    mp = null;
+                }
+                mp = MediaPlayer.create(repetitionTraining.this, getAudio(letter));
+                mp.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                mp.start();
                 makeBold(R.id.button0);
             }
         });
@@ -191,7 +201,14 @@ public class repetitionTraining extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MediaPlayer.create(repetitionTraining.this, getAudio(Integer.toString(number))).start();
+                if (mp != null){
+                    mp.stop();
+                    mp.release();
+                    mp = null;
+                }
+                mp = MediaPlayer.create(repetitionTraining.this, getAudio(Integer.toString(number)));
+                mp.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                mp.start();
                 makeBold(R.id.button1);
             }
         });
