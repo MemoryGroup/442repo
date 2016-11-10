@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         //if gson error add to gradlefile like here:
         //http://stackoverflow.com/questions/18555135/the-best-way-to-integrate-third-party-library-in-android-studio
 
-        Gson gson = new Gson();
         SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
         String wrapperStr = prefs.getString("memMap", null);
         if (wrapperStr != null){
@@ -85,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void onTestButtonClicked(View v){
         //check here that the user has created a map
-        Gson gson = new Gson();
         SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
         String wrapperStr = prefs.getString("memMap", null);
         if (wrapperStr != null){
@@ -97,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(hasMap == false){
             AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
-            builder1.setMessage("Train today before testing.");
+            builder1.setMessage("Please Create a Map First.");
             builder1.setCancelable(false);
             builder1.setNeutralButton(
                     "Ok",
@@ -117,6 +115,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onScoreButtonClicked(View v){
+
+        //check here that the user has created a map
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        String wrapperStr = prefs.getString("memMap", null);
+        if (wrapperStr != null){
+            //TODO: Also check that the user trained today via userHasTrainedToday boolean
+
+            // a map was detected
+            hasMap = true;
+        }
+
+        if(hasMap == false){
+            AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+            builder1.setMessage("Please Create a Map First.");
+            builder1.setCancelable(false);
+            builder1.setNeutralButton(
+                    "Ok",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+
+                        }
+                    });
+            AlertDialog alert11 = builder1.create();
+            alert11.show();
+            return;
+        }
+
         v.startAnimation(buttonClicked);
         Intent scoreWindowOpener = new Intent(this, progress.class);
         startActivity(scoreWindowOpener);
