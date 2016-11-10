@@ -30,7 +30,7 @@ public class showTest extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //have to access sharedpreferences in onCreate
+        //have to access shared preferences in onCreate
         Gson gson = new Gson();
         SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
         String wrapperStr = prefs.getString("memMap", null);
