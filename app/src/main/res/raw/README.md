@@ -32,6 +32,7 @@ letters0/number0 - mdtobio
 letters1/numbers1 - alschmid
 letters2/numbers2 - mordecai
 letters3/numbers3 - jrh7
+red x checkmark/green checkmark - mordecai 
 ```
 **Our group is also looking for some design work to be done. We are in need of:**
 
