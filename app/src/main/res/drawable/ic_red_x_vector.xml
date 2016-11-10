@@ -3,9 +3,9 @@
     <path android:fillAlpha="1" android:fillColor="#ff0000"
         android:pathData="M97.1,109.5 L591.4,875.2"
         android:strokeAlpha="1" android:strokeColor="#ff0000"
-        android:strokeLineCap="butt" android:strokeLineJoin="miter" android:strokeWidth="50"/>
+        android:strokeLineCap="butt" android:strokeLineJoin="miter" android:strokeWidth="45"/>
     <path android:fillColor="#00000000"
         android:pathData="M591.4,109.9 L97.1,875.2"
         android:strokeAlpha="1" android:strokeColor="#ff0000"
-        android:strokeLineCap="butt" android:strokeLineJoin="miter" android:strokeWidth="50"/>
+        android:strokeLineCap="butt" android:strokeLineJoin="miter" android:strokeWidth="45"/>
 </vector>
