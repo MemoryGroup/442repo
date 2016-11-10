@@ -137,11 +137,9 @@ public class createMap extends AppCompatActivity {
     }
   
     public void onNewTrainClicked(View v){
-
         if(hasGenerated == false){
             return;
         }
-
         Gson gson = new Gson();
         MapWrapper wrapper = new MapWrapper();
         wrapper.setMap(memMap);
@@ -149,8 +147,7 @@ public class createMap extends AppCompatActivity {
         SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
         editor.putString("memMap", serializedMap);
         editor.commit();
-
-        Intent startWindowOpener = new Intent(this,showTrainOptions.class);
-        startActivity(startWindowOpener);
+        Intent windowOpener = new Intent(this,showTrainOptions.class);
+        startActivity(windowOpener);
     }
 }
