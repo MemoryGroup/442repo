@@ -62,7 +62,7 @@ public class handWritingTrain extends Activity {
 
         textView2 = (TextView)findViewById(R.id.textView2);
 
-        textView2.setText("The first one of map : "+myNewHashMap.get(keyList.get(0))+", write "+keyList.get(0));// Erase comment
+        textView2.setText("The first one of map : "+myNewHashMap.get(keyList.get(0))+", write "+keyList.get(0));
         textView4 = (TextView)findViewById(R.id.textView4);
 
 
@@ -117,19 +117,10 @@ public class handWritingTrain extends Activity {
                 getInt = makeIntValue(getString);
 
 
-                //
-//                if(cnt==-1)MediaPlayer.create(handWritingTrain.this,audio[keyList.get(cnt+1)]).start();
-//                else MediaPlayer.create(handWritingTrain.this,audio[keyList.get(cnt)]).start();
                 MediaPlayer.create(handWritingTrain.this,audio[memMap.get(targetString)]).start();
-                //
 
-
-//                if(memMap.get(targetString)==getInt)
-//                    textView4.setText("CORRECT you wrote " + getInt);
-//                else
-//                    textView4.setText("Wrong! you wrote " + getInt + ", Answer was "+memMap.get(targetString));
                 textView2.setText(keyList.toString());
-                textView2.setText("NEXT : "+nextTargetString+" is "+memMap.get(nextTargetString)+". Write "+memMap.get(nextTargetString)); //Erase comment
+                textView2.setText("NEXT : "+nextTargetString+" is "+memMap.get(nextTargetString)+". Write "+memMap.get(nextTargetString));
                 cnt++;
 
             }
