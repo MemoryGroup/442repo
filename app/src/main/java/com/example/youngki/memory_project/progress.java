@@ -1,24 +1,51 @@
 package com.example.youngki.memory_project;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.ListView;
+
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 
 
 public class progress extends AppCompatActivity {
 
-    String[] keys =           {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"};
-    Integer[] values =        {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-    Integer[] streak =        {2, 0, 1, 4, 1, 0, 2, 2, 0, 0, 0};
-    Integer[] times_correct = {2, 0, 1, 4, 1, 1, 2, 4, 0, 0, 0};
-    Integer[] total_attempts ={3, 1, 2, 4, 3, 5, 2, 5, 2, 0, 1};
+    String[] keys;
+    Integer[] values;
+    HashMap<String, Integer> streakMap = new HashMap<>();
+    HashMap<String, Integer> timesCorrectMap = new HashMap<>();
+    HashMap<String, Integer> totalAttemptsMap = new HashMap<>();
     ArrayList<progress_column> scoreList = new ArrayList<>();
     ListView listView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
+        Gson gson = new Gson();
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        String wrapperStr = prefs.getString("memMap", null);
+        MapWrapper MemWrapper = gson.fromJson(wrapperStr, MapWrapper.class);
+        this.keys = MemWrapper.getKeys();
+        Arrays.sort(this.keys); //sorted alphabetically
+        this.values = MemWrapper.getValues(keys);
+
+        String streakStr = prefs.getString("streakMap", null);
+        MapWrapper streakWrapper = gson.fromJson(streakStr, MapWrapper.class);
+        this.streakMap = streakWrapper.getMap();
+
+        String correctStr = prefs.getString("timesCorrectMap", null);
+        MapWrapper correctWrapper = gson.fromJson(correctStr, MapWrapper.class);
+        this.timesCorrectMap = correctWrapper.getMap();
+
+        String attemptsStr = prefs.getString("totalAttemptsMap", null);
+        MapWrapper attemptsWrapper = gson.fromJson(attemptsStr, MapWrapper.class);
+        this.totalAttemptsMap = attemptsWrapper.getMap();
+
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.view_score);
@@ -33,10 +60,11 @@ public class progress extends AppCompatActivity {
             scoreList.add(0,temp1);
 
             for(int i = 0; i < keys.length; i++){
-                Integer acc = (int)((times_correct[i] * 1.0 / total_attempts[i])*100);
-                String curStreak = streak[i].toString();
+                Integer acc = (int)((timesCorrectMap.get(keys[i]) * 1.0 /
+                                totalAttemptsMap.get(keys[i]))*100);
+                String curStreak = streakMap.get(keys[i]).toString();
                 String curAcc = acc.toString() + "%";
-                if (total_attempts[i] == 0){
+                if (totalAttemptsMap.get(keys[i]) == 0){
                     curStreak = "-";
                     curAcc = "-";
                 }
@@ -45,7 +73,7 @@ public class progress extends AppCompatActivity {
                         (keys[i],values[i].toString(), curAcc, curStreak);
                 scoreList.add(i+1,temp);
             }
-            progress_format scoreboard =  new progress_format(this,R.layout.progress_layout, scoreList);
+            progress_format scoreboard = new progress_format(this,R.layout.progress_layout, scoreList);
             listView = (ListView) findViewById(R.id.scoreView);
             listView.setAdapter(scoreboard);
         }
