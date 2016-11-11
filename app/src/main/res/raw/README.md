@@ -33,6 +33,7 @@ letters1/numbers1 - alschmid
 letters2/numbers2 - mordecai
 letters3/numbers3 - jrh7
 red x checkmark/green checkmark - mordecai 
+launcher icon - mordecai
 ```
 **Our group is also looking for some design work to be done. We are in need of:**
 
@@ -41,6 +42,7 @@ https://github.com/MemoryGroup/442repo/blob/voice-submissions/app/src/main/res/m
 
 This icon should be small, about 48x48 pixels.
 Please submit a png file, and upload any submissions for the launcher icon to the memory3_content slack channel.
+These are uploaded into the 442repo/app/src/main/res/mipmap folder.
 
 *A new, unique background image for our main menu. The current one is shown here:*
 https://github.com/MemoryGroup/442repo/blob/voice-submissions/app/src/main/res/drawable/flashcardimage.png
@@ -51,3 +53,4 @@ Please submit a png file, and upload any submissions for the launcher icon to th
 
 These check mark should be green and the X should be red.
 Please upload these as two separate svg or psd files, uploaded to the memory3_content slack page.
+These are uploaded into the 442repo/app/src/main/res/drawable folder.
