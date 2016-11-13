@@ -29,18 +29,18 @@ public class progress_format extends ArrayAdapter<progress_column> {
         progress_column current = scores.get(position);
 
         if (scores != null) {
-            TextView firstName = (TextView) convertView.findViewById(R.id.textLtr);
-            TextView lastName = (TextView) convertView.findViewById(R.id.textNum);
-            TextView favFood = (TextView) convertView.findViewById(R.id.textAcc);
+            TextView letter = (TextView) convertView.findViewById(R.id.textLtr);
+            TextView value = (TextView) convertView.findViewById(R.id.textNum);
+            TextView accuracy = (TextView) convertView.findViewById(R.id.textAcc);
             TextView streak = (TextView) convertView.findViewById(R.id.textStreak);
-            if (firstName != null) {
-                firstName.setText(current.getFirstName());
+            if (letter != null) {
+                letter.setText(current.getLetter());
             }
-            if (lastName != null) {
-                lastName.setText((current.getLastName()));
+            if (value != null) {
+                value.setText((current.getValue()));
             }
-            if (favFood != null) {
-                favFood.setText((current.getFavFood()));
+            if (accuracy!= null) {
+                accuracy.setText((current.getAccuracy()));
             }
             if (streak != null) {
                 streak.setText((current.getStreak()));

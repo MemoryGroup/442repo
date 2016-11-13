@@ -30,6 +30,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.youngki.memory_project.showTestOptions" />
         </activity>
+        <activity
+            android:name=".showResultsOpt2"
+            android:parentActivityName=".showTestOptions">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.youngki.memory_project.showTestOptions" />
+        </activity>
         <activity android:name=".showTestOptions" />
         <activity android:name=".progress" />
         <activity android:name=".matchingTest" />
