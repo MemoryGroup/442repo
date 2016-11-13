@@ -1,5 +1,6 @@
 package com.example.youngki.memory_project;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -14,14 +15,14 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 
-public class progress extends AppCompatActivity {
+public class showResultsOpt2 extends AppCompatActivity {
 
     String[] keys;
     Integer[] values;
     HashMap<String, Integer> streakMap = new HashMap<>();
     HashMap<String, Integer> timesCorrectMap = new HashMap<>();
     HashMap<String, Integer> totalAttemptsMap = new HashMap<>();
-    ArrayList<progress_column> scoreList = new ArrayList<>();
+    ArrayList<showResultsOpt2Column > scoreList = new ArrayList<>();
     ListView listView;
 
     @Override
@@ -48,36 +49,41 @@ public class progress extends AppCompatActivity {
         this.totalAttemptsMap = attemptsWrapper.getMap();
 
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.view_score);
         this.findViewById(android.R.id.content).setBackgroundColor(Color.parseColor("#d3d3d3"));
 
         int numRows = values.length;
         if(numRows == 0){
-            // TODO Error check here
         }else{
 
-            progress_column temp1 = new progress_column
-                    ("Letter", "Number", "Accuracy", "Streak");
+            showResultsOpt2Column  temp1 = new showResultsOpt2Column
+                    ("Letter", "Number", "Correct", "Overall");
             scoreList.add(0,temp1);
 
             for(int i = 0; i < keys.length; i++){
                 Integer acc = (int)((timesCorrectMap.get(keys[i]) * 1.0 /
-                                totalAttemptsMap.get(keys[i]))*100);
-                String curStreak = streakMap.get(keys[i]).toString();
+                        totalAttemptsMap.get(keys[i]))*100);
+                String curCorrect = "";
                 String curAcc = acc.toString() + "%";
-                if (totalAttemptsMap.get(keys[i]) == 0){
-                    curStreak = "-";
-                    curAcc = "-";
+                if (streakMap.get(keys[i]) == 0){
+                    curCorrect = "\u2716";
+                }else{
+                    curCorrect = "\u2713";
                 }
 
-                progress_column temp = new progress_column
-                        (keys[i],values[i].toString(), curAcc, curStreak);
+                showResultsOpt2Column  temp = new showResultsOpt2Column
+                        (keys[i],values[i].toString(), curCorrect, curAcc);
                 scoreList.add(i+1,temp);
             }
-            progress_format scoreboard = new progress_format(this,R.layout.progress_layout, scoreList);
+            showResultsOpt2Format scoreboard = new showResultsOpt2Format
+                                                (this,R.layout.progress_layout, scoreList);
             listView = (ListView) findViewById(R.id.scoreView);
             listView.setAdapter(scoreboard);
         }
+    }
+
+    public void onBackPressed(){
+        Intent testsWindowOpener = new Intent(this,showTestOptions.class);
+        startActivity(testsWindowOpener);
     }
 }

@@ -1,16 +1,16 @@
 package com.example.youngki.memory_project;
 
-public class progress_column{
+public class showResultsOpt2Column {
     private String letter;
     private String number;
     private String accuracy;
-    private String streak;
+    private String correct;
 
-    public progress_column (String ltr,String num, String acc, String strk){
+    public showResultsOpt2Column (String ltr,String num, String crect, String acc){
         letter = ltr;
         number = num;
         accuracy = acc;
-        streak = strk;
+        correct = crect;
     }
 
 
@@ -22,11 +22,9 @@ public class progress_column{
         return number;
     }
 
-    public String getAccuracy() {
-        return accuracy;
-    }
+    public String getCorrect() {return correct;}
 
-    public String getStreak() {return streak;}
+    public String getAcc() {return accuracy;}
 
 
 }
