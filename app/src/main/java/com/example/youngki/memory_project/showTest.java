@@ -12,6 +12,7 @@ import com.google.gson.Gson;
 import java.util.HashMap;
 
 
+
 public class showTest extends AppCompatActivity {
 
     private MapWrapper memMapWrap;
@@ -92,9 +93,15 @@ public class showTest extends AppCompatActivity {
     }
 
     public void showResultsNow(){
-        Intent resultsWindowOpener = new Intent(this,showResults.class);
+        //currently correct is not used
+        //Implemented an alternate result display
+        // Intent resultsWindowOpener = new Intent(this,showResults.class);
+
         //resultsWindowOpener.putExtra("correct", correct);
+
+        Intent resultsWindowOpener = new Intent(this,showResultsOpt2.class);
         startActivity(resultsWindowOpener);
+
     }
 
     public void getNextLetter(){
@@ -107,6 +114,9 @@ public class showTest extends AppCompatActivity {
             pb.incrementProgressBy(1);
         }
         else{
+            ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
+            pb.incrementProgressBy(1);
+
             showResultsNow();
         }
     }
