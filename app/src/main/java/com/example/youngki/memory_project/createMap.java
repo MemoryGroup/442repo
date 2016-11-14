@@ -56,22 +56,23 @@ public class createMap extends AppCompatActivity {
 
     }
 
+	
     public void onAddLettersClicked(View v) {
         level.incrementLetter();
         //return the max of
     }
 
     public void onSubLettersClicked(View v) {
-    level.decrementLetter();
-  }
+		level.decrementLetter();
+    }
 
     public void onAddNumbersClicked(View v) {
-    level.incrementDigit();
-  }
+		level.incrementDigit();
+    }
 
     public void onSubNumbersClicked(View v) {
-    level.decrementDigit();
-  }
+		level.decrementDigit();
+    }
 
     public void onGenerateClicked(View v) {
         //now get the maps with default: 7 letters and 3 numbers for easy

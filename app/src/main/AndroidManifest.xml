@@ -30,7 +30,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.youngki.memory_project.showTestOptions" />
         </activity>
-        <activity
+		<activity
             android:name=".showResultsOpt2"
             android:parentActivityName=".showTestOptions">
             <meta-data
