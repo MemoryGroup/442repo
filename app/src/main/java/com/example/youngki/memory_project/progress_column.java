@@ -14,15 +14,15 @@ public class progress_column{
     }
 
 
-    public String getFirstName() {
+    public String getLetter() {
         return letter;
     }
 
-    public String getLastName() {
+    public String getValue() {
         return number;
     }
 
-    public String getFavFood() {
+    public String getAccuracy() {
         return accuracy;
     }
 
