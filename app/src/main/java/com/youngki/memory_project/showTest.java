@@ -12,7 +12,6 @@ import com.google.gson.Gson;
 import java.util.HashMap;
 
 
-
 public class showTest extends AppCompatActivity {
 
     private MapWrapper memMapWrap;
@@ -26,20 +25,16 @@ public class showTest extends AppCompatActivity {
     HashMap<String, Integer> timesCorrectMap = new HashMap<>();
     HashMap<String, Integer> totalAttemptsMap = new HashMap<>();
 
-
-    //String [] correct;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //have to access shared preferences in onCreate
+        //have to access sharedpreferences in onCreate
         Gson gson = new Gson();
         SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
         String wrapperStr = prefs.getString("memMap", null);
-        MapWrapper MemWrapper = gson.fromJson(wrapperStr, MapWrapper.class);
-        this.keys = MemWrapper.getKeys();
-        this.values = MemWrapper.getValues(keys);
-        this.showThis = this.keys[0]; //show the first key
-
+        MapWrapper wrapper = gson.fromJson(wrapperStr, MapWrapper.class);
+        this.keys = wrapper.getKeys();
+        this.values = wrapper.getValues(keys);
+        this.showThis = this.keys[0];
 
         String streakStr = prefs.getString("streakMap", null);
         MapWrapper streakWrapper = gson.fromJson(streakStr, MapWrapper.class);
@@ -53,8 +48,6 @@ public class showTest extends AppCompatActivity {
         MapWrapper attemptsWrapper = gson.fromJson(attemptsStr, MapWrapper.class);
         this.totalAttemptsMap = attemptsWrapper.getMap();
 
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         //    setMemoryMap(memoryMap);
@@ -66,8 +59,7 @@ public class showTest extends AppCompatActivity {
 
     }
 
-
-    public void onPause(){
+	public void onPause(){
         //save the data onpause
         super.onPause();
 
@@ -91,18 +83,11 @@ public class showTest extends AppCompatActivity {
 
         editor.apply(); //persist the values
     }
-
+	
     public void showResultsNow(){
-        //currently correct is not used
-        //Implemented an alternate result display
-        // Intent resultsWindowOpener = new Intent(this,showResults.class);
-
-        //resultsWindowOpener.putExtra("correct", correct);
-
         Intent resultsWindowOpener = new Intent(this,showResultsOpt2.class);
         startActivity(resultsWindowOpener);
-
-    }
+   }
 
     public void getNextLetter(){
         this.count = this.count + 1;
@@ -116,7 +101,6 @@ public class showTest extends AppCompatActivity {
         else{
             ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
             pb.incrementProgressBy(1);
-
             showResultsNow();
         }
     }
