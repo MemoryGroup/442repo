@@ -56,7 +56,7 @@ public class createMap extends AppCompatActivity {
 
     }
 
-	
+
     public void onAddLettersClicked(View v) {
         level.incrementLetter();
         //return the max of
@@ -136,32 +136,38 @@ public class createMap extends AppCompatActivity {
         hard.setTypeface(null, Typeface.BOLD);
         level = Level.HARD;
     }
-  
+
+
     public void onNewTrainClicked(View v){
-        if(hasGenerated == false){
+
+    //TODO: Also save the data onPause? this may be problomatic if the user decides to keep old map
+
+        if(hasGenerated == false || memMap.isEmpty()){
+       //check to make sure se don't have an empty map
             return;
         }
-		
-		HashMap<String, Integer> progress_map = new HashMap<>();
-		for (String key : memMap.keySet()) {
-			progress_map.put(key, 0);
-		}
-		
-        Gson gson = new Gson();
-		MapWrapper mem = new MapWrapper();
-		mem.setMap(memMap);
-		String serializedMap = gson.toJson(mem);
-		SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
-		editor.putString("memMap", serializedMap);
 
-		MapWrapper progress = new MapWrapper();
-		progress.setMap(progress_map);
-		String serializedProgress = gson.toJson(progress);
-		editor.putString("streakMap", serializedProgress);
-		editor.putString("timesCorrectMap", serializedProgress);
-		editor.putString("totalAttemptsMap", serializedProgress);
-		editor.apply(); //persist the values
+        HashMap<String, Integer> progress_map = new HashMap<>();
+        for (String key : memMap.keySet()) {
+            progress_map.put(key, 0);
+        }
+
+        Gson gson = new Gson();
+        MapWrapper mem = new MapWrapper();
+        mem.setMap(memMap);
+        String serializedMap = gson.toJson(mem);
+        SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
+        editor.putString("memMap", serializedMap);
+
+        MapWrapper progress = new MapWrapper();
+        progress.setMap(progress_map);
+        String serializedProgress = gson.toJson(progress);
+        editor.putString("streakMap", serializedProgress);
+        editor.putString("timesCorrectMap", serializedProgress);
+        editor.putString("totalAttemptsMap", serializedProgress);
+        editor.apply(); //persist the values
+
         Intent windowOpener = new Intent(this,showTrainOptions.class);
         startActivity(windowOpener);
-    }
+        }
 }

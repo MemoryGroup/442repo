@@ -1,0 +1,17 @@
+date: October 28, 2016
+meeting_type: group
+attendance: [kreidler, youngkih, amypritc, majuran]
+excused_absences: [
+  ]
+task_progress: [ 
+  {ubit: kreidler, progress: integrated persistent maps},
+  {ubit: youngkih, progress: progress on gesture code},
+  {ubit: amypritc, progress: integrated new tests}
+  {ubit: majuran, progress: worked on voice recognition}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  We did not hold a group meeting this week. 
+  We were able to do the needed integration of our tasks done without a group meeting.
+  Everyone has completed their assigned tasks.

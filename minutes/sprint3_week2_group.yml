@@ -1,0 +1,14 @@
+date: October 20, 2016
+meeting_type: group
+attendance: [kreidler, youngkih, amypritc, majuran]
+excused_absences: [
+  ]
+task_progress: [ 
+  {ubit: kreidler, progress: began working on GSON code},
+  {ubit: youngkih, progress: began working on gesture api code and additional options},
+  {ubit: amypritc, progress: began working on new test ideas}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  We did not have a group meeting this week because we were all busy with midterms and did not have enough progress to discuss.

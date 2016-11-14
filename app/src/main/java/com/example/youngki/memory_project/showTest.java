@@ -66,7 +66,7 @@ public class showTest extends AppCompatActivity {
 
     }
 
-    
+
     public void onPause(){
         //save the data onpause
         super.onPause();
