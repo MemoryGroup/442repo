@@ -3,11 +3,13 @@ package com.example.youngki.memory_project;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.graphics.drawable.Icon;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.graphics.Color;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.gson.Gson;
 import java.util.HashMap;
@@ -33,6 +35,11 @@ public class matchingTest extends AppCompatActivity {
     Boolean submit = Boolean.FALSE;
     HashMap<String, Integer> result = new HashMap<>();
     int currentColor = Color.rgb(202,201,201);
+    HashMap<String, Integer> correct = new HashMap<>();
+    HashMap<String, Integer> streakMap = new HashMap<>();
+    HashMap<String, Integer> timesCorrectMap = new HashMap<>();
+    HashMap<String, Integer> totalAttemptsMap = new HashMap<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +50,20 @@ public class matchingTest extends AppCompatActivity {
         this.keys = wrapper.getKeys();
         this.values = wrapper.getValues(keys);
         length = keys.length;
+
+        String streakStr = prefs.getString("streakMap", null);
+        MapWrapper streakWrapper = gson.fromJson(streakStr, MapWrapper.class);
+        this.streakMap = streakWrapper.getMap();
+
+        String correctStr = prefs.getString("timesCorrectMap", null);
+        MapWrapper correctWrapper = gson.fromJson(correctStr, MapWrapper.class);
+        this.timesCorrectMap = correctWrapper.getMap();
+
+        String attemptsStr = prefs.getString("totalAttemptsMap", null);
+        MapWrapper attemptsWrapper = gson.fromJson(attemptsStr, MapWrapper.class);
+        this.totalAttemptsMap = attemptsWrapper.getMap();
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matching_test);
         Typeface type = Typeface.createFromAsset(getAssets(),"fonts/orange juice 2.0.ttf");
@@ -68,18 +89,87 @@ public class matchingTest extends AppCompatActivity {
         int i = visible;
         switch (i){
             case 4:
-                result.put(sD, answerD);
+                if (answerD == iA){
+                    streakMap.put(sD, streakMap.get(sD)+1);
+                    timesCorrectMap.put(sD, timesCorrectMap.get(sD)+1);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewD);
+                    iv.setAlpha(0f);
+                }
+                else{
+                    streakMap.put(sD, 0);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewD);
+                    iv.setAlpha(1f);
+                }
+                totalAttemptsMap.put(sD, totalAttemptsMap.get(sD)+1);
                 i = 3;
             case 3:
-                result.put(sC, answerC);
+                if (answerC == iB){
+                    streakMap.put(sC, streakMap.get(sC)+1);
+                    timesCorrectMap.put(sC, timesCorrectMap.get(sC)+1);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewC);
+                    iv.setAlpha(0f);
+                }
+                else{
+                    streakMap.put(sC, 0);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewC);
+                    iv.setAlpha(1f);
+                }
+                totalAttemptsMap.put(sC, totalAttemptsMap.get(sC)+1);
                 i = 2;
             case 2:
-                result.put(sB, answerB);
+                if (answerB == iD){
+                    streakMap.put(sB, streakMap.get(sB)+1);
+                    timesCorrectMap.put(sB, timesCorrectMap.get(sB)+1);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewB);
+                    iv.setAlpha(0f);
+                }
+                else{
+                    streakMap.put(sB, 0);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewB);
+                    iv.setAlpha(1f);
+                }
+                totalAttemptsMap.put(sB, totalAttemptsMap.get(sB)+1);
                 i = 1;
             case 1:
-                result.put(sA, answerA);
+                if (answerA == iC){
+                    streakMap.put(sA, streakMap.get(sA)+1);
+                    timesCorrectMap.put(sA, timesCorrectMap.get(sA)+1);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewA);
+                    iv.setAlpha(0f);
+                }
+                else{
+                    streakMap.put(sA, 0);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewA);
+                    iv.setAlpha(1f);
+                }
+                totalAttemptsMap.put(sA, totalAttemptsMap.get(sA)+1);
                 break;
         }
+    }
+
+    public void onPause(){
+        //save the data onpause
+        super.onPause();
+
+        Gson gson = new Gson();
+        SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
+
+        MapWrapper streakWrap = new MapWrapper();
+        streakWrap.setMap(streakMap);
+        String serializedStreak = gson.toJson(streakWrap);
+        editor.putString("streakMap", serializedStreak);
+
+        MapWrapper correctWrap = new MapWrapper();
+        correctWrap.setMap(timesCorrectMap);
+        String serializedCorrect = gson.toJson(correctWrap);
+        editor.putString("timesCorrectMap", serializedCorrect);
+
+        MapWrapper attemptsWrap = new MapWrapper();
+        attemptsWrap.setMap(totalAttemptsMap);
+        String serializedAttempts = gson.toJson(attemptsWrap);
+        editor.putString("totalAttemptsMap", serializedAttempts);
+
+        editor.apply(); //persist the values
     }
 
     public void onNextClicked(View view){
@@ -88,7 +178,8 @@ public class matchingTest extends AppCompatActivity {
             next.setAlpha(0);
             submitted = Boolean.FALSE;
             if (done) {
-                Intent resultsWindowOpener = new Intent(this, showResults.class);
+                Intent resultsWindowOpener = new Intent(this,showResultsOpt2.class);
+                //Intent resultsWindowOpener = new Intent(this, showResults.class);
                 startActivity(resultsWindowOpener);
             } else {
                 Button submit = (Button) findViewById(R.id.buttonSubmit);
@@ -102,6 +193,14 @@ public class matchingTest extends AppCompatActivity {
                 clearC0Lines();
                 clearD0Lines();
                 clearColors();
+                ImageView iv = (ImageView) findViewById(R.id.imageViewD);
+                iv.setAlpha(0f);
+                iv = (ImageView) findViewById(R.id.imageViewC);
+                iv.setAlpha(0f);
+                iv = (ImageView) findViewById(R.id.imageViewB);
+                iv.setAlpha(0f);
+                iv = (ImageView) findViewById(R.id.imageViewA);
+                iv.setAlpha(0f);
                 setNumbersLetters();
             }
         }

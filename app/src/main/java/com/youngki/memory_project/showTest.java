@@ -27,8 +27,6 @@ public class showTest extends AppCompatActivity {
     HashMap<String, Integer> totalAttemptsMap = new HashMap<>();
 
 
-    //String [] correct;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //have to access shared preferences in onCreate
@@ -39,7 +37,6 @@ public class showTest extends AppCompatActivity {
         this.keys = MemWrapper.getKeys();
         this.values = MemWrapper.getValues(keys);
         this.showThis = this.keys[0]; //show the first key
-
 
         String streakStr = prefs.getString("streakMap", null);
         MapWrapper streakWrapper = gson.fromJson(streakStr, MapWrapper.class);
@@ -53,13 +50,10 @@ public class showTest extends AppCompatActivity {
         MapWrapper attemptsWrapper = gson.fromJson(attemptsStr, MapWrapper.class);
         this.totalAttemptsMap = attemptsWrapper.getMap();
 
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         //    setMemoryMap(memoryMap);
         TextView tv = (TextView) findViewById(R.id.textView3);
-        //    this.showThis = this.keys[3];
         tv.setText(this.showThis);
         ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
         pb.setMax(keys.length);
@@ -93,11 +87,8 @@ public class showTest extends AppCompatActivity {
     }
 
     public void showResultsNow(){
-        //currently correct is not used
         //Implemented an alternate result display
         //Intent resultsWindowOpener = new Intent(this,showResults.class);
-
-        //resultsWindowOpener.putExtra("correct", correct);
 
         Intent resultsWindowOpener = new Intent(this,showResultsOpt2.class);
         startActivity(resultsWindowOpener);
