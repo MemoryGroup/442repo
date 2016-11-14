@@ -20,18 +20,10 @@ public class showTrainOptions extends AppCompatActivity {
         button.setTypeface(type);
         button = (Button) findViewById(R.id.buttonTmp);
         button.setTypeface(type);
-        button = (Button) findViewById(R.id.numberButton);
-        button.setTypeface(type);
         button = (Button)findViewById(R.id.button7);
         button.setTypeface(type);
         button = (Button)findViewById(R.id.repetitionButton);
         button.setTypeface(type);
-        findViewById(R.id.numberButton).setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                startActivity(new Intent(showTrainOptions.this,NumberButtons.class));
-            }
-        });
-
         onClickButtonListener();
     }
 
