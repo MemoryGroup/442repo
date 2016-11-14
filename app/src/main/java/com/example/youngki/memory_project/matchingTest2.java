@@ -11,9 +11,9 @@ import android.widget.Button;
 
 public class matchingTest2 extends AppCompatActivity {
 
-    String[] keys = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"};
-    Integer[] values = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-    int length = keys.length;
+    String[] keys;
+    Integer[] values;
+    int length;
     int i = 0;
     int currentColor = Color.rgb(255,255,255);
     Integer[] numbers = {R.id.button00, R.id.button01, R.id.button02, R.id.button03, R.id.button04,
