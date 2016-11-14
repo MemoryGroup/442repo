@@ -118,11 +118,6 @@
         </TableRow>
 
         <TableRow>
-            <Button
-                android:id="@+id/customMap"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Custom"/>
 
             <Button
                 android:id="@+id/generateMap"
@@ -136,7 +131,8 @@
                 android:layout_height="wrap_content"
                 android:text="Train"
                 android:id="@+id/train"
-                android:onClick="onNewTrainClicked" />
+                android:onClick="onNewTrainClicked"
+                android:layout_span="2"/>
         </TableRow>
     </TableLayout>
 
