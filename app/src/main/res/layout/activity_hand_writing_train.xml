@@ -30,7 +30,7 @@ tools:context="com.example.youngki.memory_project.handWritingTrain">
 </android.gesture.GestureOverlayView>
 
 <TextView
-    android:text="TextView"
+    android:text=""
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_alignParentTop="true"
@@ -42,7 +42,7 @@ tools:context="com.example.youngki.memory_project.handWritingTrain">
 <TextView
     android:text="What to write"
     android:layout_width="157dp"
-    android:layout_height="50dp"
+    android:layout_height="wrap_content"
     android:id="@+id/textView2"
     android:textSize="24sp"
     android:layout_alignParentLeft="true"
