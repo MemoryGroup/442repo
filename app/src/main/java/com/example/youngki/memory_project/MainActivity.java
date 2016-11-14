@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             hasMap = true;
         }
 
-        if(hasMap == false){
+		if(hasMap == false){
             AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
             builder1.setMessage("Please Create a Map First.");
             builder1.setCancelable(false);
