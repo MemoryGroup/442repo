@@ -21,7 +21,9 @@ public class showTest extends AppCompatActivity {
     String showThis;
     int count = 0;
     HashMap<String, Integer> correct = new HashMap<>();
-    //String [] correct;
+    HashMap<String, Integer> streakMap = new HashMap<>();
+    HashMap<String, Integer> timesCorrectMap = new HashMap<>();
+    HashMap<String, Integer> totalAttemptsMap = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,18 @@ public class showTest extends AppCompatActivity {
         this.values = wrapper.getValues(keys);
         this.showThis = this.keys[0];
 
+        String streakStr = prefs.getString("streakMap", null);
+        MapWrapper streakWrapper = gson.fromJson(streakStr, MapWrapper.class);
+        this.streakMap = streakWrapper.getMap();
+
+        String correctStr = prefs.getString("timesCorrectMap", null);
+        MapWrapper correctWrapper = gson.fromJson(correctStr, MapWrapper.class);
+        this.timesCorrectMap = correctWrapper.getMap();
+
+        String attemptsStr = prefs.getString("totalAttemptsMap", null);
+        MapWrapper attemptsWrapper = gson.fromJson(attemptsStr, MapWrapper.class);
+        this.totalAttemptsMap = attemptsWrapper.getMap();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         //    setMemoryMap(memoryMap);
@@ -45,11 +59,35 @@ public class showTest extends AppCompatActivity {
 
     }
 
-    public void showResultsNow(){
-        Intent resultsWindowOpener = new Intent(this,showResults.class);
-        //resultsWindowOpener.putExtra("correct", correct);
-        startActivity(resultsWindowOpener);
+	public void onPause(){
+        //save the data onpause
+        super.onPause();
+
+        Gson gson = new Gson();
+        SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
+
+        MapWrapper streakWrap = new MapWrapper();
+        streakWrap.setMap(streakMap);
+        String serializedStreak = gson.toJson(streakWrap);
+        editor.putString("streakMap", serializedStreak);
+
+        MapWrapper correctWrap = new MapWrapper();
+        correctWrap.setMap(timesCorrectMap);
+        String serializedCorrect = gson.toJson(correctWrap);
+        editor.putString("timesCorrectMap", serializedCorrect);
+
+        MapWrapper attemptsWrap = new MapWrapper();
+        attemptsWrap.setMap(totalAttemptsMap);
+        String serializedAttempts = gson.toJson(attemptsWrap);
+        editor.putString("totalAttemptsMap", serializedAttempts);
+
+        editor.apply(); //persist the values
     }
+	
+    public void showResultsNow(){
+        Intent resultsWindowOpener = new Intent(this,showResultsOpt2.class);
+        startActivity(resultsWindowOpener);
+   }
 
     public void getNextLetter(){
         this.count = this.count + 1;
@@ -61,6 +99,8 @@ public class showTest extends AppCompatActivity {
             pb.incrementProgressBy(1);
         }
         else{
+            ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
+            pb.incrementProgressBy(1);
             showResultsNow();
         }
     }
@@ -70,10 +110,17 @@ public class showTest extends AppCompatActivity {
         if (values[count] == 1){
             correct.put(keys[count], values[count]);
             tv.setText(R.string._correct);
+            streakMap.put(keys[count], streakMap.get(keys[count])+1);
+            timesCorrectMap.put(keys[count], timesCorrectMap.get(keys[count])+1);
+
         }
         else{
             tv.setText(R.string._incorrect);
+            streakMap.put(keys[count], 0);
         }
+
+        totalAttemptsMap.put(keys[count], totalAttemptsMap.get(keys[count])+1);
+
         getNextLetter();
     }
 
@@ -82,10 +129,15 @@ public class showTest extends AppCompatActivity {
         if (values[count] == 2){
             correct.put(keys[count], values[count]);
             tv.setText(R.string._correct);
+            streakMap.put(keys[count], streakMap.get(keys[count])+1);
+            timesCorrectMap.put(keys[count], timesCorrectMap.get(keys[count])+1);
         }
         else{
             tv.setText(R.string._incorrect);
+            streakMap.put(keys[count], 0);
         }
+
+        totalAttemptsMap.put(keys[count], totalAttemptsMap.get(keys[count])+1);
         getNextLetter();
     }
 
@@ -94,10 +146,15 @@ public class showTest extends AppCompatActivity {
         if (values[count] == 3){
             correct.put(keys[count], values[count]);
             tv.setText(R.string._correct);
+            streakMap.put(keys[count], streakMap.get(keys[count])+1);
+            timesCorrectMap.put(keys[count], timesCorrectMap.get(keys[count])+1);
         }
         else{
             tv.setText(R.string._incorrect);
+            streakMap.put(keys[count], 0);
         }
+
+        totalAttemptsMap.put(keys[count], totalAttemptsMap.get(keys[count])+1);
         getNextLetter();
     }
 
@@ -106,10 +163,15 @@ public class showTest extends AppCompatActivity {
         if (values[count] == 4){
             correct.put(keys[count], values[count]);
             tv.setText(R.string._correct);
+            streakMap.put(keys[count], streakMap.get(keys[count])+1);
+            timesCorrectMap.put(keys[count], timesCorrectMap.get(keys[count])+1);
         }
         else{
             tv.setText(R.string._incorrect);
+            streakMap.put(keys[count], 0);
         }
+
+        totalAttemptsMap.put(keys[count], totalAttemptsMap.get(keys[count])+1);
         getNextLetter();
     }
 
@@ -118,10 +180,15 @@ public class showTest extends AppCompatActivity {
         if (values[count] == 5){
             correct.put(keys[count], values[count]);
             tv.setText(R.string._correct);
+            streakMap.put(keys[count], streakMap.get(keys[count])+1);
+            timesCorrectMap.put(keys[count], timesCorrectMap.get(keys[count])+1);
         }
         else{
             tv.setText(R.string._incorrect);
+            streakMap.put(keys[count], 0);
         }
+
+        totalAttemptsMap.put(keys[count], totalAttemptsMap.get(keys[count])+1);
         getNextLetter();
     }
 
@@ -130,10 +197,15 @@ public class showTest extends AppCompatActivity {
         if (values[count] == 6){
             correct.put(keys[count], values[count]);
             tv.setText(R.string._correct);
+            streakMap.put(keys[count], streakMap.get(keys[count])+1);
+            timesCorrectMap.put(keys[count], timesCorrectMap.get(keys[count])+1);
         }
         else{
             tv.setText(R.string._incorrect);
+            streakMap.put(keys[count], 0);
         }
+
+        totalAttemptsMap.put(keys[count], totalAttemptsMap.get(keys[count])+1);
         getNextLetter();
     }
 
@@ -142,10 +214,15 @@ public class showTest extends AppCompatActivity {
         if (values[count] == 7){
             correct.put(keys[count], values[count]);
             tv.setText(R.string._correct);
+            streakMap.put(keys[count], streakMap.get(keys[count])+1);
+            timesCorrectMap.put(keys[count], timesCorrectMap.get(keys[count])+1);
         }
         else{
             tv.setText(R.string._incorrect);
+            streakMap.put(keys[count], 0);
         }
+
+        totalAttemptsMap.put(keys[count], totalAttemptsMap.get(keys[count])+1);
         getNextLetter();
     }
 
@@ -154,10 +231,15 @@ public class showTest extends AppCompatActivity {
         if (values[count] == 8){
             correct.put(keys[count], values[count]);
             tv.setText(R.string._correct);
+            streakMap.put(keys[count], streakMap.get(keys[count])+1);
+            timesCorrectMap.put(keys[count], timesCorrectMap.get(keys[count])+1);
         }
         else{
             tv.setText(R.string._incorrect);
+            streakMap.put(keys[count], 0);
         }
+
+        totalAttemptsMap.put(keys[count], totalAttemptsMap.get(keys[count])+1);
         getNextLetter();
     }
 
@@ -166,10 +248,15 @@ public class showTest extends AppCompatActivity {
         if (values[count] == 9){
             correct.put(keys[count], values[count]);
             tv.setText(R.string._correct);
+            streakMap.put(keys[count], streakMap.get(keys[count])+1);
+            timesCorrectMap.put(keys[count], timesCorrectMap.get(keys[count])+1);
         }
         else{
             tv.setText(R.string._incorrect);
+            streakMap.put(keys[count], 0);
         }
+
+        totalAttemptsMap.put(keys[count], totalAttemptsMap.get(keys[count])+1);
         getNextLetter();
     }
 
@@ -178,10 +265,15 @@ public class showTest extends AppCompatActivity {
         if (values[count] == 0){
             correct.put(keys[count], values[count]);
             tv.setText(R.string._correct);
+            streakMap.put(keys[count], streakMap.get(keys[count])+1);
+            timesCorrectMap.put(keys[count], timesCorrectMap.get(keys[count])+1);
         }
         else{
             tv.setText(R.string._incorrect);
+            streakMap.put(keys[count], 0);
         }
+
+        totalAttemptsMap.put(keys[count], totalAttemptsMap.get(keys[count])+1);
         getNextLetter();
     }
 
