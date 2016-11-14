@@ -1,22 +1,23 @@
 package com.example.youngki.memory_project;
 
 import android.app.Activity;
-        import android.gesture.Gesture;
-        import android.gesture.GestureLibraries;
-        import android.gesture.GestureLibrary;
-        import android.gesture.GestureOverlayView;
-        import android.gesture.Prediction;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.widget.TextView;
-        import java.util.ArrayList;
-        import java.util.HashMap;
-        import java.util.Map;
-        import java.util.Map.Entry;
-        import java.util.Random;
-
-
-        import android.gesture.GestureOverlayView.OnGesturePerformedListener;
+import android.content.SharedPreferences;
+import android.gesture.Gesture;
+import android.gesture.GestureLibraries;
+import android.gesture.GestureLibrary;
+import android.gesture.GestureOverlayView;
+import android.gesture.Prediction;
+import android.media.MediaPlayer;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Random;
+import android.gesture.GestureOverlayView.OnGesturePerformedListener;
+import com.google.gson.Gson;
 
 public class handWritingTrain extends Activity {
 
@@ -28,18 +29,37 @@ public class handWritingTrain extends Activity {
     int cnt=0;
     HashMap<String, Integer> memMap = new HashMap<>();
     Map<Integer, String> myNewHashMap = new HashMap<>();
+    String[] keys;
+    Integer[] values;
+    ArrayList<Integer> keyList = new ArrayList<>();
+    ArrayList<String> valueList = new ArrayList<>();
+    int[] audio = new int[] {
+            R.raw.zero, R.raw.one, R.raw.two, R.raw.three, R.raw.four, R.raw.five, R.raw.six, R.raw.seven,
+            R.raw.eight, R.raw.nine
+    };
 
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        //
+        Gson gson = new Gson();
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        String wrapperStr = prefs.getString("memMap", null);
+        MapWrapper wrapper = gson.fromJson(wrapperStr, MapWrapper.class);
+        this.keys = wrapper.getKeys();
+        this.values = wrapper.getValues(keys);
+        //
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hand_writing_train);
+        generateHashMap(memMap, keys,values);
 
-        generateHashMap(memMap);
+        keyList.addAll(myNewHashMap.keySet());
+        valueList.addAll(myNewHashMap.values());
 
         textView2 = (TextView)findViewById(R.id.textView2);
-        textView2.setText("The first one of map : "+myNewHashMap.get(0));
 
+        textView2.setText("The first one of map : "+myNewHashMap.get(keyList.get(0))+", write "+keyList.get(0));
         textView4 = (TextView)findViewById(R.id.textView4);
 
 
@@ -56,47 +76,36 @@ public class handWritingTrain extends Activity {
 
     }
 
-    private void generateHashMap(HashMap<String, Integer> memMap) {
+    private void generateHashMap(HashMap<String, Integer> memMap, String[] keys, Integer[] values) {
         int i;
-        String letterMap = "abcdefghijklmnopqrstuvwxyz";
-        int randNum=0;
-        Random rand = new Random();
-
-
-
-        for(i=0;i<letterMap.length();i++){
-//            memMap.put(letterMap.substring(i, i + 1),i);
-            randNum = rand.nextInt(10);
-            memMap.put(letterMap.substring(i, i + 1),randNum);
+        for(i=0;i<keys.length;i++){
+            memMap.put(keys[i],values[i]);
         }
 
         //making into <Integer,String>
         for(Map.Entry<String, Integer> entry : memMap.entrySet()){
             myNewHashMap.put(entry.getValue(), entry.getKey());
         }
-
-
-
     }
 
     GestureOverlayView.OnGesturePerformedListener gesturePerformedListener = new GestureOverlayView.OnGesturePerformedListener(){
 
         @Override
         public void onGesturePerformed(GestureOverlayView view, Gesture gesture) {
-            // TODO Auto-generated method stub
             ArrayList<Prediction> prediction = gestureLibrary.recognize(gesture);
             String targetString = new String();
             String nextTargetString = new String();
             String getString= new String();
+
             int getInt;
 
+
             if(prediction.size() > 0){
+                if(cnt==memMap.size()) cnt = 0;
 
-                if(cnt>=memMap.size()) return;
-
-                targetString = myNewHashMap.get(cnt);
-                nextTargetString = myNewHashMap.get(cnt+1);
-
+                targetString = myNewHashMap.get(keyList.get(cnt));
+                if(cnt==keyList.size()-1)cnt=-1;
+                nextTargetString = myNewHashMap.get(keyList.get(cnt+1));
 
                 gestureResult.setText(prediction.get(0).name);
 
@@ -105,12 +114,9 @@ public class handWritingTrain extends Activity {
                 getInt = makeIntValue(getString);
 
 
+                MediaPlayer.create(handWritingTrain.this,audio[memMap.get(targetString)]).start();
 
-                if(memMap.get(targetString)==getInt)
-                    textView4.setText("CORRECT you wrote " + getInt);
-                else
-                    textView4.setText("Wrong! you wrote " + getInt + ", Answer was "+memMap.get(targetString));
-
+                textView2.setText(keyList.toString());
                 textView2.setText("NEXT : "+nextTargetString+" is "+memMap.get(nextTargetString)+". Write "+memMap.get(nextTargetString));
                 cnt++;
 
