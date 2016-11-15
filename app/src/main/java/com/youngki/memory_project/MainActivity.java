@@ -71,11 +71,42 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
     public void onTrainButtonClicked(View v){
+
+        //check here that the user has created a map
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        String wrapperStr = prefs.getString("memMap", null);
+        if (wrapperStr != null){
+            //TODO: Also check that the user trained today via userHasTrainedToday boolean
+
+            // a map was detected
+            hasMap = true;
+        }
+
+        if(hasMap == false){
+            AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+            builder1.setMessage("Please Create a Map First.");
+            builder1.setCancelable(false);
+            builder1.setNeutralButton(
+                    "Ok",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                            Intent generateMapWindowOpener = new Intent(MainActivity.this, createMap.class);
+                            startActivity(generateMapWindowOpener);
+                        }
+                    });
+            AlertDialog alert11 = builder1.create();
+            alert11.show();
+            return;
+        }
+
         v.startAnimation(buttonClicked);
         Intent startWindowOpener = new Intent(this,showTrainOptions.class);
         startActivity(startWindowOpener);
     }
+
     public void onHelpButtonClicked(View v){
         v.startAnimation(buttonClicked);
         Intent helpWindowOpener = new Intent(this,showHelp.class);
@@ -102,7 +133,8 @@ public class MainActivity extends AppCompatActivity {
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             dialog.cancel();
-
+                            Intent generateMapWindowOpener = new Intent(MainActivity.this, createMap.class);
+                            startActivity(generateMapWindowOpener);
                         }
                     });
             AlertDialog alert11 = builder1.create();
@@ -135,7 +167,8 @@ public class MainActivity extends AppCompatActivity {
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             dialog.cancel();
-
+                            Intent generateMapWindowOpener = new Intent(MainActivity.this, createMap.class);
+                            startActivity(generateMapWindowOpener);
                         }
                     });
             AlertDialog alert11 = builder1.create();
