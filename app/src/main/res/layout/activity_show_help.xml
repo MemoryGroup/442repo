@@ -4,61 +4,144 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/blue"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.youngki.memory_project.showHelp">
 
-
-    <TextView
-        android:text="HOW TO PLAY"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
-        android:id="@+id/textView10"
-        android:textSize="30dp"
-        />
-
     <Button
-        android:text="TEST"
-        android:layout_width="wrap_content"
+        android:text="Generate New Map"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView10"
-        android:layout_toLeftOf="@+id/textView10"
-        android:layout_toStartOf="@+id/textView10"
-        android:layout_marginTop="41dp"
-        android:textSize="@dimen/activity_horizontal_margin"
-        android:background="@drawable/button_shape"
-        android:id="@+id/button6" />
+        android:id="@+id/button"
+        android:textSize="21sp"
+        android:onClick="onGenerateMapClick"
+        android:textColor="@color/black"
+        android:background="@drawable/generate_map_button" />
 
-    <TextView
-        android:text="IF YOU PRESS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView10"
-        android:layout_marginTop="18dp"
-        android:id="@+id/textView11"
-        android:layout_alignLeft="@+id/button6"
-        android:layout_alignStart="@+id/button6" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/button"
+        android:id="@+id/space"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:id="@+id/editText"
-        android:text="You will see random numbers" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/linearLayout"
-        android:layout_alignParentTop="true"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line"
+        android:background="@android:color/black"
+        android:layout_below="@+id/space"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/how_to_play"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/space"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line2"
+        android:background="@android:color/black"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="10dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/line2"
+        android:id="@+id/space2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/space2">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout">
+
+            <Button
+                android:text="Generating a new map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button1"
+                android:textSize="21sp"
+                android:onClick="onGenerateHelpClick"
+                android:textColor="@color/black"
+                android:background="@drawable/button_shape"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:text="Handwriting Training"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2"
+                android:textSize="21sp"
+                android:onClick="onHandwritingHelpClick"
+                android:textColor="@color/black"
+                android:background="@drawable/button_shape"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:text="Repetition Training"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"
+                android:textSize="21sp"
+                android:onClick="onRepetitionHelpClick"
+                android:textColor="@color/black"
+                android:background="@drawable/button_shape"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:text="Letter to number test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button4"
+                android:textSize="21sp"
+                android:onClick="onLetterToNumberHelpClick"
+                android:textColor="@color/black"
+                android:background="@drawable/button_shape"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:text="Matching Test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button5"
+                android:textSize="21sp"
+                android:onClick="onMatchingHelpClick"
+                android:textColor="@color/black"
+                android:background="@drawable/button_shape"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </RelativeLayout>
