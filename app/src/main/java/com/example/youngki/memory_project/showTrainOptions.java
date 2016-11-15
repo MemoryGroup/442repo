@@ -42,11 +42,6 @@ public class showTrainOptions extends AppCompatActivity {
         );
     }
 
-    public void onStartButtonClicked(View v){
-        Intent windowOpener = new Intent(this,createMap.class);
-        startActivity(windowOpener);
-    }
-
     public void onTestClicked(View v){
         Intent windowOpener = new Intent(this,showTestOptions.class);
         startActivity(windowOpener);
