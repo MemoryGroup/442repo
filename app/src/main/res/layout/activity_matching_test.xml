@@ -426,4 +426,71 @@
 
     </RelativeLayout>
 
+    <GridLayout
+        android:layout_gravity="bottom"
+        android:layout_width="280dp"
+        android:layout_height="318dp"
+        android:rowCount="10"
+        android:columnCount="5"
+        android:id="@id/gridLayout"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+        <Space
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_width="55dp"
+            android:layout_height="42dp"/>
+
+        <ImageView
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:alpha="0"
+            android:contentDescription="@string/results"
+            app:srcCompat="@drawable/ic_red_x_vector"
+            android:id="@+id/imageViewA" />
+
+        <ImageView
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:alpha="0"
+            android:contentDescription="@string/results"
+            app:srcCompat="@drawable/ic_red_x_vector"
+            android:id="@+id/imageViewB" />
+
+        <Space
+            android:layout_height="42dp"
+            android:layout_row="3"/>
+
+        <ImageView
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:layout_column="1"
+            android:layout_row="4"
+            android:alpha="0"
+            android:contentDescription="@string/results"
+            app:srcCompat="@drawable/ic_red_x_vector"
+            android:id="@+id/imageViewC" />
+
+        <Space
+            android:layout_row="5"
+            android:layout_height="42dp"/>
+
+        <ImageView
+            android:alpha="0"
+            android:layout_width="@dimen/test_button_size"
+            android:layout_height="@dimen/test_button_size"
+            android:layout_column="1"
+            android:layout_row="6"
+            android:contentDescription="@string/results"
+            app:srcCompat="@drawable/ic_red_x_vector"
+            android:id="@+id/imageViewD" />
+
+    </GridLayout>
+
 </FrameLayout>
