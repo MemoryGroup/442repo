@@ -37,7 +37,8 @@ public class showHelp extends AppCompatActivity {
         button.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
         button = (Button)findViewById(R.id.button5);
         button.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
-
+        button = (Button)findViewById(R.id.button6);
+        button.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
     }
 
     public void onGenerateMapClick(View v){
@@ -122,6 +123,24 @@ public class showHelp extends AppCompatActivity {
         builder1.setMessage("Click on the number that is paired with the letter shown. On the next " +
                 "screen, the upper right hand corner will let you know if you answered right or " +
                 "wrong. When there are no items left, you will be taken to the results screen.");
+        builder1.setCancelable(false);
+        builder1.setNeutralButton(
+                "Ok",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+
+                    }
+                });
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
+    }
+
+    public void onMatching2HelpClick(View v){
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(showHelp.this);
+        builder1.setMessage("First, click on a number to select it, the click on the letter that " +
+                "is paired with the number. When you have matched all letters and numbers, click " +
+                "submit. You will then be taken to the results screen to see how you did.");
         builder1.setCancelable(false);
         builder1.setNeutralButton(
                 "Ok",
