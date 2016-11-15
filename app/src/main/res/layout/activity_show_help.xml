@@ -11,7 +11,7 @@
     tools:context="com.example.youngki.memory_project.showHelp">
 
     <Button
-        android:text="Generate New Map"
+        android:text="@string/generate_new_map"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button"
@@ -75,7 +75,7 @@
             android:id="@+id/linearLayout">
 
             <Button
-                android:text="Generating a new map"
+                android:text="@string/generating_a_new_map"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button1"
@@ -89,7 +89,7 @@
                 android:layout_height="10dp" />
 
             <Button
-                android:text="Handwriting Training"
+                android:text="@string/handwriting_training"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button2"
@@ -103,7 +103,7 @@
                 android:layout_height="10dp" />
 
             <Button
-                android:text="Repetition Training"
+                android:text="@string/repetition_training"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button3"
@@ -117,7 +117,7 @@
                 android:layout_height="10dp" />
 
             <Button
-                android:text="Letter to number test"
+                android:text="@string/letter_to_number_test"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button4"
@@ -131,12 +131,26 @@
                 android:layout_height="10dp" />
 
             <Button
-                android:text="Matching Test"
+                android:text="@string/matching_test"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button5"
                 android:textSize="21sp"
                 android:onClick="onMatchingHelpClick"
+                android:textColor="@color/black"
+                android:background="@drawable/button_shape"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:text="@string/matching_2_0_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button6"
+                android:textSize="21sp"
+                android:onClick="onMatching2HelpClick"
                 android:textColor="@color/black"
                 android:background="@drawable/button_shape"/>
 
