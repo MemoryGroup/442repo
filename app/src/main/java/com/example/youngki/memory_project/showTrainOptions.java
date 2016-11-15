@@ -16,9 +16,7 @@ public class showTrainOptions extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_train_options);
         Typeface type = Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf");
-        Button button = (Button) findViewById(R.id.generateMap);
-        button.setTypeface(type);
-        button = (Button) findViewById(R.id.buttonTmp);
+        Button button = (Button) findViewById(R.id.buttonTmp);
         button.setTypeface(type);
         button = (Button)findViewById(R.id.button7);
         button.setTypeface(type);
