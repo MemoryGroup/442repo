@@ -22,6 +22,8 @@
   ```
 -Please place these in a folder labeled letters.
 
+*The voices must match for the letters and numbers.* 
+
 To submit your files, send them in a zip file to amypritc@buffalo.edu, then post in #memory3_content that you have sent them.
 Your files will be uploaded to GitHub as "[slack id]'s voice submission", and the list below will be updated as well.
 
