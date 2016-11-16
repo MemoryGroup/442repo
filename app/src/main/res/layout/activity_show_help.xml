@@ -24,6 +24,23 @@
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_below="@+id/button"
+        android:id="@+id/space3"/>
+
+    <Button
+        android:text="@string/view_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button7"
+        android:layout_below="@+id/space3"
+        android:textSize="21sp"
+        android:onClick="onViewMapClick"
+        android:textColor="@color/black"
+        android:background="@drawable/generate_map_button" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/button7"
         android:id="@+id/space"/>
 
     <View
