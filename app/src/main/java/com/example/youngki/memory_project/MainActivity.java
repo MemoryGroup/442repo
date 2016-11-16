@@ -7,17 +7,13 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
-
-
 import com.google.gson.Gson;
-import static android.R.attr.onClick;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -105,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
         v.startAnimation(buttonClicked);
         Intent startWindowOpener = new Intent(this,showTrainOptions.class);
         startActivity(startWindowOpener);
+
+
+
     }
 
     public void onHelpButtonClicked(View v){
