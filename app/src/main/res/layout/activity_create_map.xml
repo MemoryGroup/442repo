@@ -11,145 +11,153 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.youngki.memory_project.createMap">
 
-  <TextView
-      android:id="@+id/longText"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:gravity="center"
-      android:text="@string/mapInfoDefault"/>
-  <GridLayout
-      android:id="@+id/dynamicGridLayout"
-      android:layout_width="wrap_content"
-      android:layout_height="0dp"
-      android:layout_gravity="center"
-      android:layout_marginBottom="16dp"
-      android:layout_weight="1"
-      android:columnCount="5"
-      android:gravity="center">
+    <TextView
+        android:id="@+id/longText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/mapInfoDefault"/>
 
-  </GridLayout>
-  <!--<TextView-->
-  <!--android:id="@+id/letterText"-->
-  <!--android:layout_width="wrap_content"-->
-  <!--android:layout_height="wrap_content"-->
-  <!--android:layout_gravity="center"-->
-  <!--android:layout_weight="1"-->
-  <!--android:gravity="center"-->
-  <!--android:layout_marginBottom="16dp"-->
-  <!--android:text="Your Map:"/>-->
-  <!--also Moe we are not sure abt budget can u make me happy :P-->
+    <GridLayout
+        android:id="@+id/dynamicGridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:columnCount="5"
+        android:gravity="center">
 
-
-  <TableLayout
-      android:id="@+id/gridLayout"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_alignParentLeft="true"
-      android:layout_alignParentStart="true"
-      android:shrinkColumns="*"
-      android:stretchColumns="*">
-    <TableRow>
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_span="4"
-          android:orientation="horizontal">
-        <TextView
-            android:id="@+id/letterCount"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Letters:"/>
+    </GridLayout>
+    <!--<TextView-->
+    <!--android:id="@+id/letterText"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_marginBottom="16dp"-->
+    <!--android:text="Your Map:"/>-->
+    <!--also Moe we are not sure abt budget can u make me happy :P-->
 
 
-        <TextView
-            android:id="@+id/numberCount"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Numbers:"/>
-      </LinearLayout>
-    </TableRow>
-    <TableRow>
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_span="4"
-          android:orientation="horizontal">
-        <Button
-            android:id="@+id/addLetter"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onAddLettersClicked"
-            android:text="+"/>
-
-        <Button
-            android:id="@+id/subLetter"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onSubLettersClicked"
-            android:text="-"/>
-        <Button
-            android:id="@+id/addNumber"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onAddNumbersClicked"
-            android:text="+"/>
-
-        <Button
-            android:id="@+id/subNumber"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onSubNumbersClicked"
-            android:text="-"/>
-
-      </LinearLayout>
-    </TableRow>
-    <TableRow>
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_span="4"
-          android:orientation="horizontal">
-        <Button
-            android:id="@+id/easy"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onNewEasyClicked"
-            android:singleLine="true"
-            android:text="Easy"/>
-
-        <Button
-            android:id="@+id/medium"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onNewMediumClicked"
-            android:singleLine="true"
-            android:text="Medium"/>
-
-        <Button
-            android:id="@+id/hard"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onNewHardClicked"
-            android:singleLine="true"
-            android:text="Hard"/>
-      </LinearLayout>
+    <TableLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
 
         <TableRow>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:orientation="horizontal">
 
-    </TableRow>
+                <TextView
+                    android:id="@+id/letterCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Letters:"/>
+
+
+                <TextView
+                    android:id="@+id/numberCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Numbers:"/>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/addLetter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onAddLettersClicked"
+                    android:text="+"/>
+
+                <Button
+                    android:id="@+id/subLetter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onSubLettersClicked"
+                    android:text="-"/>
+
+                <Button
+                    android:id="@+id/addNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onAddNumbersClicked"
+                    android:text="+"/>
+
+                <Button
+                    android:id="@+id/subNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onSubNumbersClicked"
+                    android:text="-"/>
+
+            </LinearLayout>
+        </TableRow>
+
     <TableRow>
-      <Button
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/easy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onNewEasyClicked"
+                android:singleLine="true"
+                android:text="Easy"/>
+
+            <Button
+                android:id="@+id/medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onNewMediumClicked"
+                android:singleLine="true"
+                android:text="Medium"/>
+
+            <Button
+                android:id="@+id/hard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onNewHardClicked"
+                android:singleLine="true"
+                android:text="Hard"/>
+
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow>
+        <Button
           android:id="@+id/train"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
