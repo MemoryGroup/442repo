@@ -35,6 +35,7 @@ letters1/numbers1 - alschmid
 letters2/numbers2 - mordecai
 letters3/numbers3 - jrh7
 letters4/numbers4 - fanyang
+letters5/numbers5 - vanshagg
 red x checkmark/green checkmark - mordecai 
 launcher icon - mordecai
 2nd launcher icon - mordecai
