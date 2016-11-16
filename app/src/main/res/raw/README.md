@@ -35,8 +35,10 @@ letters3/numbers3 - jrh7
 letters4/numbers4 - fanyang
 red x checkmark/green checkmark - mordecai 
 launcher icon - mordecai
+2nd launcher icon - mordecai
 launcher icon - fanyang
 launcher icon - satyakra
+2nd launcher icon - satyakra
 ```
 **Our group is also looking for some design work to be done. We are in need of:**
 
