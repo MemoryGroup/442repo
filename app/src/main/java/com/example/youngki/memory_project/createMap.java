@@ -177,13 +177,23 @@ public class createMap extends AppCompatActivity {
     if (hasGenerated == false) {
       return;
     }
+	HashMap<String, Integer> progress_map = new HashMap<>();
+    for (String key : memMap.keySet()) {
+      progress_map.put(key, 0);
+    }
     Gson gson = new Gson();
-    MapWrapper wrapper = new MapWrapper();
-    wrapper.setMap(memMap);
-    String serializedMap = gson.toJson(wrapper);
+    MapWrapper mem = new MapWrapper();
+    mem.setMap(memMap);
+    String serializedMap = gson.toJson(mem);
     SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
     editor.putString("memMap", serializedMap);
-    editor.commit();
+    MapWrapper progress = new MapWrapper();
+    progress.setMap(progress_map);
+    String serializedProgress = gson.toJson(progress);
+    editor.putString("streakMap", serializedProgress);
+    editor.putString("timesCorrectMap", serializedProgress);
+    editor.putString("totalAttemptsMap", serializedProgress);
+	editor.apply(); //persist the values
     startActivity(new Intent(this, showTrainOptions.class));
   }
 }
