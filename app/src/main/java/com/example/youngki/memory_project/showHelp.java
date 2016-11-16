@@ -2,6 +2,7 @@ package com.example.youngki.memory_project;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -25,6 +26,8 @@ public class showHelp extends AppCompatActivity {
         howToPlay = (TextView)findViewById(R.id.textView10);
         howToPlay.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/orange juice 2.0.ttf"));
 
+        button = (Button)findViewById(R.id.button7);
+        button.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
         button = (Button)findViewById(R.id.button);
         button.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
         button = (Button)findViewById(R.id.button1);
@@ -152,5 +155,34 @@ public class showHelp extends AppCompatActivity {
                 });
         AlertDialog alert11 = builder1.create();
         alert11.show();
+    }
+
+    public void onViewMapClick(View view){
+        Boolean hasMap = false;
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        String wrapperStr = prefs.getString("memMap", null);
+        if (wrapperStr != null){
+            //TODO: Also check that the user trained today via userHasTrainedToday boolean
+
+            // a map was detected
+            hasMap = true;
+        }
+        if(hasMap == false){
+            AlertDialog.Builder builder1 = new AlertDialog.Builder(showHelp.this);
+            builder1.setMessage("Please Create a Map First.");
+            builder1.setCancelable(false);
+            builder1.setNeutralButton(
+                    "Ok",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                            Intent generateMapWindowOpener = new Intent(showHelp.this, createMap.class);
+                            startActivity(generateMapWindowOpener);
+                        }
+                    });
+            AlertDialog alert11 = builder1.create();
+            alert11.show();
+            return;
+        }
     }
 }
