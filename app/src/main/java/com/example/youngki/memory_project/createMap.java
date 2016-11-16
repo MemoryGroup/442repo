@@ -1,31 +1,42 @@
 package com.example.youngki.memory_project;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.TextView;
-
+import com.google.gson.Gson;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Random;
-import android.graphics.Typeface;
-
-import android.content.SharedPreferences;
-import com.google.gson.Gson;
 
 public class createMap extends AppCompatActivity {
 
   private static final String ALPHABETS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   HashMap<String, Integer> memMap = new HashMap<>();
-  int mapLetters =  2;
+  int mapLetters = 2;
   int mapDigits = 2;
   Boolean hasGenerated = false;
-
+  GridLayout dynamicGridLayout;
   Level level = Level.EASY;
+  private int[] colors = new int[10];
+
+  /**
+   * Convert Dp to Pixel
+   */
+  public static int dpToPx(float dp, Resources resources) {
+    float px =
+        TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, resources.getDisplayMetrics());
+    return (int) px;
+  }
 
   // given amount of letters
   // and digits, make a new Memory Map stored in memMap
@@ -48,29 +59,41 @@ public class createMap extends AppCompatActivity {
     }
   }
 
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_map);
-
-    }
+  @Override protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_create_map);
+    dynamicGridLayout = (GridLayout) findViewById(R.id.dynamicGridLayout);
+    colors[0] = ContextCompat.getColor(this, R.color.red);
+    colors[1] = ContextCompat.getColor(this, R.color.orange);
+    colors[2] = ContextCompat.getColor(this, R.color.yellow);
+    colors[3] = ContextCompat.getColor(this, R.color.green);
+    colors[4] = ContextCompat.getColor(this, R.color.blue);
+    colors[5] = ContextCompat.getColor(this, R.color.purple);
+    colors[6] = ContextCompat.getColor(this, R.color.pink);
+    colors[7] = ContextCompat.getColor(this, R.color.teal);
+    colors[8] = ContextCompat.getColor(this, R.color.tan);
+    colors[9] = ContextCompat.getColor(this, R.color.gray);
+  }
 
   public void onAddLettersClicked(View v) {
     level.incrementLetter();
+    onGenerateClicked(null);
     //return the max of
   }
 
   public void onSubLettersClicked(View v) {
     level.decrementLetter();
+    onGenerateClicked(null);
   }
 
   public void onAddNumbersClicked(View v) {
     level.incrementDigit();
+    onGenerateClicked(null);
   }
 
   public void onSubNumbersClicked(View v) {
     level.decrementDigit();
+    onGenerateClicked(null);
   }
 
   public void onGenerateClicked(View v) {
@@ -78,23 +101,33 @@ public class createMap extends AppCompatActivity {
     makeNewMap(level.letters(), level.digits());
     String letterMap = ALPHABETS;
     String displayLetters = "";
-	String displayNumbers = "";
+    String displayNumbers = "";
     int mapLetters = level.letters();
+    dynamicGridLayout.removeAllViews();
     for (int i = 0; i < mapLetters; i++) {
       String curLetter = letterMap.substring(i, i + 1);
       int curNumber = memMap.get(curLetter);
+      Button button = new Button(this);
+      ViewGroup.MarginLayoutParams marginLayoutParams =
+          new ViewGroup.MarginLayoutParams(dpToPx(48, getResources()), dpToPx(48, getResources()));
+      marginLayoutParams.rightMargin = dpToPx(5, getResources());
+      marginLayoutParams.bottomMargin = dpToPx(5, getResources());
+      button.setLayoutParams(new GridLayout.LayoutParams(marginLayoutParams));
+      button.setBackgroundColor(colors[curNumber]);
+      dynamicGridLayout.addView(button);
+      button.setText(curLetter + ":" + curNumber + "  ");
       displayLetters += curLetter + ":" + curNumber + "  ";
       if (i != 0 && i % 4 == 0 && mapLetters != 4) {
         displayLetters += "\n";
       }
     }
-    TextView mapView = (TextView) findViewById(R.id.letterText);
-    mapView.setText(displayLetters);
-    mapView.setTextSize(20);
-    mapView.setHeight(500);
-    mapView.setWidth(500);
+    //TextView mapView = (TextView) findViewById(R.id.letterText);
+    //mapView.setText(displayLetters);
+    //mapView.setTextSize(20);
+    //mapView.setHeight(500);
+    //mapView.setWidth(500);
     //setContentView(mapView);
-	hasGenerated = true;
+    hasGenerated = true;
   }
 
   public void onNewEasyClicked(View v) {
@@ -108,6 +141,7 @@ public class createMap extends AppCompatActivity {
     Button hard = (Button) findViewById(R.id.hard);
     hard.setTypeface(null, Typeface.NORMAL);
     level = Level.EASY;
+    onGenerateClicked(null);
   }
 
   public void onNewMediumClicked(View v) {
@@ -121,6 +155,7 @@ public class createMap extends AppCompatActivity {
     Button hard = (Button) findViewById(R.id.hard);
     hard.setTypeface(null, Typeface.NORMAL);
     level = Level.MEDIUM;
+    onGenerateClicked(null);
   }
 
   public void onNewHardClicked(View v) {
@@ -134,20 +169,20 @@ public class createMap extends AppCompatActivity {
     Button hard = (Button) findViewById(R.id.hard);
     hard.setTypeface(null, Typeface.BOLD);
     level = Level.HARD;
+    onGenerateClicked(null);
   }
-  
-public void onNewTrainClicked(View v){
-	
-    if(hasGenerated == false){
-        return;
-    }
 
+  public void onNewTrainClicked(View v) {
+    if (hasGenerated == false) {
+      return;
+    }
     Gson gson = new Gson();
     MapWrapper wrapper = new MapWrapper();
     wrapper.setMap(memMap);
     String serializedMap = gson.toJson(wrapper);
     SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
     editor.putString("memMap", serializedMap);
-	editor.commit();
-    }
+    editor.commit();
+    startActivity(new Intent(this, showTrainOptions.class));
+  }
 }

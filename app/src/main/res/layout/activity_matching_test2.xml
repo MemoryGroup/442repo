@@ -27,12 +27,11 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/textViewInstructions"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:rowCount="13"
         android:columnCount="7"
-        android:layout_marginTop="20dp">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <Button
             android:text="0"
