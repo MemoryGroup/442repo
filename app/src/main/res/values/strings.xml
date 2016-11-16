@@ -77,4 +77,5 @@
     <string name="handwriting_training">Handwriting Training</string>
     <string name="generating_a_new_map">Generating a new map</string>
     <string name="generate_new_map">Generate New Map</string>
+    <string name="view_map">View Map</string>
 </resources>
