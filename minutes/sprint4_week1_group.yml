@@ -1,0 +1,16 @@
+date: November 2, 2016
+meeting_type: group
+attendance: [kreidler, youngkih, amypritc, majuran]
+excused_absences: [ 
+  ]
+task_progress: [ 
+  {ubit: majuran, progress: interested in working on alternate display of map, redesign of UI},
+  {ubit: kreidler, progress: interested in integrating testing and score; how score impacts training instances and accurate test feedback},
+  {ubit: youngkih, progress: interested in integrating handwriting and audio and integrate with map},
+  {ubit: amypritc, progress: interested in fixing layouts, app flow, potential new training component}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  we did not hold a group meeting in person this week
+  sprint 4 goals, tasks we would like for sprint
