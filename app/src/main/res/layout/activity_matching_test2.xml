@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/background"
     tools:context="com.example.youngki.memory_project.matchingTest2">
 
     <TextView
@@ -22,19 +23,36 @@
         android:textAlignment="center"
         android:id="@+id/textViewInstructions"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="@dimen/test_padding"/>
+
+    <Button
+        android:text="@string/submit"
+        android:textSize="20sp"
+        android:background="@drawable/button_shape2"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewInstructions"
+        android:onClick="onSubmitClick"
+        android:id="@+id/button6" />
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewInstructions"
+        />
 
     <GridLayout
+        android:paddingTop="@dimen/test_padding"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:rowCount="13"
-        android:columnCount="7"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button6"
+        android:id="@+id/grid">
 
         <Button
-            android:text="0"
+            android:text="@string/_0"
             android:layout_width="@dimen/test_button_size2"
             android:layout_height="@dimen/test_button_size2"
             android:textSize="@dimen/test_text_size2"
@@ -47,7 +65,7 @@
             android:id="@+id/button00" />
 
         <Button
-            android:text="1"
+            android:text="@string/_1"
             android:layout_width="@dimen/test_button_size2"
             android:layout_height="@dimen/test_button_size2"
             android:textSize="@dimen/test_text_size2"
@@ -60,7 +78,7 @@
             android:id="@+id/button01" />
 
         <Button
-            android:text="2"
+            android:text="@string/_2"
             android:layout_width="@dimen/test_button_size2"
             android:layout_height="@dimen/test_button_size2"
             android:textSize="@dimen/test_text_size2"
@@ -73,7 +91,7 @@
             android:id="@+id/button02" />
 
         <Button
-            android:text="3"
+            android:text="@string/_3"
             android:layout_width="@dimen/test_button_size2"
             android:layout_height="@dimen/test_button_size2"
             android:textSize="@dimen/test_text_size2"
@@ -86,7 +104,7 @@
             android:id="@+id/button03" />
 
         <Button
-            android:text="4"
+            android:text="@string/_4"
             android:layout_width="@dimen/test_button_size2"
             android:layout_height="@dimen/test_button_size2"
             android:textSize="@dimen/test_text_size2"
@@ -106,7 +124,7 @@
             />
 
         <Button
-            android:text="5"
+            android:text="@string/_5"
             android:layout_width="@dimen/test_button_size2"
             android:layout_height="@dimen/test_button_size2"
             android:textSize="@dimen/test_text_size2"
@@ -119,7 +137,7 @@
             android:id="@+id/button05" />
 
         <Button
-            android:text="6"
+            android:text="@string/_6"
             android:layout_width="@dimen/test_button_size2"
             android:layout_height="@dimen/test_button_size2"
             android:textSize="@dimen/test_text_size2"
@@ -132,7 +150,7 @@
             android:id="@+id/button06" />
 
         <Button
-            android:text="7"
+            android:text="@string/_7"
             android:layout_width="@dimen/test_button_size2"
             android:layout_height="@dimen/test_button_size2"
             android:textSize="@dimen/test_text_size2"
@@ -145,7 +163,7 @@
             android:id="@+id/button07" />
 
         <Button
-            android:text="8"
+            android:text="@string/_8"
             android:layout_width="@dimen/test_button_size2"
             android:layout_height="@dimen/test_button_size2"
             android:textSize="@dimen/test_text_size2"
@@ -158,7 +176,7 @@
             android:id="@+id/button08" />
 
         <Button
-            android:text="9"
+            android:text="@string/_9"
             android:layout_width="@dimen/test_button_size2"
             android:layout_height="@dimen/test_button_size2"
             android:textSize="@dimen/test_text_size2"
@@ -170,376 +188,384 @@
             android:layout_marginStart="11dp"
             android:id="@+id/button09" />
 
-        <Space
-            android:layout_column="0"
-            android:layout_columnSpan="5"
-            android:layout_row="3"
-            android:layout_height="36sp" />
-
-        <Button
-            android:text="A"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="1"
-            android:layout_row="4"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonA" />
-
-        <Button
-            android:text="B"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="2"
-            android:layout_row="4"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonB" />
-
-        <Button
-            android:text="C"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="3"
-            android:layout_row="4"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonC" />
-
-        <Button
-            android:text="D"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="4"
-            android:layout_row="4"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonD" />
-
-        <Button
-            android:text="E"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="5"
-            android:layout_row="4"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonE" />
-
-        <Button
-            android:text="F"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="6"
-            android:layout_row="4"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonF" />
-
-        <Space
-            android:layout_column="0"
-            android:layout_columnSpan="5"
-            android:layout_row="5"
-            android:layout_height="@dimen/test_padding" />
-
-        <Button
-            android:text="G"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="1"
-            android:layout_row="6"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonG" />
-
-        <Button
-            android:text="H"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="2"
-            android:layout_row="6"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonH" />
-
-        <Button
-            android:text="I"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="3"
-            android:layout_row="6"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonI" />
-
-        <Button
-            android:text="J"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="4"
-            android:layout_row="6"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonJ" />
-
-        <Button
-            android:text="K"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="5"
-            android:layout_row="6"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonK" />
-
-        <Button
-            android:text="L"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="6"
-            android:layout_row="6"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonL" />
-
-        <Space
-            android:layout_column="0"
-            android:layout_columnSpan="5"
-            android:layout_row="7"
-            android:layout_height="@dimen/test_padding" />
-
-        <Button
-            android:text="M"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="1"
-            android:layout_row="8"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonM" />
-
-        <Button
-            android:text="N"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="2"
-            android:layout_row="8"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonN" />
-
-        <Button
-            android:text="O"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="3"
-            android:layout_row="8"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonO" />
-
-        <Button
-            android:text="P"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="4"
-            android:layout_row="8"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonP" />
-
-        <Button
-            android:text="Q"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="5"
-            android:layout_row="8"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonQ" />
-
-        <Button
-            android:text="R"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="6"
-            android:layout_row="8"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonR" />
-
-        <Space
-            android:layout_column="0"
-            android:layout_columnSpan="5"
-            android:layout_row="9"
-            android:layout_height="@dimen/test_padding" />
-
-        <Button
-            android:text="S"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="1"
-            android:layout_row="10"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonS" />
-
-        <Button
-            android:text="T"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="2"
-            android:layout_row="10"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonT" />
-
-        <Button
-            android:text="U"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="3"
-            android:layout_row="10"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonU" />
-
-        <Button
-            android:text="V"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="4"
-            android:layout_row="10"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonV" />
-
-        <Button
-            android:text="W"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="5"
-            android:layout_row="10"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonW" />
-
-        <Button
-            android:text="X"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="6"
-            android:layout_row="10"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonX" />
-
-        <Space
-            android:layout_column="0"
-            android:layout_columnSpan="5"
-            android:layout_row="11"
-            android:layout_height="@dimen/test_padding" />
-
-        <Button
-            android:text="Y"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="3"
-            android:layout_row="12"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonY" />
-
-        <Button
-            android:text="Z"
-            android:layout_width="@dimen/test_button_size2"
-            android:layout_height="@dimen/test_button_size2"
-            android:textSize="@dimen/test_text_size2"
-            android:onClick="onClick"
-            android:layout_column="4"
-            android:layout_row="12"
-            android:background="@color/white"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:id="@+id/buttonZ" />
-
-
     </GridLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/grid">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="13"
+            android:columnCount="7"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:text="@string/_A"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="1"
+                android:layout_row="4"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonA" />
+
+            <Button
+                android:text="@string/_B"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="2"
+                android:layout_row="4"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonB" />
+
+            <Button
+                android:text="@string/_C"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="3"
+                android:layout_row="4"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonC" />
+
+            <Button
+                android:text="@string/_D"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="4"
+                android:layout_row="4"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonD" />
+
+            <Button
+                android:text="@string/_E"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="5"
+                android:layout_row="4"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonE" />
+
+            <Button
+                android:text="@string/_F"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="6"
+                android:layout_row="4"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonF" />
+
+            <Space
+                android:layout_column="0"
+                android:layout_columnSpan="5"
+                android:layout_row="5"
+                android:layout_height="@dimen/test_padding" />
+
+            <Button
+                android:text="@string/_G"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="1"
+                android:layout_row="6"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonG" />
+
+            <Button
+                android:text="@string/_H"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="2"
+                android:layout_row="6"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonH" />
+
+            <Button
+                android:text="@string/_I"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="3"
+                android:layout_row="6"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonI" />
+
+            <Button
+                android:text="@string/_J"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="4"
+                android:layout_row="6"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonJ" />
+
+            <Button
+                android:text="@string/_K"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="5"
+                android:layout_row="6"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonK" />
+
+            <Button
+                android:text="@string/_L"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="6"
+                android:layout_row="6"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonL" />
+
+            <Space
+                android:layout_column="0"
+                android:layout_columnSpan="5"
+                android:layout_row="7"
+                android:layout_height="@dimen/test_padding" />
+
+            <Button
+                android:text="@string/_M"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="1"
+                android:layout_row="8"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonM" />
+
+            <Button
+                android:text="@string/_N"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="2"
+                android:layout_row="8"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonN" />
+
+            <Button
+                android:text="@string/_O"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="3"
+                android:layout_row="8"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonO" />
+
+            <Button
+                android:text="@string/_P"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="4"
+                android:layout_row="8"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonP" />
+
+            <Button
+                android:text="@string/_Q"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="5"
+                android:layout_row="8"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonQ" />
+
+            <Button
+                android:text="@string/_R"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="6"
+                android:layout_row="8"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonR" />
+
+            <Space
+                android:layout_column="0"
+                android:layout_columnSpan="5"
+                android:layout_row="9"
+                android:layout_height="@dimen/test_padding" />
+
+            <Button
+                android:text="@string/_S"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="1"
+                android:layout_row="10"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonS" />
+
+            <Button
+                android:text="@string/_T"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="2"
+                android:layout_row="10"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonT" />
+
+            <Button
+                android:text="@string/_U"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="3"
+                android:layout_row="10"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonU" />
+
+            <Button
+                android:text="@string/_V"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="4"
+                android:layout_row="10"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonV" />
+
+            <Button
+                android:text="@string/_W"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="5"
+                android:layout_row="10"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonW" />
+
+            <Button
+                android:text="@string/_X"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="6"
+                android:layout_row="10"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonX" />
+
+            <Space
+                android:layout_column="0"
+                android:layout_columnSpan="5"
+                android:layout_row="11"
+                android:layout_height="@dimen/test_padding" />
+
+            <Button
+                android:text="@string/_Y"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="3"
+                android:layout_row="12"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonY" />
+
+            <Button
+                android:text="@string/_Z"
+                android:layout_width="@dimen/test_button_size2"
+                android:layout_height="@dimen/test_button_size2"
+                android:textSize="@dimen/test_text_size2"
+                android:onClick="onClick"
+                android:layout_column="4"
+                android:layout_row="12"
+                android:background="@color/white"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/buttonZ" />
+
+        </GridLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
