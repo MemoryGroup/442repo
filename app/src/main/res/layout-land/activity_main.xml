@@ -29,7 +29,7 @@
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/button_shape1"
                 android:onClick="onHelpButtonClicked"
                 android:text="help"
                 android:textSize="18sp" />
@@ -42,7 +42,7 @@
                 android:text="@string/train"
                 android:id="@+id/button"
                 android:textSize="18sp"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/button_shape1"
                 android:onClick="onTrainButtonClicked" />
 
             <Space />
@@ -51,7 +51,7 @@
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/button_shape1"
                 android:onClick="onTestButtonClicked"
                 android:text="@string/test"
                 android:textSize="18sp" />
@@ -64,7 +64,7 @@
                 android:text="Score"
                 android:id="@+id/button3"
                 android:textSize="18sp"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/button_shape1"
                 android:onClick="onScoreButtonClicked" />
 
         </TableRow>
