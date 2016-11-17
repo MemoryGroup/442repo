@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/flashcardimage"
+    android:background="@drawable/memory_2"
     tools:context="com.example.youngki.memory_project.MainActivity">
 
 
@@ -64,6 +64,7 @@
       android:layout_marginTop="110dp"
       android:gravity="center_horizontal"
       android:text="Memory Project"
+      android:textColor="@color/white"
       android:textAppearance="?android:attr/textAppearanceLarge"
       android:textSize="@dimen/MemoryProjectFontSize"
       />
