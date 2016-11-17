@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/memory_2"
-    tools:context="com.example.youngki.memory_project.MainActivity">
+    tools:context="com.youngki.memory_project.MainActivity">
 
 
     <Button
