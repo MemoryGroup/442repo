@@ -1,4 +1,4 @@
-package com.example.youngki.memory_project;
+package com.youngki.memory_project;
 
 import android.content.DialogInterface;
 import android.content.Intent;
