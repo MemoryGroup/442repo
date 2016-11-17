@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.youngki.memory_project">
+    package="com.youngki.memory_project">
 
     <application
         android:allowBackup="true"
@@ -28,14 +28,14 @@
             android:parentActivityName=".showTestOptions">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.youngki.memory_project.showTestOptions" />
+                android:value="com.youngki.memory_project.showTestOptions" />
         </activity>
 		<activity
             android:name=".showResultsOpt2"
             android:parentActivityName=".showTestOptions">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.youngki.memory_project.showTestOptions" />
+                android:value="com.youngki.memory_project.showTestOptions" />
         </activity>
         <activity android:name=".showTestOptions" />
         <activity android:name=".progress" />
@@ -43,7 +43,7 @@
         <activity android:name=".matchingTest2" />
         <activity android:name=".handWritingTrain">
             <intent-filter>
-                <action android:name="com.example.youngki.memory_project.handWritingTrain" />
+                <action android:name="com.youngki.memory_project.handWritingTrain" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
