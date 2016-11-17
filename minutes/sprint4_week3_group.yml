@@ -1,0 +1,17 @@
+date: November 16, 2016
+meeting_type: group
+attendance: [kreidler, youngkih, amypritc, majuran ]
+excused_absences: [ 
+  ]
+task_progress: [ 
+  {ubit: majuran, progress: began developing alternate display of map and map creation},
+  {ubit: kreidler, progress: integrated score parameters into both the test and score activities},
+  {ubit: youngkih, progress: integrate handwriting and audio and integrate with map},
+  {ubit: amypritc, progress: created a repetition based activity and worked on layouts}
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  we did not hold a group meeting in person this week.
+  discussed remaining sprint 4 goals and integration, as well as beta testing on slack
+  working on merging for our release for the sprint
