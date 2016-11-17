@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_mem_project"
+        android:icon="@mipmap/ic_mem2_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoTitleBar">
@@ -50,7 +50,6 @@
         </activity>
         <activity android:name=".showTrainOptions" />
         <activity android:name=".repetitionTraining" />
-        <activity android:name=".info_generate_map"></activity>
     </application>
 
 </manifest>
