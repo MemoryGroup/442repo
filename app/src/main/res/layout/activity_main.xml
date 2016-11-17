@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/memory_2"
-    tools:context="com.youngki.memory_project.MainActivity">
+    tools:context="com.example.youngki.memory_project.MainActivity">
 
 
     <Button
@@ -23,7 +23,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="@dimen/activity_horizontal_margin"
-        android:background="@drawable/button_shape1"
+        android:background="@drawable/button_shape"
         android:onClick="onTrainButtonClicked" />
 
   <Button
@@ -34,7 +34,7 @@
       android:layout_alignParentRight="true"
       android:layout_alignTop="@+id/button"
       android:layout_marginRight="30dp"
-      android:background="@drawable/button_shape1"
+      android:background="@drawable/button_shape"
       android:nestedScrollingEnabled="false"
       android:onClick="onTestButtonClicked"
       android:text="@string/test"
@@ -47,7 +47,7 @@
       android:layout_alignEnd="@+id/button2"
       android:layout_alignRight="@+id/button2"
       android:layout_alignTop="@+id/button3"
-      android:background="@drawable/button_shape1"
+      android:background="@drawable/button_shape"
       android:onClick="onHelpButtonClicked"
       android:text="help"
       android:textSize="@dimen/activity_horizontal_margin"/>
@@ -75,7 +75,7 @@
         android:text="Score"
         android:id="@+id/button3"
         android:textSize="@dimen/activity_horizontal_margin"
-        android:background="@drawable/button_shape1"
+        android:background="@drawable/button_shape"
         android:layout_below="@+id/button2"
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button"
