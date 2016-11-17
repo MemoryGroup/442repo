@@ -42,6 +42,11 @@ launcher icon - mordecai
 launcher icon - fanyang
 launcher icon - satyakra
 2nd launcher icon - satyakra
+background - thalaiky
+2nd background - thalaiky
+3rd background - thalaiky
+4th background - thalaiky
+5th background - thalaiky
 ```
 **Our group is also looking for some design work to be done. We are in need of:**
 
