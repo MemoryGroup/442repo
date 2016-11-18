@@ -3,9 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
-
     defaultConfig {
-        applicationId "com.example.youngki.memory_project"
+        vectorDrawables.useSupportLibrary = true
+        applicationId "com.youngki.memory_project"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1

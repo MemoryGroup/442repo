@@ -9,7 +9,7 @@
     <color name="purple">#af86cc</color>
     <color name="blue">#8ec5eb</color>
     <color name="lightGreen">#2941f4a6</color>
-    <color name="lightBlue">#216ff0f2</color>
+    <color name="lightBlue">#456ff0f2</color>
     <color name="red">#dc5e5a</color>
     <color name="lightRed">#1cec3933</color>
     <color name="orange">#eeb268</color>
@@ -18,4 +18,5 @@
     <color name="tan">#d1b897</color>
     <color name="teal">#90b5b2</color>
     <color name="white">#ffffff</color>
+    <color name="background">#3de4cfb2</color>
 </resources>
