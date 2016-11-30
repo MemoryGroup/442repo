@@ -78,4 +78,5 @@
     <string name="generating_a_new_map">Generating a new map</string>
     <string name="generate_new_map">Generate New Map</string>
     <string name="view_map">View Map</string>
+    <string name="your_current_map">Your current map:</string>
 </resources>

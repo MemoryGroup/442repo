@@ -30,7 +30,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.youngki.memory_project.showTestOptions" />
         </activity>
-		<activity
+        <activity
             android:name=".showResultsOpt2"
             android:parentActivityName=".showTestOptions">
             <meta-data
@@ -50,6 +50,7 @@
         </activity>
         <activity android:name=".showTrainOptions" />
         <activity android:name=".repetitionTraining" />
+        <activity android:name=".showMap"></activity>
     </application>
 
 </manifest>

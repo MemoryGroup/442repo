@@ -101,8 +101,6 @@ public class matchingTest extends AppCompatActivity {
                     iv.setAlpha(1f);
                 }
                 totalAttemptsMap.put(sD, totalAttemptsMap.get(sD)+1);
-                i = 3;
-            case 3:
                 if (answerC == iB){
                     streakMap.put(sC, streakMap.get(sC)+1);
                     timesCorrectMap.put(sC, timesCorrectMap.get(sC)+1);
@@ -115,8 +113,6 @@ public class matchingTest extends AppCompatActivity {
                     iv.setAlpha(1f);
                 }
                 totalAttemptsMap.put(sC, totalAttemptsMap.get(sC)+1);
-                i = 2;
-            case 2:
                 if (answerB == iD){
                     streakMap.put(sB, streakMap.get(sB)+1);
                     timesCorrectMap.put(sB, timesCorrectMap.get(sB)+1);
@@ -129,9 +125,85 @@ public class matchingTest extends AppCompatActivity {
                     iv.setAlpha(1f);
                 }
                 totalAttemptsMap.put(sB, totalAttemptsMap.get(sB)+1);
-                i = 1;
-            case 1:
                 if (answerA == iC){
+                    streakMap.put(sA, streakMap.get(sA)+1);
+                    timesCorrectMap.put(sA, timesCorrectMap.get(sA)+1);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewA);
+                    iv.setAlpha(0f);
+                }
+                else{
+                    streakMap.put(sA, 0);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewA);
+                    iv.setAlpha(1f);
+                }
+                totalAttemptsMap.put(sA, totalAttemptsMap.get(sA)+1);
+                break;
+            case 3:
+                if (answerC == iA){
+                    streakMap.put(sC, streakMap.get(sC)+1);
+                    timesCorrectMap.put(sC, timesCorrectMap.get(sC)+1);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewC);
+                    iv.setAlpha(0f);
+                }
+                else{
+                    streakMap.put(sC, 0);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewC);
+                    iv.setAlpha(1f);
+                }
+                totalAttemptsMap.put(sC, totalAttemptsMap.get(sC)+1);
+                if (answerB == iC){
+                    streakMap.put(sB, streakMap.get(sB)+1);
+                    timesCorrectMap.put(sB, timesCorrectMap.get(sB)+1);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewB);
+                    iv.setAlpha(0f);
+                }
+                else{
+                    streakMap.put(sB, 0);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewB);
+                    iv.setAlpha(1f);
+                }
+                totalAttemptsMap.put(sB, totalAttemptsMap.get(sB)+1);
+                if (answerA == iB){
+                    streakMap.put(sA, streakMap.get(sA)+1);
+                    timesCorrectMap.put(sA, timesCorrectMap.get(sA)+1);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewA);
+                    iv.setAlpha(0f);
+                }
+                else{
+                    streakMap.put(sA, 0);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewA);
+                    iv.setAlpha(1f);
+                }
+                totalAttemptsMap.put(sA, totalAttemptsMap.get(sA)+1);
+                break;
+            case 2:
+                if (answerB == iA){
+                    streakMap.put(sB, streakMap.get(sB)+1);
+                    timesCorrectMap.put(sB, timesCorrectMap.get(sB)+1);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewB);
+                    iv.setAlpha(0f);
+                }
+                else{
+                    streakMap.put(sB, 0);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewB);
+                    iv.setAlpha(1f);
+                }
+                totalAttemptsMap.put(sB, totalAttemptsMap.get(sB)+1);
+                if (answerA == iB){
+                    streakMap.put(sA, streakMap.get(sA)+1);
+                    timesCorrectMap.put(sA, timesCorrectMap.get(sA)+1);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewA);
+                    iv.setAlpha(0f);
+                }
+                else{
+                    streakMap.put(sA, 0);
+                    ImageView iv = (ImageView) findViewById(R.id.imageViewA);
+                    iv.setAlpha(1f);
+                }
+                totalAttemptsMap.put(sA, totalAttemptsMap.get(sA)+1);
+                break;
+            case 1:
+                if (answerA == iA){
                     streakMap.put(sA, streakMap.get(sA)+1);
                     timesCorrectMap.put(sA, timesCorrectMap.get(sA)+1);
                     ImageView iv = (ImageView) findViewById(R.id.imageViewA);
