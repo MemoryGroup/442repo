@@ -20,7 +20,7 @@ public class ViewMapActivity extends AppCompatActivity {
   HashMap<String, Integer> memMap;
   Boolean hasGenerated = false;
   GridLayout dynamicGridLayout;
-  Level level = Level.EASY;
+  //Level level = Level.EASY;
   private int[] colors = new int[10];
 
   /**
@@ -50,7 +50,7 @@ public class ViewMapActivity extends AppCompatActivity {
     colors[9] = ContextCompat.getColor(this, R.color.gray);
     SharedPreferences myPref = getSharedPreferences("MyPref", MODE_PRIVATE);
     String map =myPref.getString("memMap", "");
-  memMap =  new Gson().fromJson(map,MapWrapper.class).getMap();
+    memMap =  new Gson().fromJson(map,MapWrapper.class).getMap();
 
 
     onGenerateClicked(null);
@@ -61,9 +61,9 @@ public class ViewMapActivity extends AppCompatActivity {
     String letterMap = ALPHABETS;
     String displayLetters = "";
     String displayNumbers = "";
-    int mapLetters = level.letters();
-    dynamicGridLayout.removeAllViews();
-    for (int i = 0; i < mapLetters; i++) {
+    //int mapLetters = level.letters();
+    //dynamicGridLayout.removeAllViews();
+    for (int i = 0; i < memMap.size(); i++) {
       String curLetter = letterMap.substring(i, i + 1);
       int curNumber = memMap.get(curLetter);
       Button button = new Button(this);
@@ -78,7 +78,7 @@ public class ViewMapActivity extends AppCompatActivity {
       button.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
       button.setText(curLetter + ":" + curNumber + "  ");
       displayLetters += curLetter + ":" + curNumber + "  ";
-      if (i != 0 && i % 4 == 0 && mapLetters != 4) {
+      if (i != 0 && i % 4 == 0) {
         displayLetters += "\n";
       }
     }

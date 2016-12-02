@@ -79,4 +79,11 @@
     <string name="generate_new_map">Generate New Map</string>
     <string name="view_map">View Map</string>
     <string name="your_current_map">Your current map:</string>
+    <string name="letters">Letters:</string>
+    <string name="numbers">Numbers:</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="hard">Hard</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
 </resources>

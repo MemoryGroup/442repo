@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="onGenerateClicked"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -47,9 +46,6 @@
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:shrinkColumns="*"
         android:stretchColumns="*">
 
@@ -65,24 +61,18 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Letters:"/>
-
+                    android:text="@string/letters"/>
 
                 <TextView
                     android:id="@+id/numberCount"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Numbers:"/>
+                    android:text="@string/numbers"/>
             </LinearLayout>
         </TableRow>
 
         <TableRow>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_span="4"
-                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/addLetter"
@@ -90,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onAddLettersClicked"
-                    android:text="+"/>
+                    android:text="@string/plus"/>
 
                 <Button
                     android:id="@+id/subLetter"
@@ -98,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onSubLettersClicked"
-                    android:text="-"/>
+                    android:text="@string/minus"/>
 
                 <Button
                     android:id="@+id/addNumber"
@@ -106,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onAddNumbersClicked"
-                    android:text="+"/>
+                    android:text="@string/plus"/>
 
                 <Button
                     android:id="@+id/subNumber"
@@ -114,18 +104,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onSubNumbersClicked"
-                    android:text="-"/>
+                    android:text="@string/minus"/>
 
-            </LinearLayout>
         </TableRow>
 
     <TableRow>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_span="4"
-            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/easy"
@@ -133,8 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="onNewEasyClicked"
-                android:singleLine="true"
-                android:text="Easy"/>
+                android:text="@string/easy"/>
 
             <Button
                 android:id="@+id/medium"
@@ -142,8 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="onNewMediumClicked"
-                android:singleLine="true"
-                android:text="Medium"/>
+                android:text="@string/medium"/>
 
             <Button
                 android:id="@+id/hard"
@@ -151,10 +132,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="onNewHardClicked"
-                android:singleLine="true"
-                android:text="Hard"/>
+                android:text="@string/hard"/>
 
-        </LinearLayout>
     </TableRow>
 
     <TableRow>
@@ -162,13 +141,10 @@
           android:id="@+id/train"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_alignBaseline="@+id/customMap"
-          android:layout_alignBottom="@+id/customMap"
           android:layout_column="0"
-          android:layout_row="2"
           android:layout_span="4"
           android:onClick="onNewTrainClicked"
-          android:text="Train"/>
+          android:text="@string/train"/>
 
     </TableRow>
 

@@ -183,7 +183,7 @@ public class showHelp extends AppCompatActivity {
             alert11.show();
             return;
         }
-        Intent startWindowOpener = new Intent(this,showMap.class);
-        startActivity(startWindowOpener);
+        //Intent startWindowOpener = new Intent(this,showMap.class);
+        //startActivity(startWindowOpener);
     }
 }
