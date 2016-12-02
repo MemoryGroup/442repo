@@ -41,6 +41,7 @@
         <activity android:name=".progress" />
         <activity android:name=".matchingTest" />
         <activity android:name=".matchingTest2" />
+        <activity android:name=".ViewMapActivity" />
         <activity android:name=".handWritingTrain">
             <intent-filter>
                 <action android:name="com.youngki.memory_project.handWritingTrain" />

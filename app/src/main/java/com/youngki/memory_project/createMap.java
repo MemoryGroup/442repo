@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -115,6 +116,8 @@ public class createMap extends AppCompatActivity {
       button.setLayoutParams(new GridLayout.LayoutParams(marginLayoutParams));
       button.setBackgroundColor(colors[curNumber]);
       dynamicGridLayout.addView(button);
+      button.setGravity(Gravity.CENTER);
+      button.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
       button.setText(curLetter + ":" + curNumber + "  ");
       displayLetters += curLetter + ":" + curNumber + "  ";
       if (i != 0 && i % 4 == 0 && mapLetters != 4) {
@@ -176,23 +179,13 @@ public class createMap extends AppCompatActivity {
     if (hasGenerated == false) {
       return;
     }
-	HashMap<String, Integer> progress_map = new HashMap<>();
-    for (String key : memMap.keySet()) {
-      progress_map.put(key, 0);
-    }
     Gson gson = new Gson();
-    MapWrapper mem = new MapWrapper();
-    mem.setMap(memMap);
-    String serializedMap = gson.toJson(mem);
+    MapWrapper wrapper = new MapWrapper();
+    wrapper.setMap(memMap);
+    String serializedMap = gson.toJson(wrapper);
     SharedPreferences.Editor editor = getSharedPreferences("MyPref", MODE_PRIVATE).edit();
     editor.putString("memMap", serializedMap);
-    MapWrapper progress = new MapWrapper();
-    progress.setMap(progress_map);
-    String serializedProgress = gson.toJson(progress);
-    editor.putString("streakMap", serializedProgress);
-    editor.putString("timesCorrectMap", serializedProgress);
-    editor.putString("totalAttemptsMap", serializedProgress);
-	editor.apply(); //persist the values
+    editor.commit();
     startActivity(new Intent(this, showTrainOptions.class));
   }
 }
