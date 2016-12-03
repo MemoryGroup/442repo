@@ -102,8 +102,6 @@ public class createMap extends AppCompatActivity {
         //now get the maps with default: 7 letters and 3 numbers for easy
         makeNewMap(level.letters(), level.digits());
         String letterMap = ALPHABETS;
-        String displayLetters = "";
-        String displayNumbers = "";
         int mapLetters = level.letters();
         dynamicGridLayout.removeAllViews();
         for (int i = 0; i < mapLetters; i++) {
@@ -119,11 +117,7 @@ public class createMap extends AppCompatActivity {
             dynamicGridLayout.addView(button);
             button.setGravity(Gravity.CENTER);
             button.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
-            button.setText(curLetter + ":" + curNumber + "  ");
-            displayLetters += curLetter + ":" + curNumber + "  ";
-            if (i != 0 && i % 4 == 0 && mapLetters != 4) {
-                displayLetters += "\n";
-            }
+            button.setText(curLetter + ":" + curNumber);
         }
         //TextView mapView = (TextView) findViewById(R.id.letterText);
         //mapView.setText(displayLetters);

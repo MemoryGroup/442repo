@@ -59,10 +59,6 @@ public class ViewMapActivity extends AppCompatActivity {
   public void onGenerateClicked(View v) {
     //now get the maps with default: 7 letters and 3 numbers for easy
     String letterMap = ALPHABETS;
-    String displayLetters = "";
-    String displayNumbers = "";
-    //int mapLetters = level.letters();
-    //dynamicGridLayout.removeAllViews();
     for (int i = 0; i < memMap.size(); i++) {
       String curLetter = letterMap.substring(i, i + 1);
       int curNumber = memMap.get(curLetter);
@@ -76,11 +72,7 @@ public class ViewMapActivity extends AppCompatActivity {
       dynamicGridLayout.addView(button);
       button.setGravity(Gravity.CENTER);
       button.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
-      button.setText(curLetter + ":" + curNumber + "  ");
-      displayLetters += curLetter + ":" + curNumber + "  ";
-      if (i != 0 && i % 4 == 0) {
-        displayLetters += "\n";
-      }
+      button.setText(curLetter + ":" + curNumber);
     }
     hasGenerated = true;
   }
