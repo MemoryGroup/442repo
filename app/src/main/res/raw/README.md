@@ -41,6 +41,10 @@ letters7/numbers7 - mdtobio
 letters8/numbers8 - linnhtwa
 letters9/numbers9 - linnhtwa
 letters10/numbers10 - linnhtwa
+letters11/numbers11 - alee22
+letters12/numbers12 - alee22
+letters13/numbers13 - alee22
+letters14/numbers14 - alee22
 red x checkmark/green checkmark - mordecai 
 launcher icon - mordecai
 2nd launcher icon - mordecai
