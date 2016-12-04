@@ -1,6 +1,7 @@
 package com.youngki.memory_project;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,62 @@ public class repetitionTraining extends AppCompatActivity {
     Boolean done = Boolean.FALSE;
     MediaPlayer mp = new MediaPlayer();
 
+    int audioEleven[] = new int[]{
+            R.raw.a11, R.raw.b11, R.raw.c11, R.raw.d11, R.raw.e11, R.raw.f11, R.raw.g11, R.raw.h11,
+            R.raw.i11, R.raw.j11, R.raw.k11, R.raw.l11, R.raw.m11, R.raw.n11, R.raw.o11, R.raw.p11,
+            R.raw.q11, R.raw.r11, R.raw.s11, R.raw.t11, R.raw.u11, R.raw.v11, R.raw.w11, R.raw.x11,
+            R.raw.y11, R.raw.z11, R.raw.zero11, R.raw.one11, R.raw.two11,R.raw.three11, R.raw.four11,
+            R.raw.five11, R.raw.six11, R.raw.seven3, R.raw.eight11, R.raw.nine11
+    };
+    int audioTen[] = new int[]{
+            R.raw.a10, R.raw.b10, R.raw.c10, R.raw.d10, R.raw.e10, R.raw.f10, R.raw.g10, R.raw.h10,
+            R.raw.i10, R.raw.j10, R.raw.k10, R.raw.l10, R.raw.m10, R.raw.n10, R.raw.o10, R.raw.p10,
+            R.raw.q10, R.raw.r10, R.raw.s10, R.raw.t10, R.raw.u10, R.raw.v10, R.raw.w10, R.raw.x10,
+            R.raw.y10, R.raw.z10, R.raw.zero10, R.raw.one10, R.raw.two10,R.raw.three10, R.raw.four10,
+            R.raw.five10, R.raw.six10, R.raw.seven10, R.raw.eight10, R.raw.nine10
+    };
+    int audioNine[] = new int[]{
+            R.raw.a9, R.raw.b9, R.raw.c9, R.raw.d9, R.raw.e9, R.raw.f9, R.raw.g9, R.raw.h9, R.raw.i9,
+            R.raw.j9, R.raw.k9, R.raw.l9, R.raw.m9, R.raw.n9, R.raw.o9, R.raw.p9, R.raw.q9, R.raw.r9,
+            R.raw.s9, R.raw.t9, R.raw.u9, R.raw.v9, R.raw.w9, R.raw.x9, R.raw.y9, R.raw.z9,
+            R.raw.zero9, R.raw.one9, R.raw.two9,R.raw.three9, R.raw.four9, R.raw.five9, R.raw.six9,
+            R.raw.seven9, R.raw.eight9, R.raw.nine9
+    };
+    int audioEight[] = new int[]{
+            R.raw.a8, R.raw.b8, R.raw.c8, R.raw.d8, R.raw.e8, R.raw.f8, R.raw.g8, R.raw.h8, R.raw.i8,
+            R.raw.j8, R.raw.k8, R.raw.l8, R.raw.m8, R.raw.n8, R.raw.o8, R.raw.p8, R.raw.q8, R.raw.r8,
+            R.raw.s8, R.raw.t8, R.raw.u8, R.raw.v8, R.raw.w8, R.raw.x8, R.raw.y8, R.raw.z8,
+            R.raw.zero8, R.raw.one8, R.raw.two8,R.raw.three8, R.raw.four8, R.raw.five8, R.raw.six8,
+            R.raw.seven8, R.raw.eight8, R.raw.nine8
+    };
+    int audioSeven[] = new int[]{
+            R.raw.a12, R.raw.b12, R.raw.c12, R.raw.d12, R.raw.e12, R.raw.f12, R.raw.g12, R.raw.h12,
+            R.raw.i12, R.raw.j12, R.raw.k12, R.raw.l12, R.raw.m12, R.raw.n12, R.raw.o12, R.raw.p12,
+            R.raw.q12, R.raw.r12, R.raw.s12, R.raw.t12, R.raw.u12, R.raw.v12, R.raw.w12, R.raw.x12,
+            R.raw.y12, R.raw.z12, R.raw.zero12, R.raw.one12, R.raw.two12,R.raw.three12, R.raw.four12,
+            R.raw.five12, R.raw.six12, R.raw.seven12, R.raw.eight12, R.raw.nine12
+    };
+    int audioSix[] = new int[]{
+            R.raw.a6, R.raw.b6, R.raw.c6, R.raw.d6, R.raw.e6, R.raw.f6, R.raw.g6, R.raw.h6, R.raw.i6,
+            R.raw.j6, R.raw.k6, R.raw.l6, R.raw.m6, R.raw.n6, R.raw.o6, R.raw.p6, R.raw.q6, R.raw.r6,
+            R.raw.s6, R.raw.t6, R.raw.u6, R.raw.v6, R.raw.w6, R.raw.x6, R.raw.y6, R.raw.z6,
+            R.raw.zero6, R.raw.one6, R.raw.two6,R.raw.three6, R.raw.four6, R.raw.five6, R.raw.six6,
+            R.raw.seven6, R.raw.eight6, R.raw.nine6
+    };
+    int audioFive[] = new int[]{
+            R.raw.a5, R.raw.b5, R.raw.c5, R.raw.d5, R.raw.e5, R.raw.f5, R.raw.g5, R.raw.h5, R.raw.i5,
+            R.raw.j5, R.raw.k5, R.raw.l5, R.raw.m5, R.raw.n5, R.raw.o5, R.raw.p5, R.raw.q5, R.raw.r5,
+            R.raw.s5, R.raw.t5, R.raw.u5, R.raw.v5, R.raw.w5, R.raw.x5, R.raw.y5, R.raw.z5,
+            R.raw.zero5, R.raw.one5, R.raw.two5,R.raw.three5, R.raw.four5, R.raw.five5, R.raw.six5,
+            R.raw.seven5, R.raw.eight5, R.raw.nine5
+    };
+    int audioFour[] = new int[]{
+            R.raw.a4, R.raw.b4, R.raw.c4, R.raw.d4, R.raw.e4, R.raw.f4, R.raw.g4, R.raw.h4, R.raw.i4,
+            R.raw.j4, R.raw.k4, R.raw.l4, R.raw.m4, R.raw.n4, R.raw.o4, R.raw.p4, R.raw.q4, R.raw.r4,
+            R.raw.s4, R.raw.t4, R.raw.u4, R.raw.v4, R.raw.w4, R.raw.x4, R.raw.y4, R.raw.z4,
+            R.raw.zero4, R.raw.one4, R.raw.two4,R.raw.three4, R.raw.four4, R.raw.five4, R.raw.six4,
+            R.raw.seven4, R.raw.eight4, R.raw.nine4
+    };
     int audioThree[] = new int[]{
         R.raw.a3, R.raw.b3, R.raw.c3, R.raw.d3, R.raw.e3, R.raw.f3, R.raw.g3, R.raw.h3, R.raw.i3,
         R.raw.j3, R.raw.k3, R.raw.l3, R.raw.m3, R.raw.n3, R.raw.o3, R.raw.p3, R.raw.q3, R.raw.r3,
@@ -67,6 +124,7 @@ public class repetitionTraining extends AppCompatActivity {
         nextPair();
         Button b = (Button) findViewById(R.id.audio1);
         b.setTypeface(Typeface.DEFAULT_BOLD);
+        b.setTextColor(Color.RED);
     }
 
     public void nextPair(){
@@ -359,37 +417,122 @@ public class repetitionTraining extends AppCompatActivity {
         }
     }
 
-    public void onAudioSelectClick(View v){
-        int id = v.getId();
+    public void clearAudioSelection(){
         Button b;
         b = (Button) findViewById(R.id.audio0);
         b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
         b = (Button) findViewById(R.id.audio1);
         b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
         b = (Button) findViewById(R.id.audio2);
         b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
         b = (Button) findViewById(R.id.audio3);
         b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
+        b = (Button) findViewById(R.id.audio4);
+        b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
+        b = (Button) findViewById(R.id.audio5);
+        b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
+        b = (Button) findViewById(R.id.audio6);
+        b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
+        b = (Button) findViewById(R.id.audio7);
+        b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
+        b = (Button) findViewById(R.id.audio8);
+        b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
+        b = (Button) findViewById(R.id.audio9);
+        b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
+        b = (Button) findViewById(R.id.audio10);
+        b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
+        b = (Button) findViewById(R.id.audio11);
+        b.setTypeface(Typeface.DEFAULT);
+        b.setTextColor(Color.BLACK);
+    }
+
+    public void onAudioSelectClick(View v){
+        int id = v.getId();
+        Button b;
+        clearAudioSelection();
         switch (id){
             case R.id.audio0:
                 audioSelection = 0;
                 b = (Button) findViewById(R.id.audio0);
                 b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
                 break;
             case R.id.audio1:
                 audioSelection = 1;
                 b = (Button) findViewById(R.id.audio1);
                 b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
                 break;
             case R.id.audio2:
                 audioSelection = 2;
                 b = (Button) findViewById(R.id.audio2);
                 b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
                 break;
             case R.id.audio3:
                 audioSelection = 3;
                 b = (Button) findViewById(R.id.audio3);
                 b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
+                break;
+            case R.id.audio4:
+                audioSelection = 4;
+                b = (Button) findViewById(R.id.audio4);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
+                break;
+            case R.id.audio5:
+                audioSelection = 5;
+                b = (Button) findViewById(R.id.audio5);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
+                break;
+            case R.id.audio6:
+                audioSelection = 6;
+                b = (Button) findViewById(R.id.audio6);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
+                break;
+            case R.id.audio7:
+                audioSelection = 7;
+                b = (Button) findViewById(R.id.audio7);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
+                break;
+            case R.id.audio8:
+                audioSelection = 8;
+                b = (Button) findViewById(R.id.audio8);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
+                break;
+            case R.id.audio9:
+                audioSelection = 9;
+                b = (Button) findViewById(R.id.audio9);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
+                break;
+            case R.id.audio10:
+                audioSelection = 10;
+                b = (Button) findViewById(R.id.audio10);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
+                break;
+            case R.id.audio11:
+                audioSelection = 11;
+                b = (Button) findViewById(R.id.audio11);
+                b.setTypeface(Typeface.DEFAULT_BOLD);
+                b.setTextColor(Color.RED);
                 break;
         }
     }
@@ -408,6 +551,30 @@ public class repetitionTraining extends AppCompatActivity {
         }
         else if (audioSelection == 3){
             audio1 = audioThree;
+        }
+        else if (audioSelection == 4){
+            audio1 = audioFour;
+        }
+        else if (audioSelection == 5){
+            audio1 = audioFive;
+        }
+        else if (audioSelection == 6){
+            audio1 = audioSix;
+        }
+        else if (audioSelection == 7){
+            audio1 = audioSeven;
+        }
+        else if (audioSelection == 8){
+            audio1 = audioEight;
+        }
+        else if (audioSelection == 9){
+            audio1 = audioNine;
+        }
+        else if (audioSelection == 10){
+            audio1 = audioTen;
+        }
+        else if (audioSelection == 11){
+            audio1 = audioEleven;
         }
         else{
             audio1 = audioOne;

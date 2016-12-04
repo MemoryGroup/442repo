@@ -86,4 +86,8 @@
     <string name="hard">Hard</string>
     <string name="easy">Easy</string>
     <string name="medium">Medium</string>
+    <string name="_10">10</string>
+    <string name="_11">11</string>
+    <string name="audio_selection">Audio Selection:</string>
+    <string name="audio">Audio:</string>
 </resources>

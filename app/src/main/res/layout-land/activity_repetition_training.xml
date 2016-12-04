@@ -352,6 +352,94 @@
         android:layout_toEndOf="@+id/tableLayout"
         android:id="@+id/space4"/>
 
+    <Space
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tableLayout"
+        android:layout_toStartOf="@+id/tableLayout"
+        android:id="@+id/space5"/>
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:layout_below="@+id/space2"
+        android:id="@+id/tableLayout3"
+        android:layout_toLeftOf="@+id/space5"
+        android:layout_toStartOf="@+id/space5"
+        android:layout_alignParentBottom="true"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/audio" />
+
+        <TableRow>
+
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:id="@+id/audio0"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_1"
+                android:id="@+id/audio1"
+                android:onClick="onAudioSelectClick"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2"
+                android:id="@+id/audio2"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_3"
+                android:id="@+id/audio3"
+                android:onClick="onAudioSelectClick"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_4"
+                android:id="@+id/audio4"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_5"
+                android:id="@+id/audio5"
+                android:onClick="onAudioSelectClick"/>
+
+        </TableRow>
+
+    </TableLayout>
+
     <TableLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
@@ -365,50 +453,71 @@
         android:shrinkColumns="*"
         android:stretchColumns="*">
 
-
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_shape"
-            android:text="audio 0"
-            android:id="@+id/audio0"
-            android:onClick="onAudioSelectClick"/>
+            android:gravity="center"
+            android:text="@string/audio" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
+        <TableRow>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="audio 1"
-            android:id="@+id/audio1"
-            android:background="@drawable/button_shape"
-            android:onClick="onAudioSelectClick"/>
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_6"
+                android:id="@+id/audio6"
+                android:onClick="onAudioSelectClick"/>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_7"
+                android:id="@+id/audio7"
+                android:onClick="onAudioSelectClick"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="audio 2"
-            android:background="@drawable/button_shape"
-            android:id="@+id/audio2"
-            android:onClick="onAudioSelectClick"/>
+        </TableRow>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
+        <TableRow>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="audio 3"
-            android:background="@drawable/button_shape"
-            android:id="@+id/audio3"
-            android:onClick="onAudioSelectClick"/>
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_8"
+                android:id="@+id/audio8"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_9"
+                android:id="@+id/audio9"
+                android:onClick="onAudioSelectClick"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_10"
+                android:id="@+id/audio10"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_11"
+                android:id="@+id/audio11"
+                android:onClick="onAudioSelectClick"/>
+
+        </TableRow>
 
     </TableLayout>
 
