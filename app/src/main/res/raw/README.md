@@ -45,6 +45,10 @@ letters11/numbers11 - alee22
 letters12/numbers12 - alee22
 letters13/numbers13 - alee22
 letters14/numbers14 - alee22
+letters15/numbers15 - qa
+letters16/numbers16 - qa
+letters17/numbers17 - qa
+letters18/numbers18 - qa
 red x checkmark/green checkmark - mordecai 
 launcher icon - mordecai
 2nd launcher icon - mordecai
