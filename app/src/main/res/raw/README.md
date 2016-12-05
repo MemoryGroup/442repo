@@ -80,3 +80,23 @@ Please submit a png file, and upload any submissions for the launcher icon to th
 These check mark should be green and the X should be red.
 Please upload these as two separate svg or psd files, uploaded to the memory3_content slack page.
 These are uploaded into the 442repo/app/src/main/res/drawable folder.
+
+Also, thanks to all who have participated in beta testing for our app!
+```
+nwhahn
+satnamsi
+rundali
+reggie
+kuye1210
+Erickher
+Will Stewart
+jhuang42
+jasonkim
+yosephha
+Alec Tuohy
+jiaqilin
+satyakra
+swilser
+ywang77
+evantrue
+```
