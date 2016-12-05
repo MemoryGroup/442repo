@@ -205,7 +205,7 @@
         android:layout_below="@+id/textViewInstructions"
         android:layout_toEndOf="@+id/grid"
         android:layout_toRightOf="@+id/grid"
-        android:id="@id/space2"/>
+        android:id="@+id/space2"/>
 
     <ScrollView
         android:layout_width="wrap_content"
