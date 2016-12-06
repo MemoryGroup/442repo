@@ -8,8 +8,7 @@
   one.mp3
   ...
   eight.mp3
-  nine.mp3
-  ```
+  nine.mp3  ```
 -Please place these files in a folder labeled numbers.
   
 -You must have all 26 letters recorded as separate mp3 files and named as shown below:
@@ -29,7 +28,7 @@ Your files will be uploaded to GitHub as "[slack id]'s voice submission", and th
 
 **Thank You!**
 
-```
+*```
 letters0/number0 - mdtobio
 letters1/numbers1 - alschmid
 letters2/numbers2 - mordecai
@@ -84,7 +83,7 @@ These check mark should be green and the X should be red.
 Please upload these as two separate svg or psd files, uploaded to the memory3_content slack page.
 These are uploaded into the 442repo/app/src/main/res/drawable folder.
 
-Also, thanks to all who have participated in beta testing for our app!
+**Also, thanks to all who have participated in beta testing for our app!**
 ```
 nwhahn
 satnamsi
