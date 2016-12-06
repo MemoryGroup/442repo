@@ -78,9 +78,9 @@ public class ViewMapActivity extends AppCompatActivity {
     hasGenerated = true;
   }
 
-  @Override
-  public void onBackPressed(){
-    Intent windowOpener = new Intent(this, showHelp.class);
-    startActivity(windowOpener);
-  }
+  //@Override
+  //public void onBackPressed(){
+  //  Intent windowOpener = new Intent(this, showHelp.class);
+  //  startActivity(windowOpener);
+  //}
 }

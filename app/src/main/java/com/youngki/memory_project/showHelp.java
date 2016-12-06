@@ -187,9 +187,9 @@ public class showHelp extends AppCompatActivity {
         //startActivity(startWindowOpener);
     }
 
-    @Override
-    public void onBackPressed(){
-        Intent windowOpener = new Intent(this, MainActivity.class);
-        startActivity(windowOpener);
-    }
+    //@Override
+    //public void onBackPressed(){
+    //    Intent windowOpener = new Intent(this, MainActivity.class);
+    //    startActivity(windowOpener);
+    //}
 }
