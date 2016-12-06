@@ -90,7 +90,4 @@
     <string name="_11">11</string>
     <string name="audio_selection">Audio Selection:</string>
     <string name="audio">Audio:</string>
-    <string name="_numbers">Numbers</string>
-    <string name="_letters">Letters</string>
-    <string name="custom">Custom</string>
 </resources>

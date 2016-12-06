@@ -1,6 +1,5 @@
 package com.youngki.memory_project;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -76,11 +75,5 @@ public class ViewMapActivity extends AppCompatActivity {
       button.setText(curLetter + ":" + curNumber);
     }
     hasGenerated = true;
-  }
-
-  @Override
-  public void onBackPressed(){
-    Intent windowOpener = new Intent(this, showHelp.class);
-    startActivity(windowOpener);
   }
 }
