@@ -28,7 +28,7 @@ Your files will be uploaded to GitHub as "[slack id]'s voice submission", and th
 
 **Thank You!**
 
-*```
+```
 letters0/number0 - mdtobio
 letters1/numbers1 - alschmid
 letters2/numbers2 - mordecai
