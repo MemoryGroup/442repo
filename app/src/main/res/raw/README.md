@@ -52,6 +52,7 @@ letters18/numbers18 - qa
 letters19/numbers19 - minbang
 letters20/numbers20 - minbang
 letters21/numbers21 - minbang
+letters22/numbers22 - jpschnel
 red x checkmark/green checkmark - mordecai 
 launcher icon - mordecai
 2nd launcher icon - mordecai
