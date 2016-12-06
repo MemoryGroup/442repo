@@ -49,6 +49,9 @@ letters15/numbers15 - qa
 letters16/numbers16 - qa
 letters17/numbers17 - qa
 letters18/numbers18 - qa
+letters19/numbers19 - minbang
+letters20/numbers20 - minbang
+letters21/numbers21 - minbang
 red x checkmark/green checkmark - mordecai 
 launcher icon - mordecai
 2nd launcher icon - mordecai
@@ -99,4 +102,6 @@ satyakra
 swilser
 ywang77
 evantrue
+jpschnel
+sjpark
 ```
