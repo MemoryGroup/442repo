@@ -63,6 +63,7 @@ public class handWritingTrain extends Activity {
         textView2 = (TextView)findViewById(R.id.textView2);
 
         textView2.setText("The first one of map : "+myNewHashMap.get(keyList.get(0))+", write "+keyList.get(0));
+        MediaPlayer.create(handWritingTrain.this,audio[keyList.get(0)]).start();
         textView4 = (TextView)findViewById(R.id.textView4);
 
 
@@ -117,7 +118,7 @@ public class handWritingTrain extends Activity {
                 getInt = makeIntValue(getString);
 
 
-                MediaPlayer.create(handWritingTrain.this,audio[memMap.get(targetString)]).start();
+                MediaPlayer.create(handWritingTrain.this,audio[memMap.get(nextTargetString)]).start();
 
                 textView2.setText(keyList.toString());
                 textView2.setText("NEXT : "+nextTargetString+" is "+memMap.get(nextTargetString)+". Write "+memMap.get(nextTargetString));
