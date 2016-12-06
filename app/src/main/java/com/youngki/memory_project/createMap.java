@@ -193,4 +193,9 @@ public class createMap extends AppCompatActivity {
         editor.apply(); //persist the values
         startActivity(new Intent(this, showTrainOptions.class));
     }
+
+    public void onCustomClick(View v){
+        Intent generateMapWindowOpener = new Intent(this, custom_map.class);
+        startActivity(generateMapWindowOpener);
+    }
 }
