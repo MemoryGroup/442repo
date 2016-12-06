@@ -194,8 +194,8 @@ public class createMap extends AppCompatActivity {
         startActivity(new Intent(this, showTrainOptions.class));
     }
 
-    //public void onCustomClick(View v){
-    //    Intent generateMapWindowOpener = new Intent(this, custom_map.class);
-    //    startActivity(generateMapWindowOpener);
-    //}
+    public void onCustomClick(View v){
+        Intent generateMapWindowOpener = new Intent(this, custom_map.class);
+        startActivity(generateMapWindowOpener);
+    }
 }
