@@ -36,7 +36,7 @@ public class custom_map extends AppCompatActivity {
             clearMap();
             if (checkLetters(letters)){
                 saveMap(letters, numbers);
-                Intent windowOpener = new Intent(this,progress.class);
+                Intent windowOpener = new Intent(this,ViewMapActivity.class);
                 startActivity(windowOpener);
             }
             else{
