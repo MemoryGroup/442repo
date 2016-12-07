@@ -53,6 +53,11 @@ letters19/numbers19 - minbang
 letters20/numbers20 - minbang
 letters21/numbers21 - minbang
 letters22/numbers22 - jpschnel
+letters23/numbers23 - tjeiling
+letters24/numbers24 - tjeiling
+letters25/numbers25 - tjeiling
+letters26/numbers26 - minbang
+letters27/numbers27 - minbang
 red x checkmark/green checkmark - mordecai 
 launcher icon - mordecai
 2nd launcher icon - mordecai
