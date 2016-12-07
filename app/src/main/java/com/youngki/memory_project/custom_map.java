@@ -9,7 +9,6 @@ import android.content.SharedPreferences;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -54,7 +53,7 @@ public class custom_map extends AppCompatActivity {
     public Boolean checkLetters(String s){
         for (int i = 0; i < s.length(); i++){
             char c = s.charAt(i);
-            String str = Character.toString(c);
+            String str = Character.toString(c).toUpperCase();
             if (alpha.contains(str)){
                 if (!alphabet.get(str)){
                     alphabet.put(str, Boolean.TRUE);
@@ -63,13 +62,16 @@ public class custom_map extends AppCompatActivity {
                     return false;
                 }
             }
+            else{
+                return false;
+            }
         }
         return true;
     }
 
     public void saveMap(String letters, String numbers){
         for (int i = 0; i < letters.length(); i++){
-            String let = Character.toString(letters.charAt(i));
+            String let = Character.toString(letters.charAt(i)).toUpperCase();
             int num = Integer.parseInt(Character.toString(numbers.charAt(i)));
             memMap.put(let,num);
         }

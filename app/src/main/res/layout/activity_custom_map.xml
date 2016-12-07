@@ -23,7 +23,7 @@
         android:id="@+id/editText" />
 
     <TextView
-        android:text="Please enter your custom map below"
+        android:text="@string/please_enter_your_custom_map_instuctions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -59,7 +59,7 @@
         android:layout_marginBottom="46dp" />
 
     <TextView
-        android:text="Invalid Map"
+        android:text="@string/invalid_map"
         android:alpha="0"
         android:layout_centerInParent="true"
         android:textSize="20sp"
