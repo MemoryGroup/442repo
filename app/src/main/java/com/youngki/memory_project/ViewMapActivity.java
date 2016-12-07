@@ -60,27 +60,29 @@ public class ViewMapActivity extends AppCompatActivity {
   public void onGenerateClicked(View v) {
     //now get the maps with default: 7 letters and 3 numbers for easy
     String letterMap = ALPHABETS;
-    for (int i = 0; i < memMap.size(); i++) {
+    for (int i = 0; i < ALPHABETS.length(); i++) {
       String curLetter = letterMap.substring(i, i + 1);
-      int curNumber = memMap.get(curLetter);
-      Button button = new Button(this);
-      ViewGroup.MarginLayoutParams marginLayoutParams =
-          new ViewGroup.MarginLayoutParams(dpToPx(48, getResources()), dpToPx(48, getResources()));
-      marginLayoutParams.rightMargin = dpToPx(5, getResources());
-      marginLayoutParams.bottomMargin = dpToPx(5, getResources());
-      button.setLayoutParams(new GridLayout.LayoutParams(marginLayoutParams));
-      button.setBackgroundColor(colors[curNumber]);
-      dynamicGridLayout.addView(button);
-      button.setGravity(Gravity.CENTER);
-      button.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
-      button.setText(curLetter + ":" + curNumber);
+      if (memMap.containsKey(curLetter)){
+        int curNumber = memMap.get(curLetter);
+        Button button = new Button(this);
+        ViewGroup.MarginLayoutParams marginLayoutParams =
+                new ViewGroup.MarginLayoutParams(dpToPx(48, getResources()), dpToPx(48, getResources()));
+        marginLayoutParams.rightMargin = dpToPx(5, getResources());
+        marginLayoutParams.bottomMargin = dpToPx(5, getResources());
+        button.setLayoutParams(new GridLayout.LayoutParams(marginLayoutParams));
+        button.setBackgroundColor(colors[curNumber]);
+        dynamicGridLayout.addView(button);
+        button.setGravity(Gravity.CENTER);
+        button.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+        button.setText(curLetter + ":" + curNumber);
+      }
     }
     hasGenerated = true;
   }
 
-  //@Override
-  //public void onBackPressed(){
-  //  Intent windowOpener = new Intent(this, showHelp.class);
-  //  startActivity(windowOpener);
-  //}
+  @Override
+  public void onBackPressed(){
+    Intent windowOpener = new Intent(this, showHelp.class);
+    startActivity(windowOpener);
+  }
 }

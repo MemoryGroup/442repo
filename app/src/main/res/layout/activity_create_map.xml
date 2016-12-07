@@ -139,6 +139,14 @@
     <TableRow>
 
         <Button
+            android:text="@string/custom"
+            android:layout_span="3"
+            android:onClick="onCustomClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button9" />
+
+        <Button
           android:id="@+id/train"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -150,16 +158,5 @@
     </TableRow>
 
   </TableLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Custom"
-        android:id="@+id/button9"
-        android:layout_column="4"
-        android:onClick="onCustomClick"
-        android:layout_alignBottom="@+id/longText"
-        android:layout_toRightOf="@+id/longText"
-        android:layout_toEndOf="@+id/longText" />
 
 </RelativeLayout>

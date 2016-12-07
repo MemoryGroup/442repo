@@ -9,7 +9,6 @@ import android.content.SharedPreferences;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -37,7 +36,7 @@ public class custom_map extends AppCompatActivity {
             clearMap();
             if (checkLetters(letters)){
                 saveMap(letters, numbers);
-                Intent windowOpener = new Intent(this,progress.class);
+                Intent windowOpener = new Intent(this,ViewMapActivity.class);
                 startActivity(windowOpener);
             }
             else{
@@ -62,7 +61,8 @@ public class custom_map extends AppCompatActivity {
                 else{
                     return false;
                 }
-            }else{
+            }
+            else{
                 return false;
             }
         }

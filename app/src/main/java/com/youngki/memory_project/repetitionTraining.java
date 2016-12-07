@@ -27,61 +27,63 @@ public class repetitionTraining extends AppCompatActivity {
     MediaPlayer mp = new MediaPlayer();
 
     int audioEleven[] = new int[]{
-            R.raw.a11, R.raw.b11, R.raw.c11, R.raw.d11, R.raw.e11, R.raw.f11, R.raw.g11, R.raw.h11,
-            R.raw.i11, R.raw.j11, R.raw.k11, R.raw.l11, R.raw.m11, R.raw.n11, R.raw.o11, R.raw.p11,
-            R.raw.q11, R.raw.r11, R.raw.s11, R.raw.t11, R.raw.u11, R.raw.v11, R.raw.w11, R.raw.x11,
-            R.raw.y11, R.raw.z11, R.raw.zero11, R.raw.one11, R.raw.two11,R.raw.three11, R.raw.four11,
-            R.raw.five11, R.raw.six11, R.raw.seven3, R.raw.eight11, R.raw.nine11
+        R.raw.a11, R.raw.b11, R.raw.c11, R.raw.d11, R.raw.e11, R.raw.f11, R.raw.g11, R.raw.h11,
+        R.raw.i11, R.raw.j11, R.raw.k11, R.raw.l11, R.raw.m11, R.raw.n11, R.raw.o11, R.raw.p11,
+        R.raw.q11, R.raw.r11, R.raw.s11, R.raw.t11, R.raw.u11, R.raw.v11, R.raw.w11, R.raw.x11,
+        R.raw.y11, R.raw.z11, R.raw.zero11, R.raw.one11, R.raw.two11,R.raw.three11, R.raw.four11,
+        R.raw.five11, R.raw.six11, R.raw.seven3, R.raw.eight11, R.raw.nine11
     };
     int audioTen[] = new int[]{
-            R.raw.a10, R.raw.b10, R.raw.c10, R.raw.d10, R.raw.e10, R.raw.f10, R.raw.g10, R.raw.h10,
-            R.raw.i10, R.raw.j10, R.raw.k10, R.raw.l10, R.raw.m10, R.raw.n10, R.raw.o10, R.raw.p10,
-            R.raw.q10, R.raw.r10, R.raw.s10, R.raw.t10, R.raw.u10, R.raw.v10, R.raw.w10, R.raw.x10,
-            R.raw.y10, R.raw.z10, R.raw.zero10, R.raw.one10, R.raw.two10,R.raw.three10, R.raw.four10,
-            R.raw.five10, R.raw.six10, R.raw.seven10, R.raw.eight10, R.raw.nine10
+        R.raw.a10, R.raw.b10, R.raw.c10, R.raw.d10, R.raw.e10, R.raw.f10, R.raw.g10, R.raw.h10,
+        R.raw.i10, R.raw.j10, R.raw.k10, R.raw.l10, R.raw.m10, R.raw.n10, R.raw.o10, R.raw.p10,
+        R.raw.q10, R.raw.r10, R.raw.s10, R.raw.t10, R.raw.u10, R.raw.v10, R.raw.w10, R.raw.x10,
+        R.raw.y10, R.raw.z10, R.raw.zero10, R.raw.one10, R.raw.two10,R.raw.three10, R.raw.four10,
+        R.raw.five10, R.raw.six10, R.raw.seven10, R.raw.eight10, R.raw.nine10
     };
     int audioNine[] = new int[]{
-            R.raw.a9, R.raw.b9, R.raw.c9, R.raw.d9, R.raw.e9, R.raw.f9, R.raw.g9, R.raw.h9, R.raw.i9,
-            R.raw.j9, R.raw.k9, R.raw.l9, R.raw.m9, R.raw.n9, R.raw.o9, R.raw.p9, R.raw.q9, R.raw.r9,
-            R.raw.s9, R.raw.t9, R.raw.u9, R.raw.v9, R.raw.w9, R.raw.x9, R.raw.y9, R.raw.z9,
-            R.raw.zero9, R.raw.one9, R.raw.two9,R.raw.three9, R.raw.four9, R.raw.five9, R.raw.six9,
-            R.raw.seven9, R.raw.eight9, R.raw.nine9
+        R.raw.a9, R.raw.b9, R.raw.c9, R.raw.d9, R.raw.e9, R.raw.f9, R.raw.g9, R.raw.h9, R.raw.i9,
+        R.raw.j9, R.raw.k9, R.raw.l9, R.raw.m9, R.raw.n9, R.raw.o9, R.raw.p9, R.raw.q9, R.raw.r9,
+        R.raw.s9, R.raw.t9, R.raw.u9, R.raw.v9, R.raw.w9, R.raw.x9, R.raw.y9, R.raw.z9,
+        R.raw.zero9, R.raw.one9, R.raw.two9,R.raw.three9, R.raw.four9, R.raw.five9, R.raw.six9,
+        R.raw.seven9, R.raw.eight9, R.raw.nine9
     };
     int audioEight[] = new int[]{
-            R.raw.a8, R.raw.b8, R.raw.c8, R.raw.d8, R.raw.e8, R.raw.f8, R.raw.g8, R.raw.h8, R.raw.i8,
-            R.raw.j8, R.raw.k8, R.raw.l8, R.raw.m8, R.raw.n8, R.raw.o8, R.raw.p8, R.raw.q8, R.raw.r8,
-            R.raw.s8, R.raw.t8, R.raw.u8, R.raw.v8, R.raw.w8, R.raw.x8, R.raw.y8, R.raw.z8,
-            R.raw.zero8, R.raw.one8, R.raw.two8,R.raw.three8, R.raw.four8, R.raw.five8, R.raw.six8,
-            R.raw.seven8, R.raw.eight8, R.raw.nine8
+        R.raw.a8, R.raw.b8, R.raw.c8, R.raw.d8, R.raw.e8, R.raw.f8, R.raw.g8, R.raw.h8, R.raw.i8,
+        R.raw.j8, R.raw.k8, R.raw.l8, R.raw.m8, R.raw.n8, R.raw.o8, R.raw.p8, R.raw.q8, R.raw.r8,
+        R.raw.s8, R.raw.t8, R.raw.u8, R.raw.v8, R.raw.w8, R.raw.x8, R.raw.y8, R.raw.z8,
+        R.raw.zero8, R.raw.one8, R.raw.two8,R.raw.three8, R.raw.four8, R.raw.five8, R.raw.six8,
+        R.raw.seven8, R.raw.eight8, R.raw.nine8
     };
     int audioSeven[] = new int[]{
-            R.raw.a12, R.raw.b12, R.raw.c12, R.raw.d12, R.raw.e12, R.raw.f12, R.raw.g12, R.raw.h12,
-            R.raw.i12, R.raw.j12, R.raw.k12, R.raw.l12, R.raw.m12, R.raw.n12, R.raw.o12, R.raw.p12,
-            R.raw.q12, R.raw.r12, R.raw.s12, R.raw.t12, R.raw.u12, R.raw.v12, R.raw.w12, R.raw.x12,
-            R.raw.y12, R.raw.z12, R.raw.zero12, R.raw.one12, R.raw.two12,R.raw.three12, R.raw.four12,
-            R.raw.five12, R.raw.six12, R.raw.seven12, R.raw.eight12, R.raw.nine12
+        R.raw.a12, R.raw.b12, R.raw.c12, R.raw.d12, R.raw.e12, R.raw.f12, R.raw.g12, R.raw.h12,
+        R.raw.i12, R.raw.j12, R.raw.k12, R.raw.l12, R.raw.m12, R.raw.n12, R.raw.o12, R.raw.p12,
+        R.raw.q12, R.raw.r12, R.raw.s12, R.raw.t12, R.raw.u12, R.raw.v12, R.raw.w12, R.raw.x12,
+        R.raw.y12, R.raw.z12, R.raw.zero12, R.raw.one12, R.raw.two12,R.raw.three12, R.raw.four12,
+        R.raw.five12, R.raw.six12, R.raw.seven12, R.raw.eight12, R.raw.nine12
     };
     int audioSix[] = new int[]{
-            R.raw.a6, R.raw.b6, R.raw.c6, R.raw.d6, R.raw.e6, R.raw.f6, R.raw.g6, R.raw.h6, R.raw.i6,
-            R.raw.j6, R.raw.k6, R.raw.l6, R.raw.m6, R.raw.n6, R.raw.o6, R.raw.p6, R.raw.q6, R.raw.r6,
-            R.raw.s6, R.raw.t6, R.raw.u6, R.raw.v6, R.raw.w6, R.raw.x6, R.raw.y6, R.raw.z6,
-            R.raw.zero6, R.raw.one6, R.raw.two6,R.raw.three6, R.raw.four6, R.raw.five6, R.raw.six6,
-            R.raw.seven6, R.raw.eight6, R.raw.nine6
+        R.raw.a6, R.raw.b6, R.raw.c6, R.raw.d6, R.raw.e6, R.raw.f6, R.raw.g6, R.raw.h6, R.raw.i6,
+        R.raw.j6, R.raw.k6, R.raw.l6, R.raw.m6, R.raw.n6, R.raw.o6, R.raw.p6, R.raw.q6, R.raw.r6,
+        R.raw.s6, R.raw.t6, R.raw.u6, R.raw.v6, R.raw.w6, R.raw.x6, R.raw.y6, R.raw.z6,
+        R.raw.zero6, R.raw.one6, R.raw.two6,R.raw.three6, R.raw.four6, R.raw.five6, R.raw.six6,
+        R.raw.seven6, R.raw.eight6, R.raw.nine6
     };
     int audioFive[] = new int[]{
-            R.raw.a5, R.raw.b5, R.raw.c5, R.raw.d5, R.raw.e5, R.raw.f5, R.raw.g5, R.raw.h5, R.raw.i5,
-            R.raw.j5, R.raw.k5, R.raw.l5, R.raw.m5, R.raw.n5, R.raw.o5, R.raw.p5, R.raw.q5, R.raw.r5,
-            R.raw.s5, R.raw.t5, R.raw.u5, R.raw.v5, R.raw.w5, R.raw.x5, R.raw.y5, R.raw.z5,
-            R.raw.zero5, R.raw.one5, R.raw.two5,R.raw.three5, R.raw.four5, R.raw.five5, R.raw.six5,
-            R.raw.seven5, R.raw.eight5, R.raw.nine5
+        R.raw.a5, R.raw.b5, R.raw.c5, R.raw.d5, R.raw.e5, R.raw.f5, R.raw.g5, R.raw.h5, R.raw.i5,
+        R.raw.j5, R.raw.k5, R.raw.l5, R.raw.m5, R.raw.n5, R.raw.o5, R.raw.p5, R.raw.q5, R.raw.r5,
+        R.raw.s5, R.raw.t5, R.raw.u5, R.raw.v5, R.raw.w5, R.raw.x5, R.raw.y5, R.raw.z5,
+        R.raw.zero5, R.raw.one5, R.raw.two5,R.raw.three5, R.raw.four5, R.raw.five5, R.raw.six5,
+        R.raw.seven5, R.raw.eight5, R.raw.nine5
     };
     int audioFour[] = new int[]{
-            R.raw.a4, R.raw.b4, R.raw.c4, R.raw.d4, R.raw.e4, R.raw.f4, R.raw.g4, R.raw.h4, R.raw.i4,
-            R.raw.j4, R.raw.k4, R.raw.l4, R.raw.m4, R.raw.n4, R.raw.o4, R.raw.p4, R.raw.q4, R.raw.r4,
-            R.raw.s4, R.raw.t4, R.raw.u4, R.raw.v4, R.raw.w4, R.raw.x4, R.raw.y4, R.raw.z4,
-            R.raw.zero4, R.raw.one4, R.raw.two4,R.raw.three4, R.raw.four4, R.raw.five4, R.raw.six4,
-            R.raw.seven4, R.raw.eight4, R.raw.nine4
+        R.raw.a4, R.raw.b4, R.raw.c4, R.raw.d4, R.raw.e4, R.raw.f4, R.raw.g4, R.raw.h4, R.raw.i4,
+        R.raw.j4, R.raw.k4, R.raw.l4, R.raw.m4, R.raw.n4, R.raw.o4, R.raw.p4, R.raw.q4, R.raw.r4,
+        R.raw.s4, R.raw.t4, R.raw.u4, R.raw.v4, R.raw.w4, R.raw.x4, R.raw.y4, R.raw.z4,
+        R.raw.zero4, R.raw.one4, R.raw.two4,R.raw.three4, R.raw.four4, R.raw.five4, R.raw.six4,
+        R.raw.seven4, R.raw.eight4, R.raw.nine4
     };
+
+    //Use these first three
     int audioThree[] = new int[]{
         R.raw.a3, R.raw.b3, R.raw.c3, R.raw.d3, R.raw.e3, R.raw.f3, R.raw.g3, R.raw.h3, R.raw.i3,
         R.raw.j3, R.raw.k3, R.raw.l3, R.raw.m3, R.raw.n3, R.raw.o3, R.raw.p3, R.raw.q3, R.raw.r3,
@@ -90,11 +92,11 @@ public class repetitionTraining extends AppCompatActivity {
         R.raw.eight3, R.raw.nine3
     };
     int audioTwo[] = new int[]{
-        R.raw.a2, R.raw.b2, R.raw.c2, R.raw.d2, R.raw.e2, R.raw.f2, R.raw.g2, R.raw.h2, R.raw.i2,
-        R.raw.j2, R.raw.k2, R.raw.l2, R.raw.m2, R.raw.n2, R.raw.o2, R.raw.p2, R.raw.q2, R.raw.r2,
-        R.raw.s2, R.raw.t2, R.raw.u2, R.raw.v2, R.raw.w2, R.raw.x2, R.raw.y2, R.raw.z2, R.raw.zero2,
-        R.raw.one2, R.raw.two2,R.raw.three2, R.raw.four2, R.raw.five2, R.raw.six2, R.raw.seven2,
-        R.raw.eight2, R.raw.nine2
+        R.raw.a17, R.raw.b17, R.raw.c17, R.raw.d17, R.raw.e17, R.raw.f17, R.raw.g17, R.raw.h17,
+        R.raw.i17, R.raw.j17, R.raw.k17, R.raw.l17, R.raw.m17, R.raw.n17, R.raw.o17, R.raw.p17,
+        R.raw.q17, R.raw.r17, R.raw.s17, R.raw.t17, R.raw.u17, R.raw.v17, R.raw.w17, R.raw.x17,
+        R.raw.y17, R.raw.z17, R.raw.zero17, R.raw.one17, R.raw.two17,R.raw.three17, R.raw.four17,
+        R.raw.five17, R.raw.six17, R.raw.seven17, R.raw.eight17, R.raw.nine17
     };
     int audioOne[] = new int[]{
         R.raw.a1, R.raw.b1, R.raw.c1, R.raw.d1, R.raw.e1, R.raw.f1, R.raw.g1, R.raw.h1, R.raw.i1,
@@ -104,11 +106,11 @@ public class repetitionTraining extends AppCompatActivity {
         R.raw.eight1, R.raw.nine1
     };
     int audioZero[] = new int[]{
-        R.raw.a0, R.raw.b0, R.raw.c0, R.raw.d0, R.raw.e0, R.raw.f0, R.raw.g0, R.raw.h0, R.raw.i0,
-        R.raw.j0, R.raw.k0, R.raw.l0, R.raw.m0, R.raw.n0, R.raw.o0, R.raw.p0, R.raw.q0, R.raw.r0,
-        R.raw.s0, R.raw.t0, R.raw.u0, R.raw.v0, R.raw.w0, R.raw.x0, R.raw.y0, R.raw.z0, R.raw.zero0,
-        R.raw.one0, R.raw.two0,R.raw.three0, R.raw.four0, R.raw.five0, R.raw.six0, R.raw.seven0,
-        R.raw.eight0, R.raw.nine0
+        R.raw.a14, R.raw.b14, R.raw.c14, R.raw.d14, R.raw.e14, R.raw.f14, R.raw.g14, R.raw.h14,
+        R.raw.i14, R.raw.j14, R.raw.k14, R.raw.l14, R.raw.m14, R.raw.n14, R.raw.o14, R.raw.p14,
+        R.raw.q14, R.raw.r14, R.raw.s14, R.raw.t14, R.raw.u14, R.raw.v14, R.raw.w14, R.raw.x14,
+        R.raw.y14, R.raw.z14, R.raw.zero14, R.raw.one14, R.raw.two14,R.raw.three14, R.raw.four14,
+        R.raw.five14, R.raw.six14, R.raw.seven14, R.raw.eight14, R.raw.nine14
     };
 
     @Override

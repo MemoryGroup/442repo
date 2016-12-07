@@ -171,7 +171,7 @@ public class createMap extends AppCompatActivity {
     }
 
     public void onNewTrainClicked(View v) {
-        if (hasGenerated == false) {
+        if (!hasGenerated) {
             return;
         }
         HashMap<String, Integer> progress_map = new HashMap<>();
@@ -194,8 +194,8 @@ public class createMap extends AppCompatActivity {
         startActivity(new Intent(this, showTrainOptions.class));
     }
 
-    public void onCustomClick(View v){
-        Intent generateMapWindowOpener = new Intent(this, custom_map.class);
-        startActivity(generateMapWindowOpener);
+    public void onCustomClick(View view){
+        Intent windowOpener = new Intent(this, custom_map.class);
+        startActivity(windowOpener);
     }
 }
