@@ -171,7 +171,7 @@ public class createMap extends AppCompatActivity {
     }
 
     public void onNewTrainClicked(View v) {
-        if (hasGenerated == false) {
+        if (!hasGenerated) {
             return;
         }
         HashMap<String, Integer> progress_map = new HashMap<>();
@@ -192,5 +192,10 @@ public class createMap extends AppCompatActivity {
         editor.putString("totalAttemptsMap", serializedProgress);
         editor.apply(); //persist the values
         startActivity(new Intent(this, showTrainOptions.class));
+    }
+
+    public void onCustomClick(View view){
+        Intent windowOpener = new Intent(this, custom_map.class);
+        startActivity(windowOpener);
     }
 }

@@ -90,4 +90,10 @@
     <string name="_11">11</string>
     <string name="audio_selection">Audio Selection:</string>
     <string name="audio">Audio:</string>
+    <string name="_letters">Letters</string>
+    <string name="invalid_map">Invalid Map</string>
+    <string name="please_enter_your_custom_map_instuctions">Please enter your custom map below</string>
+    <string name="_numbers">Numbers</string>
+    <string name="repetition_instructions">Type the letters and numbers shown below:</string>
+    <string name="custom">Custom</string>
 </resources>

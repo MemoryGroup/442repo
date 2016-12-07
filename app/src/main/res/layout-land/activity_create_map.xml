@@ -51,7 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentEnd="true"
+        android:stretchColumns="*"
+        android:shrinkColumns="*">
 
         <TableRow>
 
@@ -81,12 +83,27 @@
 
         </TableRow>
 
-        <Button
-            android:id="@+id/train"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onNewTrainClicked"
-            android:text="@string/train"/>
+        <TableRow>
+
+            <Button
+                android:id="@+id/train"
+
+                android:layout_span="6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNewTrainClicked"
+                android:text="@string/train"/>
+
+            <Button
+                android:text="@string/custom"
+                android:layout_span="3"
+                android:onClick="onCustomClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button9" />
+
+        </TableRow>
+
 
     </TableLayout>
 
