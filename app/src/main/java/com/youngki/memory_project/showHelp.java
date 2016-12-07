@@ -186,4 +186,10 @@ public class showHelp extends AppCompatActivity {
         //Intent startWindowOpener = new Intent(this,showMap.class);
         //startActivity(startWindowOpener);
     }
+
+    @Override
+    public void onBackPressed(){
+        Intent windowOpener = new Intent(this, MainActivity.class);
+        startActivity(windowOpener);
+    }
 }

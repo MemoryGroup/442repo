@@ -201,7 +201,7 @@ public class repetitionTraining extends AppCompatActivity {
                     mp.release();
                     mp = null;
                 }
-                mp = MediaPlayer.create(repetitionTraining.this, getAudio(letter));
+                mp = MediaPlayer.create(repetitionTraining.this, getAudio(letter.toUpperCase()));
                 mp.setAudioStreamType(AudioManager.STREAM_MUSIC);
                 mp.start();
                 makeBold(R.id.button0);
