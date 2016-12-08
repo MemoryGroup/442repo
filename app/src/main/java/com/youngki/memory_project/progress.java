@@ -1,5 +1,6 @@
 package com.youngki.memory_project;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -79,5 +80,10 @@ public class progress extends AppCompatActivity {
             listView = (ListView) findViewById(R.id.scoreView);
             listView.setAdapter(scoreboard);
         }
+    }
+    @Override
+    public void onBackPressed(){
+        Intent testsWindowOpener = new Intent(this,MainActivity.class);
+        startActivity(testsWindowOpener);
     }
 }

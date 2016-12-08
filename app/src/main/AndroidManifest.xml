@@ -30,7 +30,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.youngki.memory_project.showTestOptions" />
         </activity>
-		<activity
+        <activity
             android:name=".showResultsOpt2"
             android:parentActivityName=".showTestOptions">
             <meta-data
@@ -41,6 +41,7 @@
         <activity android:name=".progress" />
         <activity android:name=".matchingTest" />
         <activity android:name=".matchingTest2" />
+        <activity android:name=".ViewMapActivity" />
         <activity android:name=".handWritingTrain">
             <intent-filter>
                 <action android:name="com.youngki.memory_project.handWritingTrain" />
@@ -50,6 +51,8 @@
         </activity>
         <activity android:name=".showTrainOptions" />
         <activity android:name=".repetitionTraining" />
+        <activity android:name=".showMap" />
+        <activity android:name=".custom_map"></activity>
     </application>
 
 </manifest>

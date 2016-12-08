@@ -56,6 +56,7 @@ public class showTest extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.textView3);
         tv.setText(this.showThis);
         ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
+        pb.setProgress(0);
         pb.setMax(keys.length);
 
     }

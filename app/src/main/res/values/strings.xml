@@ -4,19 +4,19 @@
     <string name="title_activity_display_random_number2">displayRandomNumber2</string>
     <string name="title_activity_create_map">createMap</string>
     <string name="mapInfoDefault"> How many pairs can you memorize?\n Select a difficulty or make
-        your own map.\n
+        your own map.
+    </string>
+    <string name="mapInfoDefaultLand"> How many pairs can you memorize? Select a difficulty or make
+        your own map.
     </string>
     <string name="mapInfoEasy"> How many pairs can you memorize?\n Easy has up to 4 different
-        digits.\n Increase letters to maximize your possible score!\n Press Generate to Make a new
-        Map
+        digits.\n Increase letters to maximize your possible score!
     </string>
     <string name="mapInfoMedium"> How many pairs can you memorize?\n Medium has up to 7 different
-        digits.\n Increase letters to maximize your possible score!\n Press Generate to Make a new
-        Map
+        digits.\n Increase letters to maximize your possible score!
     </string>
     <string name="mapInfoHard"> How many pairs can you memorize?\n Hard has up to 10 different
-        digits.\n Increase letters to maximize your possible score!\n Press Generate to Make a new
-        Map
+        digits.\n Increase letters to maximize your possible score!
     </string>
     <string name="test">test</string>
     <string name="_0">0</string>
@@ -78,4 +78,22 @@
     <string name="generating_a_new_map">Generating a new map</string>
     <string name="generate_new_map">Generate New Map</string>
     <string name="view_map">View Map</string>
+    <string name="your_current_map">Your current map:</string>
+    <string name="letters">Letters:</string>
+    <string name="numbers">Numbers:</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="hard">Hard</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="_10">10</string>
+    <string name="_11">11</string>
+    <string name="audio_selection">Audio Selection:</string>
+    <string name="audio">Audio:</string>
+    <string name="_letters">Letters</string>
+    <string name="invalid_map">Invalid Map</string>
+    <string name="please_enter_your_custom_map_instuctions">Please enter your custom map below</string>
+    <string name="_numbers">Numbers</string>
+    <string name="repetition_instructions">Type the letters and numbers shown below:</string>
+    <string name="custom">Custom</string>
 </resources>
