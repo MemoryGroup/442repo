@@ -1,7 +1,7 @@
 # 442repo
 - Memory Project
 - Amy Pritchard, Mohamed Juran, Nicholas Kreidler, Youngki Hong
-- https://play.google.com/store/apps/details?id=com.youngki.memory_project&ah=oXHBI1q9Q9tWonPLIW5qhpQaCpo
+- https://play.google.com/store/apps/details?id=com.youngki.memory_project
 - Apache License Version 2.0
 
 # App Description
