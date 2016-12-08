@@ -1,10 +1,10 @@
 # 442repo
--Memory Project
--Amy Pritchard, Mohamed Juran, Nicholas Kreidler, Youngki Hong
--https://play.google.com/store/apps/details?id=com.youngki.memory_project&ah=oXHBI1q9Q9tWonPLIW5qhpQaCpo
--Apache License Version 2.0
+- Memory Project
+- Amy Pritchard, Mohamed Juran, Nicholas Kreidler, Youngki Hong
+- https://play.google.com/store/apps/details?id=com.youngki.memory_project&ah=oXHBI1q9Q9tWonPLIW5qhpQaCpo
+- Apache License Version 2.0
 
--Description of the app:
+# Description of the app:
 
 This app is designed to first train and then test the user to memorize matchings of alphabet letters to digits called mappings. The app has five main functions: creating mappings, training, testing, scoring, and help. The help section is used to clarify the individual training and testing activities, as well as overall app flow. 
 
@@ -23,10 +23,8 @@ As you test yourself, your progress with each letter/number pair is tracked, so 
 The target audience for the app is (potential audience: memory enthusiasts, password creation)
 The app benefits them by providing a variety of options for memorization over time and additional options for tracking progress. 
 
--Development
+# Development and Future Work
 
 The app was developed using Android Studio with XML for the UI and Java for the backend.
-
-Future Work:
 
 We plan to include additional training and testing options so that the user has more options to be exposed to the map during training and evaluated on their progress in testing. We also plan to include daily reminders for training and testing to help the user remember to train the map, and display the progress the user has made on all maps as they improve their memory, not just the progress for the current training session. Lastly, we plan to expand the content outside of just the character to digit maps, and allow users to input their own maps of things like word to definition pairs, such as for learning a second language.
