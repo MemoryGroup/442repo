@@ -4,7 +4,7 @@
 - https://play.google.com/store/apps/details?id=com.youngki.memory_project&ah=oXHBI1q9Q9tWonPLIW5qhpQaCpo
 - Apache License Version 2.0
 
-# Description of the app:
+# App Description
 
 This app is designed to first train and then test the user to memorize matchings of alphabet letters to digits called mappings. The app has five main functions: creating mappings, training, testing, scoring, and help. The help section is used to clarify the individual training and testing activities, as well as overall app flow. 
 
