@@ -60,6 +60,7 @@ letters26/numbers26 - minbang
 letters27/numbers27 - minbang
 letters28/numbers28 - jrcharlo
 letters29/numbers29 - nwhahn
+letters30/numbers30 - tgsyre
 red x checkmark/green checkmark - mordecai 
 launcher icon - mordecai
 2nd launcher icon - mordecai
