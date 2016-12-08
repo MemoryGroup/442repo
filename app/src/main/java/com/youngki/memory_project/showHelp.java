@@ -9,8 +9,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class showHelp extends AppCompatActivity {
@@ -166,6 +164,7 @@ public class showHelp extends AppCompatActivity {
 
             // a map was detected
             hasMap = true;
+            startActivity(new Intent(this,ViewMapActivity.class));
         }
         if(hasMap == false){
             AlertDialog.Builder builder1 = new AlertDialog.Builder(showHelp.this);
@@ -184,5 +183,13 @@ public class showHelp extends AppCompatActivity {
             alert11.show();
             return;
         }
+        //Intent startWindowOpener = new Intent(this,showMap.class);
+        //startActivity(startWindowOpener);
+    }
+
+    @Override
+    public void onBackPressed(){
+        Intent windowOpener = new Intent(this, MainActivity.class);
+        startActivity(windowOpener);
     }
 }

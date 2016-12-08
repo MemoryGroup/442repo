@@ -12,7 +12,7 @@
     tools:context="com.youngki.memory_project.repetitionTraining">
 
     <TextView
-        android:text="Type the letters and numbers shown below:"
+        android:text="@string/repetition_instructions"
         android:textSize="23sp"
         android:gravity="center"
         android:layout_width="wrap_content"
@@ -54,70 +54,70 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:text="A"
+                android:text="@string/_A"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView0" />
 
             <TextView
-                android:text="A"
+                android:text="@string/_A"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView01" />
 
             <TextView
-                android:text="A"
+                android:text="@string/_A"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView02" />
 
             <TextView
-                android:text="A"
+                android:text="@string/_A"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView03" />
 
             <TextView
-                android:text="A"
+                android:text="@string/_A"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView04" />
 
             <TextView
-                android:text="1"
+                android:text="@string/_1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView05" />
 
             <TextView
-                android:text="1"
+                android:text="@string/_1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView06" />
 
             <TextView
-                android:text="1"
+                android:text="@string/_1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView07" />
 
             <TextView
-                android:text="1"
+                android:text="@string/_1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView08" />
 
             <TextView
-                android:text="1"
+                android:text="@string/_1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="A"
+                android:text="@string/_A"
                 android:layout_column="1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
@@ -138,49 +138,49 @@
                 android:id="@+id/textView2" />
 
             <TextView
-                android:text="A"
+                android:text="@string/_A"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView21" />
 
             <TextView
-                android:text="1"
+                android:text="@string/_1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView3" />
 
             <TextView
-                android:text="1"
+                android:text="@string/_1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView31" />
 
             <TextView
-                android:text="A"
+                android:text="@string/_A"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView4" />
 
             <TextView
-                android:text="A"
+                android:text="@string/_A"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView41" />
 
             <TextView
-                android:text="1"
+                android:text="@string/_1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView5" />
 
             <TextView
-                android:text="1"
+                android:text="@string/_1"
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -312,13 +312,10 @@
     </TableLayout>
 
     <TableLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:layout_alignParentBottom="true"
-        android:shrinkColumns="*"
-        android:stretchColumns="*">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tableLayout2"
+        android:layout_centerHorizontal="true">
 
         <TableRow>
 
@@ -327,17 +324,19 @@
                 android:textSize="@dimen/repetition_text_size"
                 android:layout_column="2"
                 android:background="@drawable/round_button"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/button0" />
 
-            <Space />
+            <Space
+                android:layout_height="wrap_content"
+                android:layout_width="15dp"/>
 
             <Button
                 android:text="@string/_1"
                 android:textSize="@dimen/repetition_text_size"
                 android:background="@drawable/round_button"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/button1" />
 
@@ -346,63 +345,123 @@
         <Space
             android:layout_height="15dp"/>
 
+    </TableLayout>
+
+    <TableLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:id="@+id/tableLayout2"
+        android:layout_alignParentBottom="true"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
         <TableRow>
             <TextView
-                android:text="Audio Selection:"
+                android:text="@string/audio_selection"
                 android:layout_gravity="center_horizontal"
-                android:layout_span="7"/>
+                android:layout_span="5"/>
 
         </TableRow>
 
-        <Space
-            android:layout_height="5dp"/>
-
         <TableRow>
 
             <Button
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round_button"
                 android:text="@string/_0"
                 android:textSize="18sp"
                 android:id="@+id/audio0"
+                style="?android:attr/buttonBarStyle"
                 android:onClick="onAudioSelectClick"/>
 
-            <Space />
-
             <Button
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:text="@string/_1"
                 android:textSize="18sp"
                 android:id="@+id/audio1"
-                android:background="@drawable/round_button"
+                style="?android:attr/buttonBarStyle"
                 android:onClick="onAudioSelectClick"/>
 
-            <Space />
-
             <Button
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:text="@string/_2"
                 android:textSize="18sp"
-                android:background="@drawable/round_button"
                 android:id="@+id/audio2"
+                style="?android:attr/buttonBarStyle"
                 android:onClick="onAudioSelectClick"/>
 
-            <Space />
-
             <Button
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:text="@string/_3"
                 android:textSize="18sp"
                 android:id="@+id/audio3"
-                android:background="@drawable/round_button"
+                style="?android:attr/buttonBarStyle"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_4"
+                android:textSize="18sp"
+                android:id="@+id/audio4"
+                style="?android:attr/buttonBarStyle"
                 android:onClick="onAudioSelectClick"/>
 
         </TableRow>
 
+        <TableRow>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_5"
+                android:textSize="18sp"
+                android:id="@+id/audio5"
+                style="?android:attr/buttonBarStyle"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_6"
+                android:textSize="18sp"
+                android:id="@+id/audio6"
+                style="?android:attr/buttonBarStyle"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_7"
+                android:textSize="18sp"
+                android:id="@+id/audio7"
+                style="?android:attr/buttonBarStyle"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_8"
+                android:textSize="18sp"
+                android:id="@+id/audio8"
+                style="?android:attr/buttonBarStyle"
+                android:onClick="onAudioSelectClick"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_9"
+                android:textSize="18sp"
+                android:id="@+id/audio9"
+                style="?android:attr/buttonBarStyle"
+                android:onClick="onAudioSelectClick"/>
+
+        </TableRow>
 
     </TableLayout>
 

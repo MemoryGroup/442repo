@@ -193,14 +193,14 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/grid">
+        android:layout_below="@+id/grid"
+        android:layout_marginTop="20dp">
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:rowCount="13"
-            android:columnCount="7"
-            android:layout_marginTop="20dp">
+            android:columnCount="7">
 
             <Button
                 android:text="@string/_A"

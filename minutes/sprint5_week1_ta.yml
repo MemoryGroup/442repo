@@ -1,0 +1,19 @@
+date: December 1, 2016
+meeting_type: ta
+attendance: [kreidler, youngkih, amypritc ]
+excused_absences: [ majuran
+  ]
+task_progress: [ 
+  {ubit: majuran, progress: },
+  {ubit: kreidler,progress: },
+  {ubit: youngkih, progress: },
+  {ubit: amypritc, progress: }
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  discussed remaining sprint 5 goals and presentation
+  discussed documentation
+  clicking on background or buttons shouldn't change the map
+  decide on final view map button
+  do audio before recommending gesture

@@ -19,15 +19,14 @@ public class matchingTest2 extends AppCompatActivity {
 
     String[] keys;
     Integer[] values;
+    String key = "";
     int length;
-    int i = 0;
     int currentColor = Color.rgb(255,255,255);
     int aA, aB, aC, aD, aE, aF, aG, aH, aI, aJ, aK, aL, aM, aN, aO, aP, aQ, aR, aS, aT, aU, aV, aW,
         aX, aY, aZ;
-    int kA, kB, kC, kD, kE, kF, kG, kH, kI, kJ, kK, kL, kM, kN, kO, kP, kQ, kR, kS, kT, kU, kV, kW,
-            kX, kY, kZ;
+    int answer;
     int currentNum = 0;
-    HashMap<String, Integer> correct = new HashMap<>();
+    HashMap<String, Integer> memMap = new HashMap<>();
     HashMap<String, Integer> streakMap = new HashMap<>();
     HashMap<String, Integer> timesCorrectMap = new HashMap<>();
     HashMap<String, Integer> totalAttemptsMap = new HashMap<>();
@@ -42,6 +41,7 @@ public class matchingTest2 extends AppCompatActivity {
         this.keys = wrapper.getKeys();
         this.values = wrapper.getValues(keys);
         length = keys.length;
+        this.memMap = wrapper.getMap();
 
         String streakStr = prefs.getString("streakMap", null);
         MapWrapper streakWrapper = gson.fromJson(streakStr, MapWrapper.class);
@@ -60,106 +60,144 @@ public class matchingTest2 extends AppCompatActivity {
         Typeface type = Typeface.createFromAsset(getAssets(),"fonts/orange juice 2.0.ttf");
         Button b = (Button) findViewById(R.id.button6);
         b.setTypeface(type);
-        hideNumbers();
+        hideLetters();
         findKs();
     }
 
+    /* Find the letters used in the map and set the answer keys. */
     public void findKs(){
-        for(i = 0; i < length; i++){
-            String s = keys[i];
-            setKs(s, i);
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        for (int j = 0; j < alphabet.length(); j++){
+            String l = alphabet.substring(j, j + 1);
+            if (memMap.containsKey(l)){
+                key = key.concat(l);
+            }
+        }
+        for(int i = 0; i < length; i++){
+            String l = key.substring(i, i + 1);
+            setButtons(i, l);
         }
     }
 
-    public void setKs(String s, int i){
-        switch (s){
-            case "A":
-                kA = i;
+    /* Set the correct answer for a specific button. */
+    public void setButtons(int pos, String i) {
+        Button b;
+        switch (pos) {
+            case 0:
+                b = (Button) findViewById(R.id.buttonA);
+                b.setText(i);
                 break;
-            case "B":
-                kB = i;
+            case 1:
+                b = (Button) findViewById(R.id.buttonB);
+                b.setText(i);
                 break;
-            case "C":
-                kC = i;
+            case 2:
+                b = (Button) findViewById(R.id.buttonC);
+                b.setText(i);
                 break;
-            case "D":
-                kD = i;
+            case 3:
+                b = (Button) findViewById(R.id.buttonD);
+                b.setText(i);
                 break;
-            case "E":
-                kE = i;
+            case 4:
+                b = (Button) findViewById(R.id.buttonE);
+                b.setText(i);
                 break;
-            case "F":
-                kF = i;
+            case 5:
+                b = (Button) findViewById(R.id.buttonF);
+                b.setText(i);
                 break;
-            case "G":
-                kG = i;
+            case 6:
+                b = (Button) findViewById(R.id.buttonG);
+                b.setText(i);
                 break;
-            case "H":
-                kH = i;
+            case 7:
+                b = (Button) findViewById(R.id.buttonH);
+                b.setText(i);
                 break;
-            case "I":
-                kI = i;
+            case 8:
+                b = (Button) findViewById(R.id.buttonI);
+                b.setText(i);
                 break;
-            case "J":
-                kJ = i;
+            case 9:
+                b = (Button) findViewById(R.id.buttonJ);
+                b.setText(i);
                 break;
-            case "K":
-                kK = i;
+            case 10:
+                b = (Button) findViewById(R.id.buttonK);
+                b.setText(i);
                 break;
-            case "L":
-                kL = i;
+            case 11:
+                b = (Button) findViewById(R.id.buttonL);
+                b.setText(i);
                 break;
-            case "M":
-                kM = i;
+            case 12:
+                b = (Button) findViewById(R.id.buttonM);
+                b.setText(i);
                 break;
-            case "N":
-                kN = i;
+            case 13:
+                b = (Button) findViewById(R.id.buttonN);
+                b.setText(i);
                 break;
-            case "O":
-                kO = i;
+            case 14:
+                b = (Button) findViewById(R.id.buttonO);
+                b.setText(i);
                 break;
-            case "P":
-                kP = i;
+            case 15:
+                b = (Button) findViewById(R.id.buttonP);
+                b.setText(i);
                 break;
-            case "Q":
-                kQ = i;
+            case 16:
+                b = (Button) findViewById(R.id.buttonQ);
+                b.setText(i);
                 break;
-            case "R":
-                kR = i;
+            case 17:
+                b = (Button) findViewById(R.id.buttonR);
+                b.setText(i);
                 break;
-            case "S":
-                kS = i;
+            case 18:
+                b = (Button) findViewById(R.id.buttonS);
+                b.setText(i);
                 break;
-            case "T":
-                kT = i;
+            case 19:
+                b = (Button) findViewById(R.id.buttonT);
+                b.setText(i);
                 break;
-            case "U":
-                kU = i;
+            case 20:
+                b = (Button) findViewById(R.id.buttonU);
+                b.setText(i);
                 break;
-            case "V":
-                kV = i;
+            case 21:
+                b = (Button) findViewById(R.id.buttonV);
+                b.setText(i);
                 break;
-            case "W":
-                kW = i;
+            case 22:
+                b = (Button) findViewById(R.id.buttonW);
+                b.setText(i);
                 break;
-            case "X":
-                kX = i;
+            case 23:
+                b = (Button) findViewById(R.id.buttonX);
+                b.setText(i);
                 break;
-            case "Y":
-                kY = i;
+            case 24:
+                b = (Button) findViewById(R.id.buttonY);
+                b.setText(i);
                 break;
-            case "Z":
-                kZ = i;
+            case 25:
+                b = (Button) findViewById(R.id.buttonZ);
+                b.setText(i);
                 break;
         }
     }
 
+    /* Set button's alpha to 0 so it isn't visible. */
     public void hide(int i){
         Button button = (Button) findViewById(i);
         button.setAlpha(0);
     }
 
-    public void hideNumbers(){
+    /* Hide the letter buttons not needed. */
+    public void hideLetters(){
         int i = 26 - length;
         switch (i){
             case 26:
@@ -218,15 +256,21 @@ public class matchingTest2 extends AppCompatActivity {
         }
     }
 
-    public void saveAnswer(int a, int k){
-        if (a == values[k]){
-            streakMap.put(keys[k], streakMap.get(keys[k])+1);
-            timesCorrectMap.put(keys[k], timesCorrectMap.get(keys[k])+1);
+    /* Check and save the answers. */
+    public void saveAnswers () {
+        for (int i = 0; i < key.length(); i++) {
+            String s = key.substring(i, i + 1);
+            int correct = memMap.get(s);
+            getAnswers(i+1);
+            if (answer == correct) {
+                streakMap.put(s, streakMap.get(s) + 1);
+                timesCorrectMap.put(s, timesCorrectMap.get(s) + 1);
+            }
+            else {
+                streakMap.put(s, 0);
+            }
+            totalAttemptsMap.put(s, totalAttemptsMap.get(s)+1);
         }
-        else{
-            streakMap.put(keys[k], 0);
-        }
-        totalAttemptsMap.put(keys[k], totalAttemptsMap.get(keys[k])+1);
     }
 
     public void onPause(){
@@ -254,71 +298,91 @@ public class matchingTest2 extends AppCompatActivity {
         editor.apply(); //persist the values
     }
 
-    public void getAnswers(){
-        int i = length;
-        switch (i){
+    /* Retrieve the answer for a specific button/position. */
+    public void getAnswers(int i){
+        switch (i) {
             case 26:
-                saveAnswer(aZ, kZ);
+                answer = aZ;
+                break;
             case 25:
-                saveAnswer(aY, kY);
+                answer = aY;
+                break;
             case 24:
-                saveAnswer(aX, kX);
+                answer = aX;
+                break;
             case 23:
-                saveAnswer(aW, kW);
+                answer = aW;
+                break;
             case 22:
-                saveAnswer(aV, kV);
+                answer = aV;
+                break;
             case 21:
-                saveAnswer(aU, kU);
+                answer = aU;
+                break;
             case 20:
-                saveAnswer(aT, kT);
+                answer = aT;
+                break;
             case 19:
-                saveAnswer(aS, kS);
+                answer = aS;
+                break;
             case 18:
-                saveAnswer(aR, kR);
+                answer = aR;
+                break;
             case 17:
-                saveAnswer(aQ, kQ);
+                answer = aQ;
+                break;
             case 16:
-                saveAnswer(aP, kP);
+                answer = aP;
+                break;
             case 15:
-                saveAnswer(aO, kO);
+                answer = aO;
+                break;
             case 14:
-                saveAnswer(aN, kN);
+                answer = aN;
+                break;
             case 13:
-                saveAnswer(aM, kM);
+                answer = aM;
+                break;
             case 12:
-                saveAnswer(aL, kL);
+                answer = aL;
+                break;
             case 11:
-                saveAnswer(aK, kK);
+                answer = aK;
+                break;
             case 10:
-                saveAnswer(aJ, kJ);
+                answer = aJ;
+                break;
             case 9:
-                saveAnswer(aI, kI);
+                answer = aI;
+                break;
             case 8:
-                saveAnswer(aH, kH);
+                answer = aH;
+                break;
             case 7:
-                saveAnswer(aG, kG);
+                answer = aG;
+                break;
             case 6:
-                saveAnswer(aF, kF);
+                answer = aF;
+                break;
             case 5:
-                saveAnswer(aE, kE);
+                answer = aE;
+                break;
             case 4:
-                saveAnswer(aD, kD);
+                answer = aD;
+                break;
             case 3:
-                saveAnswer(aC, kC);
+                answer = aC;
+                break;
             case 2:
-                saveAnswer(aB, kB);
+                answer = aB;
+                break;
             case 1:
-                saveAnswer(aA, kA);
+                answer = aA;
                 break;
         }
     }
 
-    public void showResults(){
-        getAnswers();
-        Intent resultsWindowOpener = new Intent(this,showResultsOpt2.class);
-        startActivity(resultsWindowOpener);
-    }
-
+    /* Get the number clicked on and set the color/number for answers. */
     public void onNumberClick(View v){
         int id = v.getId();
         if (id == R.id.button00){
@@ -363,10 +427,14 @@ public class matchingTest2 extends AppCompatActivity {
         }
     }
 
+    /* Get the answers given and send to results screen. */
     public void onSubmitClick(View view){
-        showResults();
+        saveAnswers();
+        Intent resultsWindowOpener = new Intent(this,showResultsOpt2.class);
+        startActivity(resultsWindowOpener);
     }
 
+    /* Get letter button clicked and set corresponding answer to the current number. */
     public void onClick(View v){
         int id = v.getId();
         Button b = (Button) findViewById(id);
@@ -374,6 +442,7 @@ public class matchingTest2 extends AppCompatActivity {
         setAnswer(id);
     }
 
+    /* Set the answer for a specific button/position. */
     public void setAnswer(int id){
         switch (id){
             case R.id.buttonA:

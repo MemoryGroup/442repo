@@ -33,7 +33,7 @@ public class showTrainOptions extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent("com.example.youngki.memory_project.handWritingTrain");
+                        Intent intent = new Intent("com.youngki.memory_project.handWritingTrain");
                         startActivity(intent);
                     }
                 }
