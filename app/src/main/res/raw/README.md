@@ -58,6 +58,8 @@ letters24/numbers24 - tjeiling
 letters25/numbers25 - tjeiling
 letters26/numbers26 - minbang
 letters27/numbers27 - minbang
+letters28/numbers28 - jrcharlo
+letters29/numbers29 - nwhahn
 red x checkmark/green checkmark - mordecai 
 launcher icon - mordecai
 2nd launcher icon - mordecai
