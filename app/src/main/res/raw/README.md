@@ -110,4 +110,7 @@ ywang77
 evantrue
 jpschnel
 sjpark
+shokoors
+jrcharlo
+jacascio
 ```
