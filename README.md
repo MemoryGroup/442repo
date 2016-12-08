@@ -20,8 +20,9 @@ The train section includes two activities for user input as they attempt to memo
 
 As you test yourself, your progress with each letter/number pair is tracked, so you can see which pairs you are doing well with as well as which ones you are struggling at the end of each testing phase and via the score button.
   
-The target audience for the app is (potential audience: memory enthusiasts, password creation)
+The target audience for the app is memory and cryptography enthusiasts.
 The app benefits them by providing a variety of options for memorization over time and additional options for tracking progress. 
+In addition, the memorization of maps have applications to human memorization of passwords.
 
 # Development and Future Work
 
