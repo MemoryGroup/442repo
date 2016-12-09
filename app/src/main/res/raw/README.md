@@ -119,4 +119,5 @@ sjpark
 shokoors
 jrcharlo
 jacascio
+dan_weiss
 ```
