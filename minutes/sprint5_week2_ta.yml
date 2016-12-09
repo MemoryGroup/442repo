@@ -1,0 +1,17 @@
+date: December 8, 2016
+meeting_type: ta
+attendance: [kreidler, youngkih, amypritc ]
+excused_absences: [ majuran
+  ]
+task_progress: [ 
+  {ubit: majuran, progress: },
+  {ubit: kreidler,progress: bug fixes },
+  {ubit: youngkih, progress: bug fixes },
+  {ubit: amypritc, progress: added view map, added custom map, bug fixes }
+  ]
+issues: [ 
+  ]
+Notes:  | 
+  discussed remaining sprint 5 goals and presentation
+  revised documentation
+  
