@@ -120,4 +120,7 @@ shokoors
 jrcharlo
 jacascio
 dan_weiss
+joelhigh
+fgpinnoc
+shawndur
 ```
